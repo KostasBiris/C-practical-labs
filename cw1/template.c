@@ -1,7 +1,7 @@
 
 #include <stdlib.h>
-#include <std.io>
-#include <strin.h>
+#include <stdio.h>
+#include <string.h>
 #include "book_management.h"
 #include "users.h"
 
@@ -14,7 +14,7 @@ void register(User* u){
 
 }
 
-void login(){
+void login(unsigned id,char* pass){
 
 }
 

@@ -1,16 +1,16 @@
 cmake_minimum_required(VERSION 2.8.12.2)
 
-project(restaurant C)
+project(library C)
 
 set( CMAKE_BUILD_TYPE Debug)
 
-set(CMAKE_C_FLAGS "-fdump-rtl-expand")
+set(CMAKE_C_FLAGS "-std=c99 -DNDEBUG -fdump-rtl-expand")
 
 include_directories(unity/include)
 
-add_executable(restaurant main.c interface.c customer.c order.c)
+add_executable(book_management book_management.c)
 
-add_executable(unit_tests unit_tests.c order.c unity/src/unity.c)
+#add_executable(unit_tests unit_tests.c book_management.c unity.c)
 
-install(TARGETS restaurant RUNTIME DESTINATION bin)
+#install(TARGETS library RUNTIME DESTINATION bin)
 

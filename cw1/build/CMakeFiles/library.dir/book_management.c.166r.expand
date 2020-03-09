@@ -1,0 +1,331 @@
+
+;; Function load_books (load_books, funcdef_no=2, decl_uid=2859, cgraph_uid=2)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+deleting block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 file+0 S8 A64])
+        (reg:DI 5 di [ file ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:11 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 9 2 (set (reg:SI 59 [ D.2919 ])
+        (const_int -1 [0xffffffffffffffff])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:12 -1
+     (nil))
+(insn 9 6 13 2 (set (reg:SI 60 [ <retval> ])
+        (reg:SI 59 [ D.2919 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:12 -1
+     (nil))
+(insn 13 9 16 2 (set (reg/i:SI 0 ax)
+        (reg:SI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:13 -1
+     (nil))
+(insn 16 13 0 2 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:13 -1
+     (nil))
+
+;; Function add_book (add_book, funcdef_no=3, decl_uid=2861, cgraph_uid=3)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+deleting block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 8 2 (set (reg:SI 59 [ D.2920 ])
+        (const_int -1 [0xffffffffffffffff])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:18 -1
+     (nil))
+(insn 8 5 12 2 (set (reg:SI 60 [ <retval> ])
+        (reg:SI 59 [ D.2920 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:18 -1
+     (nil))
+(insn 12 8 15 2 (set (reg/i:SI 0 ax)
+        (reg:SI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:19 -1
+     (nil))
+(insn 15 12 0 2 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:19 -1
+     (nil))
+
+;; Function remove_book (remove_book, funcdef_no=4, decl_uid=2863, cgraph_uid=4)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+deleting block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 8 2 (set (reg:SI 59 [ D.2921 ])
+        (const_int -1 [0xffffffffffffffff])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:24 -1
+     (nil))
+(insn 8 5 12 2 (set (reg:SI 60 [ <retval> ])
+        (reg:SI 59 [ D.2921 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:24 -1
+     (nil))
+(insn 12 8 15 2 (set (reg/i:SI 0 ax)
+        (reg:SI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:25 -1
+     (nil))
+(insn 15 12 0 2 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:25 -1
+     (nil))
+
+;; Function store_books (store_books, funcdef_no=5, decl_uid=2857, cgraph_uid=5)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+deleting block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 file+0 S8 A64])
+        (reg:DI 5 di [ file ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:29 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 9 2 (set (reg:SI 59 [ D.2922 ])
+        (const_int -1 [0xffffffffffffffff])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:30 -1
+     (nil))
+(insn 9 6 13 2 (set (reg:SI 60 [ <retval> ])
+        (reg:SI 59 [ D.2922 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:30 -1
+     (nil))
+(insn 13 9 16 2 (set (reg/i:SI 0 ax)
+        (reg:SI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:31 -1
+     (nil))
+(insn 16 13 0 2 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:31 -1
+     (nil))
+
+;; Function find_book_by_title (find_book_by_title, funcdef_no=6, decl_uid=2865, cgraph_uid=6)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+deleting block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 title+0 S8 A64])
+        (reg:DI 5 di [ title ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:37 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 9 2 (set (reg:TI 59 [ D.2903 ])
+        (mem/c:TI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 empty+0 S16 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:39 -1
+     (nil))
+(insn 9 6 13 2 (set (reg:TI 60 [ <retval> ])
+        (reg:TI 59 [ D.2903 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:39 -1
+     (nil))
+(insn 13 9 16 2 (set (reg/i:TI 0 ax)
+        (reg:TI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:40 -1
+     (nil))
+(insn 16 13 0 2 (use (reg/i:TI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:40 -1
+     (nil))
+
+;; Function find_book_by_author (find_book_by_author, funcdef_no=7, decl_uid=2867, cgraph_uid=7)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+deleting block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 author+0 S8 A64])
+        (reg:DI 5 di [ author ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:46 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 9 2 (set (reg:TI 59 [ D.2906 ])
+        (mem/c:TI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 empty+0 S16 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:48 -1
+     (nil))
+(insn 9 6 13 2 (set (reg:TI 60 [ <retval> ])
+        (reg:TI 59 [ D.2906 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:48 -1
+     (nil))
+(insn 13 9 16 2 (set (reg/i:TI 0 ax)
+        (reg:TI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:49 -1
+     (nil))
+(insn 16 13 0 2 (use (reg/i:TI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:49 -1
+     (nil))
+
+;; Function find_book_by_year (find_book_by_year, funcdef_no=8, decl_uid=2869, cgraph_uid=8)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+deleting block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [0 year+0 S4 A32])
+        (reg:SI 5 di [ year ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 9 2 (set (reg:TI 59 [ D.2909 ])
+        (mem/c:TI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 empty+0 S16 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:57 -1
+     (nil))
+(insn 9 6 13 2 (set (reg:TI 60 [ <retval> ])
+        (reg:TI 59 [ D.2909 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:57 -1
+     (nil))
+(insn 13 9 16 2 (set (reg/i:TI 0 ax)
+        (reg:TI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:58 -1
+     (nil))
+(insn 16 13 0 2 (use (reg/i:TI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:58 -1
+     (nil))

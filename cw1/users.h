@@ -4,15 +4,15 @@
 #include <string.h>
 #include "book_management.h"
 
-#define MaxUserID 20000 //the maximum number of id's issued.
+#define MaxUserID 3 //the maximum number of id's issued.
 #define MinPasswordSize 8 //the minimum size of a user's password.
 #define MaxPasswoedSize 16 //the maximum size of a user's password.
 
 #define MaxFirstNameSize 30
 #define MaxLastNameSize 40
 
-#define MaxNormalUsers 19950 //the maximum number of Normal type users.
-#define MaxLibrarianUsers 50 //the maximum number of Librarian type users.
+#define MaxNormalUsers 2 //the maximum number of Normal type users.
+#define MaxLibrarianUsers 1 //the maximum number of Librarian type users.
 
 #define MaxBooksBorrowed 10 //the maximum number of Books a user can borrow.
 #define MaxBooksReturned 10 //the maximum number of displayed returned Books by a user.
