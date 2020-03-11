@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/unit_tests.dir/unit_tests.c.o"
   "CMakeFiles/unit_tests.dir/book_management.c.o"
-  "CMakeFiles/unit_tests.dir/unity.c.o"
+  "CMakeFiles/unit_tests.dir/unity/unity.c.o"
   "unit_tests.pdb"
   "unit_tests"
 )

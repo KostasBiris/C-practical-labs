@@ -5,11 +5,11 @@ CMakeFiles/unit_tests.dir/book_management.c.o
  /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c
  /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.h
 CMakeFiles/unit_tests.dir/unit_tests.c.o
+ ../unity/include/unity.h
+ ../unity/include/unity_internals.h
  /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.h
  /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c
- /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unity.h
- /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unity_internals.h
-CMakeFiles/unit_tests.dir/unity.c.o
- /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unity.c
- /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unity.h
- /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unity_internals.h
+CMakeFiles/unit_tests.dir/unity/unity.c.o
+ ../unity/include/unity.h
+ ../unity/include/unity_internals.h
+ /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unity/unity.c

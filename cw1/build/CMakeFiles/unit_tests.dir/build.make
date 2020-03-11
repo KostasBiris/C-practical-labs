@@ -98,41 +98,41 @@ CMakeFiles/unit_tests.dir/book_management.c.o.provides: CMakeFiles/unit_tests.di
 
 CMakeFiles/unit_tests.dir/book_management.c.o.provides.build: CMakeFiles/unit_tests.dir/book_management.c.o
 
-CMakeFiles/unit_tests.dir/unity.c.o: CMakeFiles/unit_tests.dir/flags.make
-CMakeFiles/unit_tests.dir/unity.c.o: ../unity.c
+CMakeFiles/unit_tests.dir/unity/unity.c.o: CMakeFiles/unit_tests.dir/flags.make
+CMakeFiles/unit_tests.dir/unity/unity.c.o: ../unity/unity.c
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/unit_tests.dir/unity.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/unit_tests.dir/unity.c.o   -c /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unity.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/unit_tests.dir/unity/unity.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/unit_tests.dir/unity/unity.c.o   -c /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unity/unity.c
 
-CMakeFiles/unit_tests.dir/unity.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unit_tests.dir/unity.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unity.c > CMakeFiles/unit_tests.dir/unity.c.i
+CMakeFiles/unit_tests.dir/unity/unity.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/unit_tests.dir/unity/unity.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unity/unity.c > CMakeFiles/unit_tests.dir/unity/unity.c.i
 
-CMakeFiles/unit_tests.dir/unity.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unit_tests.dir/unity.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unity.c -o CMakeFiles/unit_tests.dir/unity.c.s
+CMakeFiles/unit_tests.dir/unity/unity.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/unit_tests.dir/unity/unity.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unity/unity.c -o CMakeFiles/unit_tests.dir/unity/unity.c.s
 
-CMakeFiles/unit_tests.dir/unity.c.o.requires:
-.PHONY : CMakeFiles/unit_tests.dir/unity.c.o.requires
+CMakeFiles/unit_tests.dir/unity/unity.c.o.requires:
+.PHONY : CMakeFiles/unit_tests.dir/unity/unity.c.o.requires
 
-CMakeFiles/unit_tests.dir/unity.c.o.provides: CMakeFiles/unit_tests.dir/unity.c.o.requires
-	$(MAKE) -f CMakeFiles/unit_tests.dir/build.make CMakeFiles/unit_tests.dir/unity.c.o.provides.build
-.PHONY : CMakeFiles/unit_tests.dir/unity.c.o.provides
+CMakeFiles/unit_tests.dir/unity/unity.c.o.provides: CMakeFiles/unit_tests.dir/unity/unity.c.o.requires
+	$(MAKE) -f CMakeFiles/unit_tests.dir/build.make CMakeFiles/unit_tests.dir/unity/unity.c.o.provides.build
+.PHONY : CMakeFiles/unit_tests.dir/unity/unity.c.o.provides
 
-CMakeFiles/unit_tests.dir/unity.c.o.provides.build: CMakeFiles/unit_tests.dir/unity.c.o
+CMakeFiles/unit_tests.dir/unity/unity.c.o.provides.build: CMakeFiles/unit_tests.dir/unity/unity.c.o
 
 # Object files for target unit_tests
 unit_tests_OBJECTS = \
 "CMakeFiles/unit_tests.dir/unit_tests.c.o" \
 "CMakeFiles/unit_tests.dir/book_management.c.o" \
-"CMakeFiles/unit_tests.dir/unity.c.o"
+"CMakeFiles/unit_tests.dir/unity/unity.c.o"
 
 # External object files for target unit_tests
 unit_tests_EXTERNAL_OBJECTS =
 
 unit_tests: CMakeFiles/unit_tests.dir/unit_tests.c.o
 unit_tests: CMakeFiles/unit_tests.dir/book_management.c.o
-unit_tests: CMakeFiles/unit_tests.dir/unity.c.o
+unit_tests: CMakeFiles/unit_tests.dir/unity/unity.c.o
 unit_tests: CMakeFiles/unit_tests.dir/build.make
 unit_tests: CMakeFiles/unit_tests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable unit_tests"
@@ -144,7 +144,7 @@ CMakeFiles/unit_tests.dir/build: unit_tests
 
 CMakeFiles/unit_tests.dir/requires: CMakeFiles/unit_tests.dir/unit_tests.c.o.requires
 CMakeFiles/unit_tests.dir/requires: CMakeFiles/unit_tests.dir/book_management.c.o.requires
-CMakeFiles/unit_tests.dir/requires: CMakeFiles/unit_tests.dir/unity.c.o.requires
+CMakeFiles/unit_tests.dir/requires: CMakeFiles/unit_tests.dir/unity/unity.c.o.requires
 .PHONY : CMakeFiles/unit_tests.dir/requires
 
 CMakeFiles/unit_tests.dir/clean:

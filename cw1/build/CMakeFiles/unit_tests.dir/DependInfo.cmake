@@ -6,7 +6,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
 SET(CMAKE_DEPENDS_CHECK_C
   "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c" "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles/unit_tests.dir/book_management.c.o"
   "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c" "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles/unit_tests.dir/unit_tests.c.o"
-  "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unity.c" "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles/unit_tests.dir/unity.c.o"
+  "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unity/unity.c" "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles/unit_tests.dir/unity/unity.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 

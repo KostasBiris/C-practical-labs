@@ -56,38 +56,38 @@ CMAKE_SOURCE_DIR = /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1
 CMAKE_BINARY_DIR = /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/book_management.dir
+# Target rules for target CMakeFiles/unit_tests.dir
 
 # All Build rule for target.
-CMakeFiles/book_management.dir/all:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/depend
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles  1
-	@echo "Built target book_management"
-.PHONY : CMakeFiles/book_management.dir/all
+CMakeFiles/unit_tests.dir/all:
+	$(MAKE) -f CMakeFiles/unit_tests.dir/build.make CMakeFiles/unit_tests.dir/depend
+	$(MAKE) -f CMakeFiles/unit_tests.dir/build.make CMakeFiles/unit_tests.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles  1 2 3
+	@echo "Built target unit_tests"
+.PHONY : CMakeFiles/unit_tests.dir/all
 
 # Include target in all.
-all: CMakeFiles/book_management.dir/all
+all: CMakeFiles/unit_tests.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/book_management.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/book_management.dir/all
+CMakeFiles/unit_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/unit_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles 0
-.PHONY : CMakeFiles/book_management.dir/rule
+.PHONY : CMakeFiles/unit_tests.dir/rule
 
 # Convenience name for target.
-book_management: CMakeFiles/book_management.dir/rule
-.PHONY : book_management
+unit_tests: CMakeFiles/unit_tests.dir/rule
+.PHONY : unit_tests
 
 # clean rule for target.
-CMakeFiles/book_management.dir/clean:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/clean
-.PHONY : CMakeFiles/book_management.dir/clean
+CMakeFiles/unit_tests.dir/clean:
+	$(MAKE) -f CMakeFiles/unit_tests.dir/build.make CMakeFiles/unit_tests.dir/clean
+.PHONY : CMakeFiles/unit_tests.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/book_management.dir/clean
+clean: CMakeFiles/unit_tests.dir/clean
 .PHONY : clean
 
 #=============================================================================

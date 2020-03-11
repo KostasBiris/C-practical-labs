@@ -54,7 +54,7 @@ try_optimize_cfg iteration 2
         (reg:DI 65)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:14 -1
      (nil))
 (call_insn 11 10 12 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("_IO_getc") [flags 0x41]  <function_decl 0x7ffad68ab000 _IO_getc>) [0 _IO_getc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("_IO_getc") [flags 0x41]  <function_decl 0x7f459fb2f000 _IO_getc>) [0 _IO_getc S1 A8])
             (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:14 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -80,7 +80,7 @@ try_optimize_cfg iteration 2
         (reg:DI 59 [ D.2235 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:15 -1
      (nil))
 (call_insn 18 17 19 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x7ffad67ced00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x7f459fa52d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:15 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -94,10 +94,10 @@ try_optimize_cfg iteration 2
 (insn 20 19 21 2 (set (reg/f:DI 60 [ all_books.0 ])
         (reg/f:DI 68)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:15 -1
      (nil))
-(insn 21 20 22 2 (set (mem/f/c:DI (symbol_ref:DI ("all_books") [flags 0x2]  <var_decl 0x7ffad68d9260 all_books>) [0 all_books+0 S8 A64])
+(insn 21 20 22 2 (set (mem/f/c:DI (symbol_ref:DI ("all_books") [flags 0x2]  <var_decl 0x7f459fb5d260 all_books>) [0 all_books+0 S8 A64])
         (reg/f:DI 60 [ all_books.0 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:15 -1
      (nil))
-(insn 22 21 23 2 (set (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7ffad68d92f8 books_array>)
+(insn 22 21 23 2 (set (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f459fb5d2f8 books_array>)
                     (const_int 8 [0x8]))) [0 books_array.length+0 S4 A64])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:16 -1
      (nil))
