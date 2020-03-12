@@ -14,33 +14,33 @@ int load_books(FILE *file){
   all_books= calloc(number_books,sizeof(struct Book));
   books_array.length=0;
   int buff=0;
-  char * b = malloc(300*sizeof(char));
+  char b;
+  char buff1[512];
   struct Book loaded_book;
-  char* token;
-
+  char *token;
   int i=0;
+
   for(b=getc(file);b!=EOF;b=getc(file)){
     if(b=='\n'){
       i++;
     }
   }
   rewind(file);
+
   number_books=i-1;
-
-
-  while (fgets(b, 1000, file)) {
+  while (fgets(buff1, 512, file)) {
 
     if(buff==0){
       buff++;
       continue;
     }
     //Title
-    token= strtok(b,",");
+    token= strtok(buff1,",");
     strcpy(loaded_book.title,token);
 
     //Author
     token= strtok(NULL,",");
-    strcpy(loaded_book.title,token);
+    strcpy(loaded_book.authors,token);
 
     //Year
     token= strtok(NULL,",");
@@ -76,7 +76,21 @@ int remove_book(struct Book book){
 //saves the database of books in the specified file
 //returns 0 if books were stored correctly, or an error code otherwise
 int store_books(FILE *file){
-  return -1;
+  FILE* store_file=file;
+  struct Book book_temp;
+  const struct Book *array_temp=books_array.array;
+
+  if(store_file==NULL){
+    return -1;
+  }
+  all_books= calloc(number_books,sizeof(struct Book));
+
+  for(int i=0; i<number_books;i++){
+    fprintf(file, "%s","%s","%d","%d\n", array_temp->title, array_temp->authors, array_temp->year, array_temp->copies);
+  }
+
+
+  return 0;
 }
 
 //finds books with a given title.
@@ -111,8 +125,8 @@ int main(){
   FILE* file1= fopen("../books.csv","r");
   FILE* file2= fopen("../test_file.csv","a");
 
-  //load_books(file1);
-  //store_books(file2);
+  load_books(file1);
+  store_books(file2);
 
   return 0;
 }
