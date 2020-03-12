@@ -30,13 +30,13 @@ try_optimize_cfg iteration 2
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (insn 5 2 6 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f74b3c6ea18 *.LC0>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:8 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fc0925f1a18 *.LC0>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:8 -1
      (nil))
 (insn 6 5 7 2 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f74b3c6eab0 *.LC1>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:8 -1
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7fc0925f1ab0 *.LC1>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:8 -1
      (nil))
 (call_insn 7 6 8 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f74b3ebf000 fopen>) [0 fopen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7fc092842000 fopen>) [0 fopen S1 A8])
             (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:8 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -66,9 +66,9 @@ try_optimize_cfg iteration 2
         (const_int 11 [0xb])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:11 -1
      (nil))
 (insn 14 13 15 4 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f74b3c6eb48 *.LC2>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:11 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7fc0925f1b48 *.LC2>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:11 -1
      (nil))
-(call_insn 15 14 16 4 (call (mem:QI (symbol_ref:DI ("UnityFail") [flags 0x41]  <function_decl 0x7f74b3bc6100 UnityFail>) [0 UnityFail S1 A8])
+(call_insn 15 14 16 4 (call (mem:QI (symbol_ref:DI ("UnityFail") [flags 0x41]  <function_decl 0x7fc092549100 UnityFail>) [0 UnityFail S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:11 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -84,7 +84,7 @@ try_optimize_cfg iteration 2
         (reg:DI 61)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:13 -1
      (nil))
 (call_insn 20 19 21 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("store_books") [flags 0x41]  <function_decl 0x7f74b3c26900 store_books>) [0 store_books S1 A8])
+        (call (mem:QI (symbol_ref:DI ("store_books") [flags 0x41]  <function_decl 0x7fc0925a9900 store_books>) [0 store_books S1 A8])
             (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:13 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -110,7 +110,7 @@ try_optimize_cfg iteration 2
         (const_int 15 [0xf])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:15 -1
      (nil))
 (insn 27 26 28 5 (set (reg:DI 1 dx)
-        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f74b3c6ebe0 *.LC3>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:15 -1
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7fc0925f1be0 *.LC3>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:15 -1
      (nil))
 (insn 28 27 29 5 (set (reg:DI 4 si)
         (reg:DI 59 [ D.3293 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:15 -1
@@ -118,7 +118,7 @@ try_optimize_cfg iteration 2
 (insn 29 28 30 5 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:15 -1
      (nil))
-(call_insn 30 29 0 5 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7f74b3bbe700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
+(call_insn 30 29 0 5 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7fc092541700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:15 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -159,13 +159,13 @@ try_optimize_cfg iteration 2
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (insn 5 2 6 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f74b3c6ea18 *.LC0>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:20 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fc0925f1a18 *.LC0>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:20 -1
      (nil))
 (insn 6 5 7 2 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f74b3c6eab0 *.LC1>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:20 -1
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7fc0925f1ab0 *.LC1>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:20 -1
      (nil))
 (call_insn 7 6 8 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f74b3ebf000 fopen>) [0 fopen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7fc092842000 fopen>) [0 fopen S1 A8])
             (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:20 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -195,9 +195,9 @@ try_optimize_cfg iteration 2
         (const_int 23 [0x17])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:23 -1
      (nil))
 (insn 14 13 15 4 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f74b3c6eb48 *.LC2>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:23 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7fc0925f1b48 *.LC2>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:23 -1
      (nil))
-(call_insn 15 14 16 4 (call (mem:QI (symbol_ref:DI ("UnityFail") [flags 0x41]  <function_decl 0x7f74b3bc6100 UnityFail>) [0 UnityFail S1 A8])
+(call_insn 15 14 16 4 (call (mem:QI (symbol_ref:DI ("UnityFail") [flags 0x41]  <function_decl 0x7fc092549100 UnityFail>) [0 UnityFail S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:23 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -213,7 +213,7 @@ try_optimize_cfg iteration 2
         (reg:DI 61)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:25 -1
      (nil))
 (call_insn 20 19 21 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("store_books") [flags 0x41]  <function_decl 0x7f74b3c26900 store_books>) [0 store_books S1 A8])
+        (call (mem:QI (symbol_ref:DI ("load_books") [flags 0x41]  <function_decl 0x7fc0925a9a00 load_books>) [0 load_books S1 A8])
             (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:25 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -239,7 +239,7 @@ try_optimize_cfg iteration 2
         (const_int 27 [0x1b])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:27 -1
      (nil))
 (insn 27 26 28 5 (set (reg:DI 1 dx)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f74b3c7d260 *.LC4>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:27 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7fc092600260 *.LC4>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:27 -1
      (nil))
 (insn 28 27 29 5 (set (reg:DI 4 si)
         (reg:DI 59 [ D.3298 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:27 -1
@@ -247,7 +247,7 @@ try_optimize_cfg iteration 2
 (insn 29 28 30 5 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:27 -1
      (nil))
-(call_insn 30 29 0 5 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7f74b3bbe700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
+(call_insn 30 29 0 5 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7fc092541700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:27 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -307,7 +307,7 @@ try_optimize_cfg iteration 2
         (reg:DI 62)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:34 -1
      (nil))
 (call_insn 11 10 12 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("add_book") [flags 0x41]  <function_decl 0x7f74b3c26b00 add_book>) [0 add_book S1 A8])
+        (call (mem:QI (symbol_ref:DI ("add_book") [flags 0x41]  <function_decl 0x7fc0925a9b00 add_book>) [0 add_book S1 A8])
             (const_int 24 [0x18]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:34 -1
      (nil)
     (expr_list:REG_DEAD (use (mem:BLK (reg/f:DI 56 virtual-outgoing-args) [0  S24 A64]))
@@ -333,7 +333,7 @@ try_optimize_cfg iteration 2
         (const_int 36 [0x24])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:36 -1
      (nil))
 (insn 18 17 19 2 (set (reg:DI 1 dx)
-        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f74b3c7d7b8 *.LC5>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:36 -1
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7fc0926007b8 *.LC5>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:36 -1
      (nil))
 (insn 19 18 20 2 (set (reg:DI 4 si)
         (reg:DI 59 [ D.3300 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:36 -1
@@ -341,7 +341,7 @@ try_optimize_cfg iteration 2
 (insn 20 19 21 2 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:36 -1
      (nil))
-(call_insn 21 20 0 2 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7f74b3bbe700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
+(call_insn 21 20 0 2 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7fc092541700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:36 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -401,7 +401,7 @@ try_optimize_cfg iteration 2
         (reg:DI 62)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:42 -1
      (nil))
 (call_insn 11 10 12 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("remove_book") [flags 0x41]  <function_decl 0x7f74b3c26c00 remove_book>) [0 remove_book S1 A8])
+        (call (mem:QI (symbol_ref:DI ("remove_book") [flags 0x41]  <function_decl 0x7fc0925a9c00 remove_book>) [0 remove_book S1 A8])
             (const_int 24 [0x18]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:42 -1
      (nil)
     (expr_list:REG_DEAD (use (mem:BLK (reg/f:DI 56 virtual-outgoing-args) [0  S24 A64]))
@@ -427,7 +427,7 @@ try_optimize_cfg iteration 2
         (const_int 44 [0x2c])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:44 -1
      (nil))
 (insn 18 17 19 2 (set (reg:DI 1 dx)
-        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f74b3c7dbe0 *.LC6>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:44 -1
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7fc092600be0 *.LC6>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:44 -1
      (nil))
 (insn 19 18 20 2 (set (reg:DI 4 si)
         (reg:DI 59 [ D.3303 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:44 -1
@@ -435,7 +435,7 @@ try_optimize_cfg iteration 2
 (insn 20 19 21 2 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:44 -1
      (nil))
-(call_insn 21 20 0 2 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7f74b3bbe700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
+(call_insn 21 20 0 2 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7fc092541700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:44 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -481,11 +481,11 @@ try_optimize_cfg iteration 2
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (insn 5 2 6 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -8 [0xfffffffffffffff8])) [0 t+0 S8 A64])
-        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x7f74b3c871c8 *.LC7>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:49 -1
+        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x7fc09260a1c8 *.LC7>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:49 -1
      (nil))
 (insn 6 5 7 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -16 [0xfffffffffffffff0])) [0 fake_t+0 S8 A64])
-        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x7f74b3c87260 *.LC8>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:50 -1
+        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x7fc09260a260 *.LC8>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:50 -1
      (nil))
 (insn 7 6 8 2 (set (reg:DI 65)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -495,7 +495,7 @@ try_optimize_cfg iteration 2
         (reg:DI 65)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:52 -1
      (nil))
 (call_insn 9 8 10 2 (set (reg:TI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("find_book_by_title") [flags 0x41]  <function_decl 0x7f74b3c26d00 find_book_by_title>) [0 find_book_by_title S1 A8])
+        (call (mem:QI (symbol_ref:DI ("find_book_by_title") [flags 0x41]  <function_decl 0x7fc0925a9d00 find_book_by_title>) [0 find_book_by_title S1 A8])
             (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:52 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -518,7 +518,7 @@ try_optimize_cfg iteration 2
         (reg:DI 68)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:53 -1
      (nil))
 (call_insn 15 14 16 2 (set (reg:TI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("find_book_by_title") [flags 0x41]  <function_decl 0x7f74b3c26d00 find_book_by_title>) [0 find_book_by_title S1 A8])
+        (call (mem:QI (symbol_ref:DI ("find_book_by_title") [flags 0x41]  <function_decl 0x7fc0925a9d00 find_book_by_title>) [0 find_book_by_title S1 A8])
             (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:53 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -553,9 +553,9 @@ try_optimize_cfg iteration 2
         (const_int 54 [0x36])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:54 -1
      (nil))
 (insn 24 23 25 4 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x7f74b3c872f8 *.LC9>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:54 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x7fc09260a2f8 *.LC9>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:54 -1
      (nil))
-(call_insn 25 24 26 4 (call (mem:QI (symbol_ref:DI ("UnityFail") [flags 0x41]  <function_decl 0x7f74b3bc6100 UnityFail>) [0 UnityFail S1 A8])
+(call_insn 25 24 26 4 (call (mem:QI (symbol_ref:DI ("UnityFail") [flags 0x41]  <function_decl 0x7fc092549100 UnityFail>) [0 UnityFail S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:54 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -583,9 +583,9 @@ try_optimize_cfg iteration 2
         (const_int 55 [0x37])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:55 -1
      (nil))
 (insn 33 32 34 6 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x7f74b3c87390 *.LC10>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:55 -1
+        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x7fc09260a390 *.LC10>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:55 -1
      (nil))
-(call_insn 34 33 35 6 (call (mem:QI (symbol_ref:DI ("UnityFail") [flags 0x41]  <function_decl 0x7f74b3bc6100 UnityFail>) [0 UnityFail S1 A8])
+(call_insn 34 33 35 6 (call (mem:QI (symbol_ref:DI ("UnityFail") [flags 0x41]  <function_decl 0x7fc092549100 UnityFail>) [0 UnityFail S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:55 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -607,7 +607,7 @@ try_optimize_cfg iteration 2
         (const_int 57 [0x39])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:57 -1
      (nil))
 (insn 41 40 42 7 (set (reg:DI 1 dx)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f74b3c87428 *.LC11>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:57 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7fc09260a428 *.LC11>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:57 -1
      (nil))
 (insn 42 41 43 7 (set (reg:DI 4 si)
         (const_int 1 [0x1])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:57 -1
@@ -615,7 +615,7 @@ try_optimize_cfg iteration 2
 (insn 43 42 44 7 (set (reg:DI 5 di)
         (reg:DI 62 [ D.3307 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:57 -1
      (nil))
-(call_insn 44 43 45 7 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7f74b3bbe700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
+(call_insn 44 43 45 7 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7fc092541700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:57 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -638,7 +638,7 @@ try_optimize_cfg iteration 2
         (const_int 58 [0x3a])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:58 -1
      (nil))
 (insn 49 48 50 7 (set (reg:DI 1 dx)
-        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x7f74b3c874c0 *.LC12>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:58 -1
+        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x7fc09260a4c0 *.LC12>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:58 -1
      (nil))
 (insn 50 49 51 7 (set (reg:DI 4 si)
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:58 -1
@@ -646,7 +646,7 @@ try_optimize_cfg iteration 2
 (insn 51 50 52 7 (set (reg:DI 5 di)
         (reg:DI 64 [ D.3307 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:58 -1
      (nil))
-(call_insn 52 51 0 7 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7f74b3bbe700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
+(call_insn 52 51 0 7 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7fc092541700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:58 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -692,11 +692,11 @@ try_optimize_cfg iteration 2
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (insn 5 2 6 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -8 [0xfffffffffffffff8])) [0 a+0 S8 A64])
-        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x7f74b3c87d10 *.LC13>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:63 -1
+        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x7fc09260ad10 *.LC13>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:63 -1
      (nil))
 (insn 6 5 7 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -16 [0xfffffffffffffff0])) [0 fake_a+0 S8 A64])
-        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x7f74b3c87da8 *.LC14>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:64 -1
+        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x7fc09260ada8 *.LC14>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:64 -1
      (nil))
 (insn 7 6 8 2 (set (reg:DI 65)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -706,7 +706,7 @@ try_optimize_cfg iteration 2
         (reg:DI 65)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:66 -1
      (nil))
 (call_insn 9 8 10 2 (set (reg:TI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("find_book_by_author") [flags 0x41]  <function_decl 0x7f74b3c26e00 find_book_by_author>) [0 find_book_by_author S1 A8])
+        (call (mem:QI (symbol_ref:DI ("find_book_by_author") [flags 0x41]  <function_decl 0x7fc0925a9e00 find_book_by_author>) [0 find_book_by_author S1 A8])
             (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:66 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -729,7 +729,7 @@ try_optimize_cfg iteration 2
         (reg:DI 68)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:67 -1
      (nil))
 (call_insn 15 14 16 2 (set (reg:TI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("find_book_by_author") [flags 0x41]  <function_decl 0x7f74b3c26e00 find_book_by_author>) [0 find_book_by_author S1 A8])
+        (call (mem:QI (symbol_ref:DI ("find_book_by_author") [flags 0x41]  <function_decl 0x7fc0925a9e00 find_book_by_author>) [0 find_book_by_author S1 A8])
             (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:67 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -764,9 +764,9 @@ try_optimize_cfg iteration 2
         (const_int 68 [0x44])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:68 -1
      (nil))
 (insn 24 23 25 4 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x7f74b3c87e40 *.LC15>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:68 -1
+        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x7fc09260ae40 *.LC15>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:68 -1
      (nil))
-(call_insn 25 24 26 4 (call (mem:QI (symbol_ref:DI ("UnityFail") [flags 0x41]  <function_decl 0x7f74b3bc6100 UnityFail>) [0 UnityFail S1 A8])
+(call_insn 25 24 26 4 (call (mem:QI (symbol_ref:DI ("UnityFail") [flags 0x41]  <function_decl 0x7fc092549100 UnityFail>) [0 UnityFail S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:68 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -794,9 +794,9 @@ try_optimize_cfg iteration 2
         (const_int 69 [0x45])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:69 -1
      (nil))
 (insn 33 32 34 6 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC16") [flags 0x2]  <var_decl 0x7f74b3c87ed8 *.LC16>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:69 -1
+        (symbol_ref/f:DI ("*.LC16") [flags 0x2]  <var_decl 0x7fc09260aed8 *.LC16>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:69 -1
      (nil))
-(call_insn 34 33 35 6 (call (mem:QI (symbol_ref:DI ("UnityFail") [flags 0x41]  <function_decl 0x7f74b3bc6100 UnityFail>) [0 UnityFail S1 A8])
+(call_insn 34 33 35 6 (call (mem:QI (symbol_ref:DI ("UnityFail") [flags 0x41]  <function_decl 0x7fc092549100 UnityFail>) [0 UnityFail S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:69 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -818,7 +818,7 @@ try_optimize_cfg iteration 2
         (const_int 71 [0x47])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:71 -1
      (nil))
 (insn 41 40 42 7 (set (reg:DI 1 dx)
-        (symbol_ref/f:DI ("*.LC17") [flags 0x2]  <var_decl 0x7f74b3c91000 *.LC17>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:71 -1
+        (symbol_ref/f:DI ("*.LC17") [flags 0x2]  <var_decl 0x7fc092614000 *.LC17>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:71 -1
      (nil))
 (insn 42 41 43 7 (set (reg:DI 4 si)
         (const_int 1 [0x1])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:71 -1
@@ -826,7 +826,7 @@ try_optimize_cfg iteration 2
 (insn 43 42 44 7 (set (reg:DI 5 di)
         (reg:DI 62 [ D.3316 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:71 -1
      (nil))
-(call_insn 44 43 45 7 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7f74b3bbe700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
+(call_insn 44 43 45 7 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7fc092541700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:71 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -849,7 +849,7 @@ try_optimize_cfg iteration 2
         (const_int 72 [0x48])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:72 -1
      (nil))
 (insn 49 48 50 7 (set (reg:DI 1 dx)
-        (symbol_ref/f:DI ("*.LC18") [flags 0x2]  <var_decl 0x7f74b3c91098 *.LC18>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:72 -1
+        (symbol_ref/f:DI ("*.LC18") [flags 0x2]  <var_decl 0x7fc092614098 *.LC18>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:72 -1
      (nil))
 (insn 50 49 51 7 (set (reg:DI 4 si)
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:72 -1
@@ -857,7 +857,7 @@ try_optimize_cfg iteration 2
 (insn 51 50 52 7 (set (reg:DI 5 di)
         (reg:DI 64 [ D.3316 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:72 -1
      (nil))
-(call_insn 52 51 0 7 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7f74b3bbe700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
+(call_insn 52 51 0 7 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7fc092541700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:72 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -913,7 +913,7 @@ try_optimize_cfg iteration 2
         (const_int 1813 [0x715])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:80 -1
      (nil))
 (call_insn 8 7 9 2 (set (reg:TI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("find_book_by_year") [flags 0x41]  <function_decl 0x7f74b3c26f00 find_book_by_year>) [0 find_book_by_year S1 A8])
+        (call (mem:QI (symbol_ref:DI ("find_book_by_year") [flags 0x41]  <function_decl 0x7fc0925a9f00 find_book_by_year>) [0 find_book_by_year S1 A8])
             (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:80 -1
      (nil)
     (expr_list:REG_BR_PRED (use (reg:SI 5 di))
@@ -936,7 +936,7 @@ try_optimize_cfg iteration 2
         (reg:SI 67)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:81 -1
      (nil))
 (call_insn 14 13 15 2 (set (reg:TI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("find_book_by_year") [flags 0x41]  <function_decl 0x7f74b3c26f00 find_book_by_year>) [0 find_book_by_year S1 A8])
+        (call (mem:QI (symbol_ref:DI ("find_book_by_year") [flags 0x41]  <function_decl 0x7fc0925a9f00 find_book_by_year>) [0 find_book_by_year S1 A8])
             (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:81 -1
      (nil)
     (expr_list:REG_BR_PRED (use (reg:SI 5 di))
@@ -971,9 +971,9 @@ try_optimize_cfg iteration 2
         (const_int 82 [0x52])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:82 -1
      (nil))
 (insn 23 22 24 4 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC19") [flags 0x2]  <var_decl 0x7f74b3c918e8 *.LC19>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:82 -1
+        (symbol_ref/f:DI ("*.LC19") [flags 0x2]  <var_decl 0x7fc0926148e8 *.LC19>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:82 -1
      (nil))
-(call_insn 24 23 25 4 (call (mem:QI (symbol_ref:DI ("UnityFail") [flags 0x41]  <function_decl 0x7f74b3bc6100 UnityFail>) [0 UnityFail S1 A8])
+(call_insn 24 23 25 4 (call (mem:QI (symbol_ref:DI ("UnityFail") [flags 0x41]  <function_decl 0x7fc092549100 UnityFail>) [0 UnityFail S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:82 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1001,9 +1001,9 @@ try_optimize_cfg iteration 2
         (const_int 83 [0x53])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:83 -1
      (nil))
 (insn 32 31 33 6 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC20") [flags 0x2]  <var_decl 0x7f74b3c91980 *.LC20>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:83 -1
+        (symbol_ref/f:DI ("*.LC20") [flags 0x2]  <var_decl 0x7fc092614980 *.LC20>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:83 -1
      (nil))
-(call_insn 33 32 34 6 (call (mem:QI (symbol_ref:DI ("UnityFail") [flags 0x41]  <function_decl 0x7f74b3bc6100 UnityFail>) [0 UnityFail S1 A8])
+(call_insn 33 32 34 6 (call (mem:QI (symbol_ref:DI ("UnityFail") [flags 0x41]  <function_decl 0x7fc092549100 UnityFail>) [0 UnityFail S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:83 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1025,7 +1025,7 @@ try_optimize_cfg iteration 2
         (const_int 85 [0x55])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:85 -1
      (nil))
 (insn 40 39 41 7 (set (reg:DI 1 dx)
-        (symbol_ref/f:DI ("*.LC21") [flags 0x2]  <var_decl 0x7f74b3c91a18 *.LC21>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:85 -1
+        (symbol_ref/f:DI ("*.LC21") [flags 0x2]  <var_decl 0x7fc092614a18 *.LC21>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:85 -1
      (nil))
 (insn 41 40 42 7 (set (reg:DI 4 si)
         (const_int 1 [0x1])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:85 -1
@@ -1033,7 +1033,7 @@ try_optimize_cfg iteration 2
 (insn 42 41 43 7 (set (reg:DI 5 di)
         (reg:DI 62 [ D.3325 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:85 -1
      (nil))
-(call_insn 43 42 44 7 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7f74b3bbe700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
+(call_insn 43 42 44 7 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7fc092541700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:85 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1056,7 +1056,7 @@ try_optimize_cfg iteration 2
         (const_int 86 [0x56])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:86 -1
      (nil))
 (insn 48 47 49 7 (set (reg:DI 1 dx)
-        (symbol_ref/f:DI ("*.LC22") [flags 0x2]  <var_decl 0x7f74b3c91ab0 *.LC22>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:86 -1
+        (symbol_ref/f:DI ("*.LC22") [flags 0x2]  <var_decl 0x7fc092614ab0 *.LC22>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:86 -1
      (nil))
 (insn 49 48 50 7 (set (reg:DI 4 si)
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:86 -1
@@ -1064,7 +1064,7 @@ try_optimize_cfg iteration 2
 (insn 50 49 51 7 (set (reg:DI 5 di)
         (reg:DI 64 [ D.3325 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:86 -1
      (nil))
-(call_insn 51 50 0 7 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7f74b3bbe700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
+(call_insn 51 50 0 7 (call (mem:QI (symbol_ref:DI ("UnityAssertEqualNumber") [flags 0x41]  <function_decl 0x7fc092541700 UnityAssertEqualNumber>) [0 UnityAssertEqualNumber S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:86 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1161,9 +1161,9 @@ try_optimize_cfg iteration 2
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (insn 5 2 6 2 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC23") [flags 0x2]  <var_decl 0x7f74b3c99850 *.LC23>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:99 -1
+        (symbol_ref/f:DI ("*.LC23") [flags 0x2]  <var_decl 0x7fc09261c850 *.LC23>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:99 -1
      (nil))
-(call_insn 6 5 7 2 (call (mem:QI (symbol_ref:DI ("UnityBegin") [flags 0x41]  <function_decl 0x7f74b3b99a00 UnityBegin>) [0 UnityBegin S1 A8])
+(call_insn 6 5 7 2 (call (mem:QI (symbol_ref:DI ("UnityBegin") [flags 0x41]  <function_decl 0x7fc09251ca00 UnityBegin>) [0 UnityBegin S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:99 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1172,12 +1172,12 @@ try_optimize_cfg iteration 2
         (const_int 102 [0x66])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:102 -1
      (nil))
 (insn 8 7 9 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC24") [flags 0x2]  <var_decl 0x7f74b3c998e8 *.LC24>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:102 -1
+        (symbol_ref/f:DI ("*.LC24") [flags 0x2]  <var_decl 0x7fc09261c8e8 *.LC24>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:102 -1
      (nil))
 (insn 9 8 10 2 (set (reg:DI 5 di)
-        (symbol_ref:DI ("test_store_books") [flags 0x3]  <function_decl 0x7f74b3c4c000 test_store_books>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:102 -1
+        (symbol_ref:DI ("test_store_books") [flags 0x3]  <function_decl 0x7fc0925cf000 test_store_books>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:102 -1
      (nil))
-(call_insn 10 9 11 2 (call (mem:QI (symbol_ref:DI ("UnityDefaultTestRun") [flags 0x41]  <function_decl 0x7f74b3b99e00 UnityDefaultTestRun>) [0 UnityDefaultTestRun S1 A8])
+(call_insn 10 9 11 2 (call (mem:QI (symbol_ref:DI ("UnityDefaultTestRun") [flags 0x41]  <function_decl 0x7fc09251ce00 UnityDefaultTestRun>) [0 UnityDefaultTestRun S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:102 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1188,12 +1188,12 @@ try_optimize_cfg iteration 2
         (const_int 103 [0x67])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:103 -1
      (nil))
 (insn 12 11 13 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC25") [flags 0x2]  <var_decl 0x7f74b3c99980 *.LC25>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:103 -1
+        (symbol_ref/f:DI ("*.LC25") [flags 0x2]  <var_decl 0x7fc09261c980 *.LC25>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:103 -1
      (nil))
 (insn 13 12 14 2 (set (reg:DI 5 di)
-        (symbol_ref:DI ("test_load_books") [flags 0x3]  <function_decl 0x7f74b3c4c100 test_load_books>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:103 -1
+        (symbol_ref:DI ("test_load_books") [flags 0x3]  <function_decl 0x7fc0925cf100 test_load_books>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:103 -1
      (nil))
-(call_insn 14 13 15 2 (call (mem:QI (symbol_ref:DI ("UnityDefaultTestRun") [flags 0x41]  <function_decl 0x7f74b3b99e00 UnityDefaultTestRun>) [0 UnityDefaultTestRun S1 A8])
+(call_insn 14 13 15 2 (call (mem:QI (symbol_ref:DI ("UnityDefaultTestRun") [flags 0x41]  <function_decl 0x7fc09251ce00 UnityDefaultTestRun>) [0 UnityDefaultTestRun S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:103 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1204,12 +1204,12 @@ try_optimize_cfg iteration 2
         (const_int 104 [0x68])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:104 -1
      (nil))
 (insn 16 15 17 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC26") [flags 0x2]  <var_decl 0x7f74b3c99a18 *.LC26>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:104 -1
+        (symbol_ref/f:DI ("*.LC26") [flags 0x2]  <var_decl 0x7fc09261ca18 *.LC26>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:104 -1
      (nil))
 (insn 17 16 18 2 (set (reg:DI 5 di)
-        (symbol_ref:DI ("test_add_book") [flags 0x3]  <function_decl 0x7f74b3c4c200 test_add_book>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:104 -1
+        (symbol_ref:DI ("test_add_book") [flags 0x3]  <function_decl 0x7fc0925cf200 test_add_book>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:104 -1
      (nil))
-(call_insn 18 17 19 2 (call (mem:QI (symbol_ref:DI ("UnityDefaultTestRun") [flags 0x41]  <function_decl 0x7f74b3b99e00 UnityDefaultTestRun>) [0 UnityDefaultTestRun S1 A8])
+(call_insn 18 17 19 2 (call (mem:QI (symbol_ref:DI ("UnityDefaultTestRun") [flags 0x41]  <function_decl 0x7fc09251ce00 UnityDefaultTestRun>) [0 UnityDefaultTestRun S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:104 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1220,12 +1220,12 @@ try_optimize_cfg iteration 2
         (const_int 105 [0x69])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:105 -1
      (nil))
 (insn 20 19 21 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC27") [flags 0x2]  <var_decl 0x7f74b3c99ab0 *.LC27>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:105 -1
+        (symbol_ref/f:DI ("*.LC27") [flags 0x2]  <var_decl 0x7fc09261cab0 *.LC27>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:105 -1
      (nil))
 (insn 21 20 22 2 (set (reg:DI 5 di)
-        (symbol_ref:DI ("test_remove_book") [flags 0x3]  <function_decl 0x7f74b3c4c300 test_remove_book>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:105 -1
+        (symbol_ref:DI ("test_remove_book") [flags 0x3]  <function_decl 0x7fc0925cf300 test_remove_book>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:105 -1
      (nil))
-(call_insn 22 21 23 2 (call (mem:QI (symbol_ref:DI ("UnityDefaultTestRun") [flags 0x41]  <function_decl 0x7f74b3b99e00 UnityDefaultTestRun>) [0 UnityDefaultTestRun S1 A8])
+(call_insn 22 21 23 2 (call (mem:QI (symbol_ref:DI ("UnityDefaultTestRun") [flags 0x41]  <function_decl 0x7fc09251ce00 UnityDefaultTestRun>) [0 UnityDefaultTestRun S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:105 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1236,12 +1236,12 @@ try_optimize_cfg iteration 2
         (const_int 106 [0x6a])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:106 -1
      (nil))
 (insn 24 23 25 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC28") [flags 0x2]  <var_decl 0x7f74b3c99b48 *.LC28>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:106 -1
+        (symbol_ref/f:DI ("*.LC28") [flags 0x2]  <var_decl 0x7fc09261cb48 *.LC28>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:106 -1
      (nil))
 (insn 25 24 26 2 (set (reg:DI 5 di)
-        (symbol_ref:DI ("test_find_book_by_title") [flags 0x3]  <function_decl 0x7f74b3c4c400 test_find_book_by_title>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:106 -1
+        (symbol_ref:DI ("test_find_book_by_title") [flags 0x3]  <function_decl 0x7fc0925cf400 test_find_book_by_title>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:106 -1
      (nil))
-(call_insn 26 25 27 2 (call (mem:QI (symbol_ref:DI ("UnityDefaultTestRun") [flags 0x41]  <function_decl 0x7f74b3b99e00 UnityDefaultTestRun>) [0 UnityDefaultTestRun S1 A8])
+(call_insn 26 25 27 2 (call (mem:QI (symbol_ref:DI ("UnityDefaultTestRun") [flags 0x41]  <function_decl 0x7fc09251ce00 UnityDefaultTestRun>) [0 UnityDefaultTestRun S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:106 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1252,12 +1252,12 @@ try_optimize_cfg iteration 2
         (const_int 107 [0x6b])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:107 -1
      (nil))
 (insn 28 27 29 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC29") [flags 0x2]  <var_decl 0x7f74b3c99be0 *.LC29>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:107 -1
+        (symbol_ref/f:DI ("*.LC29") [flags 0x2]  <var_decl 0x7fc09261cbe0 *.LC29>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:107 -1
      (nil))
 (insn 29 28 30 2 (set (reg:DI 5 di)
-        (symbol_ref:DI ("test_find_book_by_author") [flags 0x3]  <function_decl 0x7f74b3c4c700 test_find_book_by_author>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:107 -1
+        (symbol_ref:DI ("test_find_book_by_author") [flags 0x3]  <function_decl 0x7fc0925cf700 test_find_book_by_author>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:107 -1
      (nil))
-(call_insn 30 29 31 2 (call (mem:QI (symbol_ref:DI ("UnityDefaultTestRun") [flags 0x41]  <function_decl 0x7f74b3b99e00 UnityDefaultTestRun>) [0 UnityDefaultTestRun S1 A8])
+(call_insn 30 29 31 2 (call (mem:QI (symbol_ref:DI ("UnityDefaultTestRun") [flags 0x41]  <function_decl 0x7fc09251ce00 UnityDefaultTestRun>) [0 UnityDefaultTestRun S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:107 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1268,12 +1268,12 @@ try_optimize_cfg iteration 2
         (const_int 108 [0x6c])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:108 -1
      (nil))
 (insn 32 31 33 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC30") [flags 0x2]  <var_decl 0x7f74b3c99c78 *.LC30>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:108 -1
+        (symbol_ref/f:DI ("*.LC30") [flags 0x2]  <var_decl 0x7fc09261cc78 *.LC30>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:108 -1
      (nil))
 (insn 33 32 34 2 (set (reg:DI 5 di)
-        (symbol_ref:DI ("test_find_book_by_year") [flags 0x3]  <function_decl 0x7f74b3c4ca00 test_find_book_by_year>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:108 -1
+        (symbol_ref:DI ("test_find_book_by_year") [flags 0x3]  <function_decl 0x7fc0925cfa00 test_find_book_by_year>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:108 -1
      (nil))
-(call_insn 34 33 35 2 (call (mem:QI (symbol_ref:DI ("UnityDefaultTestRun") [flags 0x41]  <function_decl 0x7f74b3b99e00 UnityDefaultTestRun>) [0 UnityDefaultTestRun S1 A8])
+(call_insn 34 33 35 2 (call (mem:QI (symbol_ref:DI ("UnityDefaultTestRun") [flags 0x41]  <function_decl 0x7fc09251ce00 UnityDefaultTestRun>) [0 UnityDefaultTestRun S1 A8])
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:108 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1281,7 +1281,7 @@ try_optimize_cfg iteration 2
             (expr_list:REG_BR_PRED (use (reg:SI 1 dx))
                 (nil)))))
 (call_insn 35 34 36 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("UnityEnd") [flags 0x41]  <function_decl 0x7f74b3b99b00 UnityEnd>) [0 UnityEnd S1 A8])
+        (call (mem:QI (symbol_ref:DI ("UnityEnd") [flags 0x41]  <function_decl 0x7fc09251cb00 UnityEnd>) [0 UnityEnd S1 A8])
             (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/unit_tests.c:109 -1
      (nil)
     (nil))

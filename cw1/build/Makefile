@@ -102,24 +102,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named unit_tests
+# Target rules for targets named book_management
 
 # Build rule for target.
-unit_tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 unit_tests
-.PHONY : unit_tests
+book_management: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 book_management
+.PHONY : book_management
 
 # fast build rule for target.
-unit_tests/fast:
-	$(MAKE) -f CMakeFiles/unit_tests.dir/build.make CMakeFiles/unit_tests.dir/build
-.PHONY : unit_tests/fast
+book_management/fast:
+	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/build
+.PHONY : book_management/fast
 
 book_management.o: book_management.c.o
 .PHONY : book_management.o
 
 # target to build an object file
 book_management.c.o:
-	$(MAKE) -f CMakeFiles/unit_tests.dir/build.make CMakeFiles/unit_tests.dir/book_management.c.o
+	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/book_management.c.o
 .PHONY : book_management.c.o
 
 book_management.i: book_management.c.i
@@ -127,7 +127,7 @@ book_management.i: book_management.c.i
 
 # target to preprocess a source file
 book_management.c.i:
-	$(MAKE) -f CMakeFiles/unit_tests.dir/build.make CMakeFiles/unit_tests.dir/book_management.c.i
+	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/book_management.c.i
 .PHONY : book_management.c.i
 
 book_management.s: book_management.c.s
@@ -135,56 +135,8 @@ book_management.s: book_management.c.s
 
 # target to generate assembly for a file
 book_management.c.s:
-	$(MAKE) -f CMakeFiles/unit_tests.dir/build.make CMakeFiles/unit_tests.dir/book_management.c.s
+	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/book_management.c.s
 .PHONY : book_management.c.s
-
-unit_tests.o: unit_tests.c.o
-.PHONY : unit_tests.o
-
-# target to build an object file
-unit_tests.c.o:
-	$(MAKE) -f CMakeFiles/unit_tests.dir/build.make CMakeFiles/unit_tests.dir/unit_tests.c.o
-.PHONY : unit_tests.c.o
-
-unit_tests.i: unit_tests.c.i
-.PHONY : unit_tests.i
-
-# target to preprocess a source file
-unit_tests.c.i:
-	$(MAKE) -f CMakeFiles/unit_tests.dir/build.make CMakeFiles/unit_tests.dir/unit_tests.c.i
-.PHONY : unit_tests.c.i
-
-unit_tests.s: unit_tests.c.s
-.PHONY : unit_tests.s
-
-# target to generate assembly for a file
-unit_tests.c.s:
-	$(MAKE) -f CMakeFiles/unit_tests.dir/build.make CMakeFiles/unit_tests.dir/unit_tests.c.s
-.PHONY : unit_tests.c.s
-
-unity/unity.o: unity/unity.c.o
-.PHONY : unity/unity.o
-
-# target to build an object file
-unity/unity.c.o:
-	$(MAKE) -f CMakeFiles/unit_tests.dir/build.make CMakeFiles/unit_tests.dir/unity/unity.c.o
-.PHONY : unity/unity.c.o
-
-unity/unity.i: unity/unity.c.i
-.PHONY : unity/unity.i
-
-# target to preprocess a source file
-unity/unity.c.i:
-	$(MAKE) -f CMakeFiles/unit_tests.dir/build.make CMakeFiles/unit_tests.dir/unity/unity.c.i
-.PHONY : unity/unity.c.i
-
-unity/unity.s: unity/unity.c.s
-.PHONY : unity/unity.s
-
-# target to generate assembly for a file
-unity/unity.c.s:
-	$(MAKE) -f CMakeFiles/unit_tests.dir/build.make CMakeFiles/unit_tests.dir/unity/unity.c.s
-.PHONY : unity/unity.c.s
 
 # Help Target
 help:
@@ -192,18 +144,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... book_management"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... unit_tests"
 	@echo "... book_management.o"
 	@echo "... book_management.i"
 	@echo "... book_management.s"
-	@echo "... unit_tests.o"
-	@echo "... unit_tests.i"
-	@echo "... unit_tests.s"
-	@echo "... unity/unity.o"
-	@echo "... unity/unity.i"
-	@echo "... unity/unity.s"
 .PHONY : help
 
 

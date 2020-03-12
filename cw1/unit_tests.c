@@ -22,7 +22,7 @@ void test_load_books() {
 // test for files not existing.
 	TEST_ASSERT_NOT_NULL_MESSAGE(f, "FAILED! File does not exist.")
 
-	int ret_value= store_books(f); //returned value of the store_books() test.
+	int ret_value= load_books(f); //returned value of the store_books() test.
 
 	TEST_ASSERT_EQUAL_INT_MESSAGE(0, ret_value, "TEST FAILED: load_books() did not return 0.");
 }
@@ -95,7 +95,7 @@ void tearDown() {
 	 //this function is called after each test, it can be empty
 }
 
-int main() {
+/*int main() {
 	UNITY_BEGIN();
 
 
@@ -107,4 +107,4 @@ int main() {
 	RUN_TEST(test_find_book_by_author);
 	RUN_TEST(test_find_book_by_year);
 	return UNITY_END();
-}
+}*/
