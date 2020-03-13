@@ -51,273 +51,309 @@ try_optimize_cfg iteration 2
 (note 1 0 4 NOTE_INSN_DELETED)
 (note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -600 [0xfffffffffffffda8])) [0 file+0 S8 A64])
+                (const_int -552 [0xfffffffffffffdd8])) [0 file+0 S8 A64])
         (reg:DI 5 di [ file ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:12 -1
      (nil))
 (note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
-(insn 6 3 7 2 (set (reg/f:DI 84)
-        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -600 [0xfffffffffffffda8])) [0 file+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:13 -1
-     (nil))
-(insn 7 6 8 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -24 [0xffffffffffffffe8])) [0 loaded_file+0 S8 A64])
-        (reg/f:DI 84)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:13 -1
-     (nil))
-(insn 8 7 9 2 (set (reg:SI 59 [ number_books.0 ])
-        (mem/c:SI (symbol_ref:DI ("number_books") [flags 0x2]  <var_decl 0x7f868c561390 number_books>) [0 number_books+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:14 -1
-     (nil))
-(insn 9 8 10 2 (set (reg:DI 60 [ D.2279 ])
-        (sign_extend:DI (reg:SI 59 [ number_books.0 ]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:14 -1
-     (nil))
-(insn 10 9 11 2 (set (reg:DI 4 si)
-        (const_int 24 [0x18])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:14 -1
-     (nil))
-(insn 11 10 12 2 (set (reg:DI 5 di)
-        (reg:DI 60 [ D.2279 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:14 -1
-     (nil))
-(call_insn 12 11 13 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x7f868c456d00 calloc>) [0 __builtin_calloc S1 A8])
-            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:14 -1
-     (expr_list:REG_EH_REGION (const_int 0 [0])
-        (nil))
-    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
-        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
-            (nil))))
-(insn 13 12 14 2 (set (reg/f:DI 85)
-        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:14 -1
-     (expr_list:REG_NOALIAS (reg/f:DI 85)
-        (nil)))
-(insn 14 13 15 2 (set (reg/f:DI 61 [ all_books.1 ])
-        (reg/f:DI 85)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:14 -1
-     (nil))
-(insn 15 14 16 2 (set (mem/f/c:DI (symbol_ref:DI ("all_books") [flags 0x2]  <var_decl 0x7f868c561260 all_books>) [0 all_books+0 S8 A64])
-        (reg/f:DI 61 [ all_books.1 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:14 -1
-     (nil))
-(insn 16 15 17 2 (set (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f868c5612f8 books_array>)
+(insn 6 3 7 2 (set (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f56c76dc2f8 books_array>)
                     (const_int 8 [0x8]))) [0 books_array.length+0 S4 A64])
-        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:15 -1
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:13 -1
      (nil))
-(insn 17 16 18 2 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+(insn 7 6 8 2 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -4 [0xfffffffffffffffc])) [0 buff+0 S4 A32])
-        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:16 -1
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:14 -1
      (nil))
-(insn 18 17 19 2 (set (reg:DI 5 di)
-        (const_int 262144 [0x40000])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:19 -1
+(insn 8 7 9 2 (set (reg:DI 5 di)
+        (const_int 24 [0x18])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:18 -1
      (nil))
-(call_insn 19 18 20 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f868c461f00 malloc>) [0 __builtin_malloc S1 A8])
-            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:19 -1
+(call_insn 9 8 10 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f56c75dcf00 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:18 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (nil)))
-(insn 20 19 21 2 (set (reg/f:DI 86)
-        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:19 -1
-     (expr_list:REG_NOALIAS (reg/f:DI 86)
+(insn 10 9 11 2 (set (reg/f:DI 88)
+        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:18 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 88)
         (nil)))
-(insn 21 20 22 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -32 [0xffffffffffffffe0])) [0 book_pointer+0 S8 A64])
-        (reg/f:DI 86)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:19 -1
+(insn 11 10 12 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 loaded_book+0 S8 A64])
+        (reg/f:DI 88)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:18 -1
      (nil))
-(insn 22 21 23 2 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+(insn 12 11 13 2 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -12 [0xfffffffffffffff4])) [0 i+0 S4 A32])
-        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:22 -1
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:20 -1
      (nil))
-(insn 23 22 24 2 (set (reg:DI 87)
+(insn 13 12 14 2 (set (reg:DI 89)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -600 [0xfffffffffffffda8])) [0 file+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:24 -1
+                (const_int -552 [0xfffffffffffffdd8])) [0 file+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:22 -1
      (nil))
-(insn 24 23 25 2 (set (reg:DI 5 di)
-        (reg:DI 87)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:24 -1
+(insn 14 13 15 2 (set (reg:DI 5 di)
+        (reg:DI 89)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:22 -1
      (nil))
-(call_insn 25 24 26 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("_IO_getc") [flags 0x41]  <function_decl 0x7f868c533000 _IO_getc>) [0 _IO_getc S1 A8])
-            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:24 -1
+(call_insn 15 14 16 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_IO_getc") [flags 0x41]  <function_decl 0x7f56c76ae000 _IO_getc>) [0 _IO_getc S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:22 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (nil)))
-(insn 26 25 27 2 (set (reg:SI 62 [ D.2280 ])
-        (reg:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:24 -1
+(insn 16 15 17 2 (set (reg:SI 59 [ D.2358 ])
+        (reg:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:22 -1
      (nil))
-(insn 27 26 28 2 (set (mem/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+(insn 17 16 18 2 (set (mem/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -5 [0xfffffffffffffffb])) [0 b+0 S1 A8])
-        (subreg:QI (reg:SI 62 [ D.2280 ]) 0)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:24 -1
+        (subreg:QI (reg:SI 59 [ D.2358 ]) 0)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:22 -1
      (nil))
-(jump_insn 28 27 29 2 (set (pc)
-        (label_ref 42)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:24 -1
+(jump_insn 18 17 19 2 (set (pc)
+        (label_ref 32)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:22 -1
      (nil)
- -> 42)
-(barrier 29 28 44)
-(code_label 44 29 30 4 4 "" [1 uses])
-(note 30 44 31 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
-(insn 31 30 32 4 (set (reg:CCZ 17 flags)
+ -> 32)
+(barrier 19 18 34)
+(code_label 34 19 20 4 4 "" [1 uses])
+(note 20 34 21 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 4 (set (reg:CCZ 17 flags)
         (compare:CCZ (mem/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                     (const_int -5 [0xfffffffffffffffb])) [0 b+0 S1 A8])
-            (const_int 10 [0xa]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:25 -1
+            (const_int 10 [0xa]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:23 -1
      (nil))
-(jump_insn 32 31 33 4 (set (pc)
+(jump_insn 22 21 23 4 (set (pc)
         (if_then_else (ne (reg:CCZ 17 flags)
                 (const_int 0 [0]))
-            (label_ref 35)
-            (pc))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:25 -1
+            (label_ref 25)
+            (pc))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:23 -1
      (nil)
- -> 35)
-(note 33 32 34 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
-(insn 34 33 35 5 (parallel [
+ -> 25)
+(note 23 22 24 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 25 5 (parallel [
             (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                         (const_int -12 [0xfffffffffffffff4])) [0 i+0 S4 A32])
                 (plus:SI (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                             (const_int -12 [0xfffffffffffffff4])) [0 i+0 S4 A32])
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:26 -1
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:24 -1
      (nil))
-(code_label 35 34 36 6 3 "" [1 uses])
-(note 36 35 37 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
-(insn 37 36 38 6 (set (reg:DI 88)
+(code_label 25 24 26 6 3 "" [1 uses])
+(note 26 25 27 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 6 (set (reg:DI 90)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -600 [0xfffffffffffffda8])) [0 file+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:24 -1
+                (const_int -552 [0xfffffffffffffdd8])) [0 file+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:22 -1
      (nil))
-(insn 38 37 39 6 (set (reg:DI 5 di)
-        (reg:DI 88)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:24 -1
+(insn 28 27 29 6 (set (reg:DI 5 di)
+        (reg:DI 90)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:22 -1
      (nil))
-(call_insn 39 38 40 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("_IO_getc") [flags 0x41]  <function_decl 0x7f868c533000 _IO_getc>) [0 _IO_getc S1 A8])
-            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:24 -1
+(call_insn 29 28 30 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_IO_getc") [flags 0x41]  <function_decl 0x7f56c76ae000 _IO_getc>) [0 _IO_getc S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:22 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (nil)))
-(insn 40 39 41 6 (set (reg:SI 63 [ D.2280 ])
-        (reg:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:24 -1
+(insn 30 29 31 6 (set (reg:SI 60 [ D.2358 ])
+        (reg:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:22 -1
      (nil))
-(insn 41 40 42 6 (set (mem/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+(insn 31 30 32 6 (set (mem/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -5 [0xfffffffffffffffb])) [0 b+0 S1 A8])
-        (subreg:QI (reg:SI 63 [ D.2280 ]) 0)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:24 -1
+        (subreg:QI (reg:SI 60 [ D.2358 ]) 0)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:22 -1
      (nil))
-(code_label 42 41 43 7 2 "" [1 uses])
-(note 43 42 45 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
-(insn 45 43 46 7 (set (reg:CCZ 17 flags)
+(code_label 32 31 33 7 2 "" [1 uses])
+(note 33 32 35 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 35 33 36 7 (set (reg:CCZ 17 flags)
         (compare:CCZ (mem/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                     (const_int -5 [0xfffffffffffffffb])) [0 b+0 S1 A8])
-            (const_int -1 [0xffffffffffffffff]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:24 -1
+            (const_int -1 [0xffffffffffffffff]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:22 -1
      (nil))
-(jump_insn 46 45 47 7 (set (pc)
+(jump_insn 36 35 37 7 (set (pc)
         (if_then_else (ne (reg:CCZ 17 flags)
                 (const_int 0 [0]))
-            (label_ref 44)
-            (pc))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:24 -1
+            (label_ref 34)
+            (pc))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:22 -1
      (nil)
- -> 44)
-(note 47 46 48 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
-(insn 48 47 49 8 (set (reg:DI 89)
+ -> 34)
+(note 37 36 38 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 38 37 39 8 (set (reg:DI 91)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -600 [0xfffffffffffffda8])) [0 file+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:29 -1
+                (const_int -552 [0xfffffffffffffdd8])) [0 file+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:27 -1
      (nil))
-(insn 49 48 50 8 (set (reg:DI 5 di)
-        (reg:DI 89)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:29 -1
+(insn 39 38 40 8 (set (reg:DI 5 di)
+        (reg:DI 91)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:27 -1
      (nil))
-(call_insn 50 49 51 8 (call (mem:QI (symbol_ref:DI ("rewind") [flags 0x41]  <function_decl 0x7f868c550000 rewind>) [0 rewind S1 A8])
-        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:29 -1
+(call_insn 40 39 41 8 (call (mem:QI (symbol_ref:DI ("rewind") [flags 0x41]  <function_decl 0x7f56c76cb000 rewind>) [0 rewind S1 A8])
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:27 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (nil)))
-(insn 51 50 52 8 (set (reg:SI 90)
+(insn 41 40 42 8 (set (reg:SI 92)
         (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -12 [0xfffffffffffffff4])) [0 i+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:31 -1
+                (const_int -12 [0xfffffffffffffff4])) [0 i+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:29 -1
      (nil))
-(insn 52 51 53 8 (parallel [
-            (set (reg:SI 64 [ number_books.2 ])
-                (plus:SI (reg:SI 90)
+(insn 42 41 43 8 (parallel [
+            (set (reg:SI 61 [ number_books.0 ])
+                (plus:SI (reg:SI 92)
                     (const_int -1 [0xffffffffffffffff])))
             (clobber (reg:CC 17 flags))
-        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:31 -1
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:29 -1
      (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                     (const_int -12 [0xfffffffffffffff4])) [0 i+0 S4 A32])
             (const_int -1 [0xffffffffffffffff]))
         (nil)))
-(insn 53 52 54 8 (set (mem/c:SI (symbol_ref:DI ("number_books") [flags 0x2]  <var_decl 0x7f868c561390 number_books>) [0 number_books+0 S4 A32])
-        (reg:SI 64 [ number_books.2 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:31 -1
+(insn 43 42 44 8 (set (mem/c:SI (symbol_ref:DI ("number_books") [flags 0x2]  <var_decl 0x7f56c76dc390 number_books>) [0 number_books+0 S4 A32])
+        (reg:SI 61 [ number_books.0 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:29 -1
      (nil))
-(jump_insn 54 53 55 8 (set (pc)
-        (label_ref 130)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:32 -1
+(insn 44 43 45 8 (set (reg:SI 62 [ number_books.1 ])
+        (mem/c:SI (symbol_ref:DI ("number_books") [flags 0x2]  <var_decl 0x7f56c76dc390 number_books>) [0 number_books+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:30 -1
+     (nil))
+(insn 45 44 46 8 (set (reg:DI 63 [ D.2359 ])
+        (sign_extend:DI (reg:SI 62 [ number_books.1 ]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:30 -1
+     (nil))
+(insn 46 45 47 8 (set (reg:DI 4 si)
+        (const_int 24 [0x18])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:30 -1
+     (nil))
+(insn 47 46 48 8 (set (reg:DI 5 di)
+        (reg:DI 63 [ D.2359 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:30 -1
+     (nil))
+(call_insn 48 47 49 8 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x7f56c75d1d00 calloc>) [0 __builtin_calloc S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:30 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 49 48 50 8 (set (reg/f:DI 93)
+        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:30 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 93)
+        (nil)))
+(insn 50 49 51 8 (set (reg/f:DI 64 [ all_books.2 ])
+        (reg/f:DI 93)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:30 -1
+     (nil))
+(insn 51 50 52 8 (set (mem/f/c:DI (symbol_ref:DI ("all_books") [flags 0x2]  <var_decl 0x7f56c76dc260 all_books>) [0 all_books+0 S8 A64])
+        (reg/f:DI 64 [ all_books.2 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:30 -1
+     (nil))
+(jump_insn 52 51 53 8 (set (pc)
+        (label_ref 153)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:31 -1
      (nil)
- -> 130)
-(barrier 55 54 139)
-(code_label 139 55 56 9 7 "" [1 uses])
-(note 56 139 57 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
-(insn 57 56 58 9 (set (reg:CCZ 17 flags)
+ -> 153)
+(barrier 53 52 162)
+(code_label 162 53 54 9 7 "" [1 uses])
+(note 54 162 55 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 55 54 56 9 (set (reg:CCZ 17 flags)
         (compare:CCZ (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                     (const_int -4 [0xfffffffffffffffc])) [0 buff+0 S4 A32])
-            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:34 -1
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:33 -1
      (nil))
-(jump_insn 58 57 59 9 (set (pc)
+(jump_insn 56 55 57 9 (set (pc)
         (if_then_else (ne (reg:CCZ 17 flags)
                 (const_int 0 [0]))
-            (label_ref 63)
-            (pc))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:34 -1
+            (label_ref 61)
+            (pc))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:33 -1
      (nil)
- -> 63)
-(note 59 58 60 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
-(insn 60 59 61 10 (parallel [
+ -> 61)
+(note 57 56 58 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 58 57 59 10 (parallel [
             (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                         (const_int -4 [0xfffffffffffffffc])) [0 buff+0 S4 A32])
                 (plus:SI (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                             (const_int -4 [0xfffffffffffffffc])) [0 buff+0 S4 A32])
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:35 -1
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:34 -1
      (nil))
-(jump_insn 61 60 62 10 (set (pc)
-        (label_ref 130)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:36 -1
+(jump_insn 59 58 60 10 (set (pc)
+        (label_ref 153)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:35 -1
      (nil)
- -> 130)
-(barrier 62 61 63)
-(code_label 63 62 64 11 6 "" [1 uses])
-(note 64 63 65 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
-(insn 65 64 66 11 (parallel [
-            (set (reg:DI 91)
+ -> 153)
+(barrier 60 59 61)
+(code_label 61 60 62 11 6 "" [1 uses])
+(note 62 61 63 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 63 62 64 11 (parallel [
+            (set (reg:DI 94)
                 (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                    (const_int -560 [0xfffffffffffffdd0])))
+                    (const_int -544 [0xfffffffffffffde0])))
             (clobber (reg:CC 17 flags))
-        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:39 -1
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:38 -1
      (nil))
-(insn 66 65 67 11 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f868c5835f0 *.LC0>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:39 -1
+(insn 64 63 65 11 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f56c77111c8 *.LC0>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:38 -1
      (nil))
-(insn 67 66 68 11 (set (reg:DI 5 di)
-        (reg:DI 91)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:39 -1
+(insn 65 64 66 11 (set (reg:DI 5 di)
+        (reg:DI 94)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:38 -1
      (nil))
-(call_insn 68 67 69 11 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f868c559b00 strtok>) [0 strtok S1 A8])
-            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:39 -1
+(call_insn 66 65 67 11 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f56c76d4b00 strtok>) [0 strtok S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:38 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
             (nil))))
-(insn 69 68 70 11 (set (reg:DI 92)
+(insn 67 66 68 11 (set (reg:DI 95)
+        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:38 -1
+     (nil))
+(insn 68 67 69 11 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 token+0 S8 A64])
+        (reg:DI 95)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:38 -1
+     (nil))
+(insn 69 68 70 11 (set (reg:DI 96)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 token+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:39 -1
+     (nil))
+(insn 70 69 71 11 (set (reg:DI 5 di)
+        (reg:DI 96)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:39 -1
+     (nil))
+(call_insn/i 71 70 72 11 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x7f56c75bb600 strlen>) [0 __builtin_strlen S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:39 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 72 71 73 11 (set (reg:DI 66 [ D.2359 ])
         (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:39 -1
      (nil))
-(insn 70 69 71 11 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -40 [0xffffffffffffffd8])) [0 token+0 S8 A64])
-        (reg:DI 92)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:39 -1
+(insn 73 72 74 11 (set (reg:DI 5 di)
+        (reg:DI 66 [ D.2359 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:39 -1
      (nil))
-(insn 71 70 72 11 (set (reg/f:DI 66 [ D.2281 ])
-        (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -592 [0xfffffffffffffdb0])) [0 loaded_book.title+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:40 -1
+(call_insn 74 73 75 11 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f56c75dcf00 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:39 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 75 74 76 11 (set (reg/f:DI 97)
+        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:39 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 97)
+        (nil)))
+(insn 76 75 77 11 (set (reg/f:DI 67 [ D.2361 ])
+        (reg/f:DI 97)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:39 -1
      (nil))
-(insn 72 71 73 11 (set (reg:DI 93)
+(insn 77 76 78 11 (set (reg/f:DI 98)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -40 [0xffffffffffffffd8])) [0 token+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:40 -1
+                (const_int -24 [0xffffffffffffffe8])) [0 loaded_book+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:39 -1
      (nil))
-(insn 73 72 74 11 (set (reg:DI 4 si)
-        (reg:DI 93)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:40 -1
+(insn 78 77 79 11 (set (mem/f/j:DI (reg/f:DI 98) [0 loaded_book_6->title+0 S8 A64])
+        (reg/f:DI 67 [ D.2361 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:39 -1
      (nil))
-(insn 74 73 75 11 (set (reg:DI 5 di)
-        (reg/f:DI 66 [ D.2281 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:40 -1
+(insn 79 78 80 11 (set (reg/f:DI 99)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 loaded_book+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:40 -1
      (nil))
-(call_insn 75 74 76 11 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcpy") [flags 0x41]  <function_decl 0x7f868c440000 strcpy>) [0 __builtin_strcpy S1 A8])
+(insn 80 79 81 11 (set (reg/f:DI 68 [ D.2360 ])
+        (mem/f/j:DI (reg/f:DI 99) [0 loaded_book_6->title+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:40 -1
+     (nil))
+(insn 81 80 82 11 (set (reg:DI 100)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 token+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:40 -1
+     (nil))
+(insn 82 81 83 11 (set (reg:DI 4 si)
+        (reg:DI 100)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:40 -1
+     (nil))
+(insn 83 82 84 11 (set (reg:DI 5 di)
+        (reg/f:DI 68 [ D.2360 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:40 -1
+     (nil))
+(call_insn 84 83 85 11 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcpy") [flags 0x41]  <function_decl 0x7f56c75bb000 strcpy>) [0 __builtin_strcpy S1 A8])
             (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:40 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -326,44 +362,90 @@ try_optimize_cfg iteration 2
         (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
             (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
                 (nil)))))
-(insn 76 75 77 11 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f868c5835f0 *.LC0>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:43 -1
+(insn 85 84 86 11 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f56c77111c8 *.LC0>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:43 -1
      (nil))
-(insn 77 76 78 11 (set (reg:DI 5 di)
+(insn 86 85 87 11 (set (reg:DI 5 di)
         (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:43 -1
      (nil))
-(call_insn 78 77 79 11 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f868c559b00 strtok>) [0 strtok S1 A8])
+(call_insn 87 86 88 11 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f56c76d4b00 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:43 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
             (nil))))
-(insn 79 78 80 11 (set (reg:DI 94)
+(insn 88 87 89 11 (set (reg:DI 101)
         (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:43 -1
      (nil))
-(insn 80 79 81 11 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -40 [0xffffffffffffffd8])) [0 token+0 S8 A64])
-        (reg:DI 94)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:43 -1
+(insn 89 88 90 11 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 token+0 S8 A64])
+        (reg:DI 101)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:43 -1
      (nil))
-(insn 81 80 82 11 (set (reg/f:DI 67 [ D.2281 ])
-        (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -584 [0xfffffffffffffdb8])) [0 loaded_book.authors+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:44 -1
-     (nil))
-(insn 82 81 83 11 (set (reg:DI 95)
+(insn 90 89 91 11 (set (reg:DI 102)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -40 [0xffffffffffffffd8])) [0 token+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:44 -1
+                (const_int -32 [0xffffffffffffffe0])) [0 token+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:44 -1
      (nil))
-(insn 83 82 84 11 (set (reg:DI 4 si)
-        (reg:DI 95)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:44 -1
+(insn 91 90 92 11 (set (reg:DI 5 di)
+        (reg:DI 102)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:44 -1
      (nil))
-(insn 84 83 85 11 (set (reg:DI 5 di)
-        (reg/f:DI 67 [ D.2281 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:44 -1
-     (nil))
-(call_insn 85 84 86 11 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcpy") [flags 0x41]  <function_decl 0x7f868c440000 strcpy>) [0 __builtin_strcpy S1 A8])
+(call_insn/i 92 91 93 11 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x7f56c75bb600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:44 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 93 92 94 11 (set (reg:DI 69 [ D.2359 ])
+        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:44 -1
+     (nil))
+(insn 94 93 95 11 (set (reg:DI 5 di)
+        (reg:DI 69 [ D.2359 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:44 -1
+     (nil))
+(call_insn 95 94 96 11 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f56c75dcf00 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:44 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 96 95 97 11 (set (reg/f:DI 103)
+        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:44 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 103)
+        (nil)))
+(insn 97 96 98 11 (set (reg/f:DI 70 [ D.2361 ])
+        (reg/f:DI 103)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:44 -1
+     (nil))
+(insn 98 97 99 11 (set (reg/f:DI 104)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 loaded_book+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:44 -1
+     (nil))
+(insn 99 98 100 11 (set (mem/f/j:DI (plus:DI (reg/f:DI 104)
+                (const_int 8 [0x8])) [0 loaded_book_6->authors+0 S8 A64])
+        (reg/f:DI 70 [ D.2361 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:44 -1
+     (nil))
+(insn 100 99 101 11 (set (reg/f:DI 105)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 loaded_book+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:45 -1
+     (nil))
+(insn 101 100 102 11 (set (reg/f:DI 71 [ D.2360 ])
+        (mem/f/j:DI (plus:DI (reg/f:DI 105)
+                (const_int 8 [0x8])) [0 loaded_book_6->authors+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:45 -1
+     (nil))
+(insn 102 101 103 11 (set (reg:DI 106)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 token+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:45 -1
+     (nil))
+(insn 103 102 104 11 (set (reg:DI 4 si)
+        (reg:DI 106)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:45 -1
+     (nil))
+(insn 104 103 105 11 (set (reg:DI 5 di)
+        (reg/f:DI 71 [ D.2360 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:45 -1
+     (nil))
+(call_insn 105 104 106 11 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcpy") [flags 0x41]  <function_decl 0x7f56c75bb000 strcpy>) [0 __builtin_strcpy S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:45 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
     (expr_list:REG_FRAME_RELATED_EXPR (set (reg:DI 0 ax)
@@ -371,259 +453,270 @@ try_optimize_cfg iteration 2
         (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
             (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
                 (nil)))))
-(insn 86 85 87 11 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f868c5835f0 *.LC0>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:47 -1
+(insn 106 105 107 11 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f56c77111c8 *.LC0>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:48 -1
      (nil))
-(insn 87 86 88 11 (set (reg:DI 5 di)
-        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:47 -1
+(insn 107 106 108 11 (set (reg:DI 5 di)
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:48 -1
      (nil))
-(call_insn 88 87 89 11 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f868c559b00 strtok>) [0 strtok S1 A8])
-            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:47 -1
-     (expr_list:REG_EH_REGION (const_int 0 [0])
-        (nil))
-    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
-        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
-            (nil))))
-(insn 89 88 90 11 (set (reg:DI 96)
-        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:47 -1
-     (nil))
-(insn 90 89 91 11 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -40 [0xffffffffffffffd8])) [0 token+0 S8 A64])
-        (reg:DI 96)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:47 -1
-     (nil))
-(insn 91 90 92 11 (set (reg:DI 97)
-        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -40 [0xffffffffffffffd8])) [0 token+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:48 -1
-     (nil))
-(insn 92 91 93 11 (set (reg:DI 5 di)
-        (reg:DI 97)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:48 -1
-     (nil))
-(call_insn/i 93 92 94 11 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("atoi") [flags 0x41]  <function_decl 0x7f868c4ec500 atoi>) [0 atoi S1 A8])
+(call_insn 108 107 109 11 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f56c76d4b00 strtok>) [0 strtok S1 A8])
             (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:48 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+            (nil))))
+(insn 109 108 110 11 (set (reg:DI 107)
+        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:48 -1
+     (nil))
+(insn 110 109 111 11 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 token+0 S8 A64])
+        (reg:DI 107)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:48 -1
+     (nil))
+(insn 111 110 112 11 (set (reg:DI 108)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 token+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:49 -1
+     (nil))
+(insn 112 111 113 11 (set (reg:DI 5 di)
+        (reg:DI 108)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:49 -1
+     (nil))
+(call_insn/i 113 112 114 11 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("atoi") [flags 0x41]  <function_decl 0x7f56c7667500 atoi>) [0 atoi S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:49 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (nil)))
-(insn 94 93 95 11 (set (reg:SI 68 [ D.2280 ])
-        (reg:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:48 -1
+(insn 114 113 115 11 (set (reg:SI 72 [ D.2358 ])
+        (reg:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:49 -1
      (nil))
-(insn 95 94 96 11 (set (reg:SI 69 [ D.2282 ])
-        (reg:SI 68 [ D.2280 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:48 -1
+(insn 115 114 116 11 (set (reg:SI 73 [ D.2362 ])
+        (reg:SI 72 [ D.2358 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:49 -1
      (nil))
-(insn 96 95 97 11 (set (mem/j/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -576 [0xfffffffffffffdc0])) [0 loaded_book.year+0 S4 A64])
-        (reg:SI 69 [ D.2282 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:48 -1
+(insn 116 115 117 11 (set (reg/f:DI 109)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 loaded_book+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:49 -1
      (nil))
-(insn 97 96 98 11 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f868c5835f0 *.LC0>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:51 -1
+(insn 117 116 118 11 (set (mem/j:SI (plus:DI (reg/f:DI 109)
+                (const_int 16 [0x10])) [0 loaded_book_6->year+0 S4 A64])
+        (reg:SI 73 [ D.2362 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:49 -1
      (nil))
-(insn 98 97 99 11 (set (reg:DI 5 di)
-        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:51 -1
+(insn 118 117 119 11 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f56c77111c8 *.LC0>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:52 -1
      (nil))
-(call_insn 99 98 100 11 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f868c559b00 strtok>) [0 strtok S1 A8])
-            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:51 -1
+(insn 119 118 120 11 (set (reg:DI 5 di)
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:52 -1
+     (nil))
+(call_insn 120 119 121 11 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strtok") [flags 0x41]  <function_decl 0x7f56c76d4b00 strtok>) [0 strtok S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:52 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
             (nil))))
-(insn 100 99 101 11 (set (reg:DI 98)
-        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:51 -1
+(insn 121 120 122 11 (set (reg:DI 110)
+        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:52 -1
      (nil))
-(insn 101 100 102 11 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -40 [0xffffffffffffffd8])) [0 token+0 S8 A64])
-        (reg:DI 98)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:51 -1
+(insn 122 121 123 11 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 token+0 S8 A64])
+        (reg:DI 110)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:52 -1
      (nil))
-(insn 102 101 103 11 (set (reg:DI 99)
+(insn 123 122 124 11 (set (reg:DI 111)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -40 [0xffffffffffffffd8])) [0 token+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:52 -1
+                (const_int -32 [0xffffffffffffffe0])) [0 token+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:53 -1
      (nil))
-(insn 103 102 104 11 (set (reg:DI 5 di)
-        (reg:DI 99)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:52 -1
+(insn 124 123 125 11 (set (reg:DI 5 di)
+        (reg:DI 111)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:53 -1
      (nil))
-(call_insn/i 104 103 105 11 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("atoi") [flags 0x41]  <function_decl 0x7f868c4ec500 atoi>) [0 atoi S1 A8])
-            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:52 -1
+(call_insn/i 125 124 126 11 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("atoi") [flags 0x41]  <function_decl 0x7f56c7667500 atoi>) [0 atoi S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:53 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (nil)))
-(insn 105 104 106 11 (set (reg:SI 70 [ D.2280 ])
-        (reg:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:52 -1
+(insn 126 125 127 11 (set (reg:SI 74 [ D.2358 ])
+        (reg:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:53 -1
      (nil))
-(insn 106 105 107 11 (set (reg:SI 71 [ D.2282 ])
-        (reg:SI 70 [ D.2280 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:52 -1
+(insn 127 126 128 11 (set (reg:SI 75 [ D.2362 ])
+        (reg:SI 74 [ D.2358 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:53 -1
      (nil))
-(insn 107 106 108 11 (set (mem/j/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -572 [0xfffffffffffffdc4])) [0 loaded_book.copies+0 S4 A32])
-        (reg:SI 71 [ D.2282 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:52 -1
+(insn 128 127 129 11 (set (reg/f:DI 112)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 loaded_book+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:53 -1
      (nil))
-(insn 108 107 109 11 (set (reg/f:DI 72 [ all_books.3 ])
-        (mem/f/c:DI (symbol_ref:DI ("all_books") [flags 0x2]  <var_decl 0x7f868c561260 all_books>) [0 all_books+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:54 -1
+(insn 129 128 130 11 (set (mem/j:SI (plus:DI (reg/f:DI 112)
+                (const_int 20 [0x14])) [0 loaded_book_6->copies+0 S4 A32])
+        (reg:SI 75 [ D.2362 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:53 -1
      (nil))
-(insn 109 108 110 11 (set (reg:SI 73 [ D.2282 ])
-        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f868c5612f8 books_array>)
-                    (const_int 8 [0x8]))) [0 books_array.length+0 S4 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:54 -1
+(insn 130 129 131 11 (set (reg/f:DI 76 [ all_books.3 ])
+        (mem/f/c:DI (symbol_ref:DI ("all_books") [flags 0x2]  <var_decl 0x7f56c76dc260 all_books>) [0 all_books+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
      (nil))
-(insn 110 109 111 11 (set (reg:DI 74 [ D.2279 ])
-        (zero_extend:DI (reg:SI 73 [ D.2282 ]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:54 -1
+(insn 131 130 132 11 (set (reg:SI 77 [ D.2362 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f56c76dc2f8 books_array>)
+                    (const_int 8 [0x8]))) [0 books_array.length+0 S4 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
      (nil))
-(insn 111 110 112 11 (set (reg:DI 100)
-        (reg:DI 74 [ D.2279 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:54 -1
+(insn 132 131 133 11 (set (reg:DI 78 [ D.2359 ])
+        (zero_extend:DI (reg:SI 77 [ D.2362 ]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
      (nil))
-(insn 112 111 113 11 (parallel [
-            (set (reg:DI 100)
-                (ashift:DI (reg:DI 100)
-                    (const_int 1 [0x1])))
-            (clobber (reg:CC 17 flags))
-        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:54 -1
+(insn 133 132 134 11 (set (reg:DI 113)
+        (reg:DI 78 [ D.2359 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
      (nil))
-(insn 113 112 114 11 (parallel [
-            (set (reg:DI 100)
-                (plus:DI (reg:DI 100)
-                    (reg:DI 74 [ D.2279 ])))
-            (clobber (reg:CC 17 flags))
-        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:54 -1
-     (expr_list:REG_EQUAL (mult:DI (reg:DI 74 [ D.2279 ])
-            (const_int 3 [0x3]))
-        (nil)))
-(insn 114 113 115 11 (parallel [
-            (set (reg:DI 101)
-                (ashift:DI (reg:DI 100)
-                    (const_int 3 [0x3])))
-            (clobber (reg:CC 17 flags))
-        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:54 -1
-     (nil))
-(insn 115 114 116 11 (set (reg:DI 100)
-        (reg:DI 101)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:54 -1
-     (expr_list:REG_EQUAL (mult:DI (reg:DI 74 [ D.2279 ])
-            (const_int 24 [0x18]))
-        (nil)))
-(insn 116 115 117 11 (set (reg:DI 75 [ D.2279 ])
-        (reg:DI 100)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:54 -1
-     (nil))
-(insn 117 116 118 11 (parallel [
-            (set (reg/f:DI 76 [ D.2283 ])
-                (plus:DI (reg/f:DI 72 [ all_books.3 ])
-                    (reg:DI 75 [ D.2279 ])))
-            (clobber (reg:CC 17 flags))
-        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:54 -1
-     (nil))
-(insn 118 117 119 11 (set (reg:DI 102)
-        (mem/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -592 [0xfffffffffffffdb0])) [0 loaded_book+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:54 -1
-     (nil))
-(insn 119 118 120 11 (set (mem:DI (reg/f:DI 76 [ D.2283 ]) [0 *_35+0 S8 A64])
-        (reg:DI 102)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:54 -1
-     (nil))
-(insn 120 119 121 11 (set (reg:DI 103)
-        (mem/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -584 [0xfffffffffffffdb8])) [0 loaded_book+8 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:54 -1
-     (nil))
-(insn 121 120 122 11 (set (mem:DI (plus:DI (reg/f:DI 76 [ D.2283 ])
-                (const_int 8 [0x8])) [0 *_35+8 S8 A64])
-        (reg:DI 103)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:54 -1
-     (nil))
-(insn 122 121 123 11 (set (reg:DI 104)
-        (mem/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -576 [0xfffffffffffffdc0])) [0 loaded_book+16 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:54 -1
-     (nil))
-(insn 123 122 124 11 (set (mem:DI (plus:DI (reg/f:DI 76 [ D.2283 ])
-                (const_int 16 [0x10])) [0 *_35+16 S8 A64])
-        (reg:DI 104)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:54 -1
-     (nil))
-(insn 124 123 125 11 (set (reg:SI 77 [ number_books.4 ])
-        (mem/c:SI (symbol_ref:DI ("number_books") [flags 0x2]  <var_decl 0x7f868c561390 number_books>) [0 number_books+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
-     (nil))
-(insn 125 124 126 11 (parallel [
-            (set (reg:SI 78 [ number_books.5 ])
-                (plus:SI (reg:SI 77 [ number_books.4 ])
+(insn 134 133 135 11 (parallel [
+            (set (reg:DI 113)
+                (ashift:DI (reg:DI 113)
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
         ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
      (nil))
-(insn 126 125 127 11 (set (mem/c:SI (symbol_ref:DI ("number_books") [flags 0x2]  <var_decl 0x7f868c561390 number_books>) [0 number_books+0 S4 A32])
-        (reg:SI 78 [ number_books.5 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
+(insn 135 134 136 11 (parallel [
+            (set (reg:DI 113)
+                (plus:DI (reg:DI 113)
+                    (reg:DI 78 [ D.2359 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 78 [ D.2359 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 136 135 137 11 (parallel [
+            (set (reg:DI 114)
+                (ashift:DI (reg:DI 113)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
      (nil))
-(insn 127 126 128 11 (set (reg:SI 79 [ D.2282 ])
-        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f868c5612f8 books_array>)
-                    (const_int 8 [0x8]))) [0 books_array.length+0 S4 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:56 -1
+(insn 137 136 138 11 (set (reg:DI 113)
+        (reg:DI 114)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 78 [ D.2359 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 138 137 139 11 (set (reg:DI 79 [ D.2359 ])
+        (reg:DI 113)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
      (nil))
-(insn 128 127 129 11 (parallel [
-            (set (reg:SI 80 [ D.2282 ])
-                (plus:SI (reg:SI 79 [ D.2282 ])
+(insn 139 138 140 11 (parallel [
+            (set (reg/f:DI 80 [ D.2363 ])
+                (plus:DI (reg/f:DI 76 [ all_books.3 ])
+                    (reg:DI 79 [ D.2359 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
+     (nil))
+(insn 140 139 141 11 (set (reg/f:DI 115)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 loaded_book+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
+     (nil))
+(insn 141 140 142 11 (set (reg:DI 116)
+        (mem:DI (reg/f:DI 115) [0 *loaded_book_6+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
+     (nil))
+(insn 142 141 143 11 (set (mem:DI (reg/f:DI 80 [ D.2363 ]) [0 *_38+0 S8 A64])
+        (reg:DI 116)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
+     (nil))
+(insn 143 142 144 11 (set (reg:DI 117)
+        (mem:DI (plus:DI (reg/f:DI 115)
+                (const_int 8 [0x8])) [0 *loaded_book_6+8 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
+     (nil))
+(insn 144 143 145 11 (set (mem:DI (plus:DI (reg/f:DI 80 [ D.2363 ])
+                (const_int 8 [0x8])) [0 *_38+8 S8 A64])
+        (reg:DI 117)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
+     (nil))
+(insn 145 144 146 11 (set (reg:DI 118)
+        (mem:DI (plus:DI (reg/f:DI 115)
+                (const_int 16 [0x10])) [0 *loaded_book_6+16 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
+     (nil))
+(insn 146 145 147 11 (set (mem:DI (plus:DI (reg/f:DI 80 [ D.2363 ])
+                (const_int 16 [0x10])) [0 *_38+16 S8 A64])
+        (reg:DI 118)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:55 -1
+     (nil))
+(insn 147 146 148 11 (set (reg:SI 81 [ number_books.4 ])
+        (mem/c:SI (symbol_ref:DI ("number_books") [flags 0x2]  <var_decl 0x7f56c76dc390 number_books>) [0 number_books+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:56 -1
+     (nil))
+(insn 148 147 149 11 (parallel [
+            (set (reg:SI 82 [ number_books.5 ])
+                (plus:SI (reg:SI 81 [ number_books.4 ])
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
         ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:56 -1
      (nil))
-(insn 129 128 130 11 (set (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f868c5612f8 books_array>)
-                    (const_int 8 [0x8]))) [0 books_array.length+0 S4 A64])
-        (reg:SI 80 [ D.2282 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:56 -1
+(insn 149 148 150 11 (set (mem/c:SI (symbol_ref:DI ("number_books") [flags 0x2]  <var_decl 0x7f56c76dc390 number_books>) [0 number_books+0 S4 A32])
+        (reg:SI 82 [ number_books.5 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:56 -1
      (nil))
-(code_label 130 129 131 12 5 "" [2 uses])
-(note 131 130 132 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
-(insn 132 131 133 12 (set (reg:DI 105)
-        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -600 [0xfffffffffffffda8])) [0 file+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:32 -1
+(insn 150 149 151 11 (set (reg:SI 83 [ D.2362 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f56c76dc2f8 books_array>)
+                    (const_int 8 [0x8]))) [0 books_array.length+0 S4 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:57 -1
      (nil))
-(insn 133 132 134 12 (parallel [
-            (set (reg:DI 106)
-                (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                    (const_int -560 [0xfffffffffffffdd0])))
+(insn 151 150 152 11 (parallel [
+            (set (reg:SI 84 [ D.2362 ])
+                (plus:SI (reg:SI 83 [ D.2362 ])
+                    (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:32 -1
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:57 -1
      (nil))
-(insn 134 133 135 12 (set (reg:DI 1 dx)
-        (reg:DI 105)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:32 -1
+(insn 152 151 153 11 (set (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f56c76dc2f8 books_array>)
+                    (const_int 8 [0x8]))) [0 books_array.length+0 S4 A64])
+        (reg:SI 84 [ D.2362 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:57 -1
      (nil))
-(insn 135 134 136 12 (set (reg:SI 4 si)
-        (const_int 512 [0x200])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:32 -1
+(code_label 153 152 154 12 5 "" [2 uses])
+(note 154 153 155 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 155 154 156 12 (set (reg:DI 119)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -552 [0xfffffffffffffdd8])) [0 file+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:31 -1
      (nil))
-(insn 136 135 137 12 (set (reg:DI 5 di)
-        (reg:DI 106)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:32 -1
+(insn 156 155 157 12 (parallel [
+            (set (reg:DI 120)
+                (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -544 [0xfffffffffffffde0])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:31 -1
      (nil))
-(call_insn 137 136 138 12 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fgets") [flags 0x41]  <function_decl 0x7f868c548700 fgets>) [0 fgets S1 A8])
-            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:32 -1
+(insn 157 156 158 12 (set (reg:DI 1 dx)
+        (reg:DI 119)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:31 -1
+     (nil))
+(insn 158 157 159 12 (set (reg:SI 4 si)
+        (const_int 512 [0x200])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:31 -1
+     (nil))
+(insn 159 158 160 12 (set (reg:DI 5 di)
+        (reg:DI 120)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:31 -1
+     (nil))
+(call_insn 160 159 161 12 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fgets") [flags 0x41]  <function_decl 0x7f56c76c3700 fgets>) [0 fgets S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:31 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (expr_list:REG_BR_PRED (use (reg:SI 4 si))
             (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 1 dx))
                 (nil)))))
-(insn 138 137 140 12 (set (reg/f:DI 65 [ D.2281 ])
-        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:32 -1
+(insn 161 160 163 12 (set (reg/f:DI 65 [ D.2360 ])
+        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:31 -1
      (nil))
-(insn 140 138 141 12 (set (reg:CCZ 17 flags)
-        (compare:CCZ (reg/f:DI 65 [ D.2281 ])
-            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:32 -1
+(insn 163 161 164 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 65 [ D.2360 ])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:31 -1
      (nil))
-(jump_insn 141 140 142 12 (set (pc)
+(jump_insn 164 163 165 12 (set (pc)
         (if_then_else (ne (reg:CCZ 17 flags)
                 (const_int 0 [0]))
-            (label_ref 139)
-            (pc))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:32 -1
+            (label_ref 162)
+            (pc))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:31 -1
      (nil)
- -> 139)
-(note 142 141 143 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
-(insn 143 142 144 13 (set (reg/f:DI 81 [ all_books.6 ])
-        (mem/f/c:DI (symbol_ref:DI ("all_books") [flags 0x2]  <var_decl 0x7f868c561260 all_books>) [0 all_books+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:59 -1
+ -> 162)
+(note 165 164 166 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 166 165 167 13 (set (reg/f:DI 85 [ all_books.6 ])
+        (mem/f/c:DI (symbol_ref:DI ("all_books") [flags 0x2]  <var_decl 0x7f56c76dc260 all_books>) [0 all_books+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:60 -1
      (nil))
-(insn 144 143 145 13 (set (mem/f/j/c:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f868c5612f8 books_array>) [0 books_array.array+0 S8 A128])
-        (reg/f:DI 81 [ all_books.6 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:59 -1
+(insn 167 166 168 13 (set (mem/f/j/c:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f56c76dc2f8 books_array>) [0 books_array.array+0 S8 A128])
+        (reg/f:DI 85 [ all_books.6 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:60 -1
      (nil))
-(insn 145 144 148 13 (set (reg:SI 82 [ D.2280 ])
-        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:62 -1
+(insn 168 167 171 13 (set (reg:SI 86 [ D.2358 ])
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:63 -1
      (nil))
-(insn 148 145 152 13 (set (reg:SI 83 [ <retval> ])
-        (reg:SI 82 [ D.2280 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:62 -1
+(insn 171 168 175 13 (set (reg:SI 87 [ <retval> ])
+        (reg:SI 86 [ D.2358 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:63 -1
      (nil))
-(insn 152 148 155 13 (set (reg/i:SI 0 ax)
-        (reg:SI 83 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:63 -1
+(insn 175 171 178 13 (set (reg/i:SI 0 ax)
+        (reg:SI 87 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:64 -1
      (nil))
-(insn 155 152 0 13 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:63 -1
+(insn 178 175 0 13 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:64 -1
      (nil))
 
 ;; Function add_book (add_book, funcdef_no=1, decl_uid=2151, cgraph_uid=1)
@@ -632,7 +725,23 @@ try_optimize_cfg iteration 2
 ;; Generating RTL for gimple basic block 2
 
 ;; Generating RTL for gimple basic block 3
-deleting block 5
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+deleting block 13
 
 
 try_optimize_cfg iteration 1
@@ -640,12 +749,9 @@ try_optimize_cfg iteration 1
 Merging block 3 into block 2...
 Merged blocks 2 and 3.
 Merged 2 and 3 without moving.
-Merging block 4 into block 2...
-Merged blocks 2 and 4.
-Merged 2 and 4 without moving.
-Merging block 5 into block 2...
-Merged blocks 2 and 5.
-Merged 2 and 5 without moving.
+Merging block 13 into block 12...
+Merged blocks 12 and 13.
+Merged 12 and 13 without moving.
 
 
 try_optimize_cfg iteration 2
@@ -658,16 +764,956 @@ try_optimize_cfg iteration 2
 (note 1 0 3 NOTE_INSN_DELETED)
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
-(insn 5 2 8 2 (set (reg:SI 59 [ D.2285 ])
-        (const_int -1 [0xffffffffffffffff])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:68 -1
+(insn 5 2 6 2 (set (reg:SI 60 [ D.2366 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f56c76dc2f8 books_array>)
+                    (const_int 8 [0x8]))) [0 books_array.length+0 S4 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:68 -1
      (nil))
-(insn 8 5 12 2 (set (reg:SI 60 [ <retval> ])
-        (reg:SI 59 [ D.2285 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:68 -1
+(insn 6 5 7 2 (set (reg:DI 61 [ D.2367 ])
+        (zero_extend:DI (reg:SI 60 [ D.2366 ]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:68 -1
      (nil))
-(insn 12 8 15 2 (set (reg/i:SI 0 ax)
-        (reg:SI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:69 -1
+(insn 7 6 8 2 (parallel [
+            (set (reg:DI 62 [ D.2367 ])
+                (ashift:DI (reg:DI 61 [ D.2367 ])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:68 -1
      (nil))
-(insn 15 12 0 2 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:69 -1
+(insn 8 7 9 2 (parallel [
+            (set (reg:DI 63 [ D.2367 ])
+                (plus:DI (reg:DI 62 [ D.2367 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:68 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 5 di)
+        (reg:DI 63 [ D.2367 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:68 -1
+     (nil))
+(call_insn 10 9 11 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f56c75dcf00 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:68 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 11 10 12 2 (set (reg/f:DI 128)
+        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:68 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 128)
+        (nil)))
+(insn 12 11 13 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 temp+0 S8 A64])
+        (reg/f:DI 128)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:68 -1
+     (nil))
+(insn 13 12 14 2 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:70 -1
+     (nil))
+(jump_insn 14 13 15 2 (set (pc)
+        (label_ref 171)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:71 -1
+     (nil)
+ -> 171)
+(barrier 15 14 175)
+(code_label 175 15 16 4 13 "" [1 uses])
+(note 16 175 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 4 (set (reg/f:DI 66 [ D.2368 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f56c76dc2f8 books_array>) [0 books_array.array+0 S8 A128])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:SI 129)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:DI 67 [ D.2367 ])
+        (sign_extend:DI (reg:SI 129))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 20 19 21 4 (set (reg:DI 130)
+        (reg:DI 67 [ D.2367 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 21 20 22 4 (parallel [
+            (set (reg:DI 130)
+                (ashift:DI (reg:DI 130)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 22 21 23 4 (parallel [
+            (set (reg:DI 130)
+                (plus:DI (reg:DI 130)
+                    (reg:DI 67 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 67 [ D.2367 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 23 22 24 4 (parallel [
+            (set (reg:DI 131)
+                (ashift:DI (reg:DI 130)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 24 23 25 4 (set (reg:DI 130)
+        (reg:DI 131)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 67 [ D.2367 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 25 24 26 4 (set (reg:DI 68 [ D.2367 ])
+        (reg:DI 130)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 26 25 27 4 (parallel [
+            (set (reg/f:DI 69 [ D.2368 ])
+                (plus:DI (reg/f:DI 66 [ D.2368 ])
+                    (reg:DI 68 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 27 26 28 4 (set (reg/f:DI 70 [ D.2369 ])
+        (mem/f/j:DI (reg/f:DI 69 [ D.2368 ]) [0 _14->title+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 28 27 29 4 (set (reg/f:DI 71 [ D.2369 ])
+        (mem/f/j/c:DI (reg/f:DI 53 virtual-incoming-args) [0 book.title+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 29 28 30 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 70 [ D.2369 ])
+            (reg/f:DI 71 [ D.2369 ]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(jump_insn 30 29 31 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 80)
+            (pc))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil)
+ -> 80)
+(note 31 30 32 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 32 31 33 5 (set (reg/f:DI 72 [ D.2368 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f56c76dc2f8 books_array>) [0 books_array.array+0 S8 A128])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 33 32 34 5 (set (reg:SI 132)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 34 33 35 5 (set (reg:DI 73 [ D.2367 ])
+        (sign_extend:DI (reg:SI 132))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 35 34 36 5 (set (reg:DI 133)
+        (reg:DI 73 [ D.2367 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 36 35 37 5 (parallel [
+            (set (reg:DI 133)
+                (ashift:DI (reg:DI 133)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 37 36 38 5 (parallel [
+            (set (reg:DI 133)
+                (plus:DI (reg:DI 133)
+                    (reg:DI 73 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 73 [ D.2367 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 38 37 39 5 (parallel [
+            (set (reg:DI 134)
+                (ashift:DI (reg:DI 133)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 39 38 40 5 (set (reg:DI 133)
+        (reg:DI 134)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 73 [ D.2367 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 40 39 41 5 (set (reg:DI 74 [ D.2367 ])
+        (reg:DI 133)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 41 40 42 5 (parallel [
+            (set (reg/f:DI 75 [ D.2368 ])
+                (plus:DI (reg/f:DI 72 [ D.2368 ])
+                    (reg:DI 74 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 42 41 43 5 (set (reg/f:DI 76 [ D.2369 ])
+        (mem/f/j:DI (plus:DI (reg/f:DI 75 [ D.2368 ])
+                (const_int 8 [0x8])) [0 _20->authors+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 43 42 44 5 (set (reg/f:DI 77 [ D.2369 ])
+        (mem/f/j/c:DI (plus:DI (reg/f:DI 53 virtual-incoming-args)
+                (const_int 8 [0x8])) [0 book.authors+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 44 43 45 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 76 [ D.2369 ])
+            (reg/f:DI 77 [ D.2369 ]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(jump_insn 45 44 46 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 80)
+            (pc))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil)
+ -> 80)
+(note 46 45 47 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 47 46 48 6 (set (reg/f:DI 78 [ D.2368 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f56c76dc2f8 books_array>) [0 books_array.array+0 S8 A128])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 48 47 49 6 (set (reg:SI 135)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 49 48 50 6 (set (reg:DI 79 [ D.2367 ])
+        (sign_extend:DI (reg:SI 135))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 50 49 51 6 (set (reg:DI 136)
+        (reg:DI 79 [ D.2367 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 51 50 52 6 (parallel [
+            (set (reg:DI 136)
+                (ashift:DI (reg:DI 136)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 52 51 53 6 (parallel [
+            (set (reg:DI 136)
+                (plus:DI (reg:DI 136)
+                    (reg:DI 79 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 79 [ D.2367 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 53 52 54 6 (parallel [
+            (set (reg:DI 137)
+                (ashift:DI (reg:DI 136)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 54 53 55 6 (set (reg:DI 136)
+        (reg:DI 137)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 79 [ D.2367 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 55 54 56 6 (set (reg:DI 80 [ D.2367 ])
+        (reg:DI 136)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 56 55 57 6 (parallel [
+            (set (reg/f:DI 81 [ D.2368 ])
+                (plus:DI (reg/f:DI 78 [ D.2368 ])
+                    (reg:DI 80 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 57 56 58 6 (set (reg:SI 82 [ D.2366 ])
+        (mem/j:SI (plus:DI (reg/f:DI 81 [ D.2368 ])
+                (const_int 16 [0x10])) [0 _26->year+0 S4 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 58 57 59 6 (set (reg:SI 83 [ D.2366 ])
+        (mem/j/c:SI (plus:DI (reg/f:DI 53 virtual-incoming-args)
+                (const_int 16 [0x10])) [0 book.year+0 S4 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 59 58 60 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 82 [ D.2366 ])
+            (reg:SI 83 [ D.2366 ]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(jump_insn 60 59 61 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 80)
+            (pc))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil)
+ -> 80)
+(note 61 60 62 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 62 61 63 7 (set (reg/f:DI 84 [ D.2368 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f56c76dc2f8 books_array>) [0 books_array.array+0 S8 A128])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 63 62 64 7 (set (reg:SI 138)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 64 63 65 7 (set (reg:DI 85 [ D.2367 ])
+        (sign_extend:DI (reg:SI 138))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 65 64 66 7 (set (reg:DI 139)
+        (reg:DI 85 [ D.2367 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 66 65 67 7 (parallel [
+            (set (reg:DI 139)
+                (ashift:DI (reg:DI 139)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 67 66 68 7 (parallel [
+            (set (reg:DI 139)
+                (plus:DI (reg:DI 139)
+                    (reg:DI 85 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 85 [ D.2367 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 68 67 69 7 (parallel [
+            (set (reg:DI 140)
+                (ashift:DI (reg:DI 139)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 69 68 70 7 (set (reg:DI 139)
+        (reg:DI 140)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 85 [ D.2367 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 70 69 71 7 (set (reg:DI 86 [ D.2367 ])
+        (reg:DI 139)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 71 70 72 7 (parallel [
+            (set (reg/f:DI 87 [ D.2368 ])
+                (plus:DI (reg/f:DI 84 [ D.2368 ])
+                    (reg:DI 86 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 72 71 73 7 (set (reg:SI 88 [ D.2366 ])
+        (mem/j:SI (plus:DI (reg/f:DI 87 [ D.2368 ])
+                (const_int 20 [0x14])) [0 _32->copies+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 73 72 74 7 (set (reg:SI 89 [ D.2366 ])
+        (mem/j/c:SI (plus:DI (reg/f:DI 53 virtual-incoming-args)
+                (const_int 20 [0x14])) [0 book.copies+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(insn 74 73 75 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 88 [ D.2366 ])
+            (reg:SI 89 [ D.2366 ]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil))
+(jump_insn 75 74 76 7 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 80)
+            (pc))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:72 -1
+     (nil)
+ -> 80)
+(note 76 75 77 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 77 76 78 8 (set (reg:SI 59 [ D.2365 ])
+        (const_int 1 [0x1])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:73 -1
+     (nil))
+(jump_insn 78 77 79 8 (set (pc)
+        (label_ref 203)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:73 -1
+     (nil)
+ -> 203)
+(barrier 79 78 80)
+(code_label 80 79 81 9 11 "" [4 uses])
+(note 81 80 82 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 82 81 83 9 (set (reg:SI 141)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (nil))
+(insn 83 82 84 9 (set (reg:DI 90 [ D.2367 ])
+        (sign_extend:DI (reg:SI 141))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (nil))
+(insn 84 83 85 9 (set (reg:DI 142)
+        (reg:DI 90 [ D.2367 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (nil))
+(insn 85 84 86 9 (parallel [
+            (set (reg:DI 142)
+                (ashift:DI (reg:DI 142)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (nil))
+(insn 86 85 87 9 (parallel [
+            (set (reg:DI 142)
+                (plus:DI (reg:DI 142)
+                    (reg:DI 90 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 90 [ D.2367 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 87 86 88 9 (parallel [
+            (set (reg:DI 143)
+                (ashift:DI (reg:DI 142)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (nil))
+(insn 88 87 89 9 (set (reg:DI 142)
+        (reg:DI 143)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 90 [ D.2367 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 89 88 90 9 (set (reg:DI 91 [ D.2367 ])
+        (reg:DI 142)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (nil))
+(insn 90 89 91 9 (set (reg/f:DI 144)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 temp+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (nil))
+(insn 91 90 92 9 (parallel [
+            (set (reg/f:DI 92 [ D.2368 ])
+                (plus:DI (reg:DI 91 [ D.2367 ])
+                    (reg/f:DI 144)))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [0 temp+0 S8 A64])
+            (reg:DI 91 [ D.2367 ]))
+        (nil)))
+(insn 92 91 93 9 (set (reg/f:DI 93 [ D.2368 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f56c76dc2f8 books_array>) [0 books_array.array+0 S8 A128])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (nil))
+(insn 93 92 94 9 (set (reg:SI 145)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (nil))
+(insn 94 93 95 9 (set (reg:DI 94 [ D.2367 ])
+        (sign_extend:DI (reg:SI 145))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (nil))
+(insn 95 94 96 9 (set (reg:DI 146)
+        (reg:DI 94 [ D.2367 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (nil))
+(insn 96 95 97 9 (parallel [
+            (set (reg:DI 146)
+                (ashift:DI (reg:DI 146)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (nil))
+(insn 97 96 98 9 (parallel [
+            (set (reg:DI 146)
+                (plus:DI (reg:DI 146)
+                    (reg:DI 94 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 94 [ D.2367 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 98 97 99 9 (parallel [
+            (set (reg:DI 147)
+                (ashift:DI (reg:DI 146)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (nil))
+(insn 99 98 100 9 (set (reg:DI 146)
+        (reg:DI 147)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 94 [ D.2367 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 100 99 101 9 (set (reg:DI 95 [ D.2367 ])
+        (reg:DI 146)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (nil))
+(insn 101 100 102 9 (parallel [
+            (set (reg/f:DI 96 [ D.2368 ])
+                (plus:DI (reg/f:DI 93 [ D.2368 ])
+                    (reg:DI 95 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (nil))
+(insn 102 101 103 9 (set (reg/f:DI 97 [ D.2369 ])
+        (mem/f/j:DI (reg/f:DI 96 [ D.2368 ]) [0 _42->title+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (nil))
+(insn 103 102 104 9 (set (mem/f/j:DI (reg/f:DI 92 [ D.2368 ]) [0 _38->title+0 S8 A64])
+        (reg/f:DI 97 [ D.2369 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:77 -1
+     (nil))
+(insn 104 103 105 9 (set (reg:SI 148)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (nil))
+(insn 105 104 106 9 (set (reg:DI 98 [ D.2367 ])
+        (sign_extend:DI (reg:SI 148))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (nil))
+(insn 106 105 107 9 (set (reg:DI 149)
+        (reg:DI 98 [ D.2367 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (nil))
+(insn 107 106 108 9 (parallel [
+            (set (reg:DI 149)
+                (ashift:DI (reg:DI 149)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (nil))
+(insn 108 107 109 9 (parallel [
+            (set (reg:DI 149)
+                (plus:DI (reg:DI 149)
+                    (reg:DI 98 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 98 [ D.2367 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 109 108 110 9 (parallel [
+            (set (reg:DI 150)
+                (ashift:DI (reg:DI 149)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (nil))
+(insn 110 109 111 9 (set (reg:DI 149)
+        (reg:DI 150)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 98 [ D.2367 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 111 110 112 9 (set (reg:DI 99 [ D.2367 ])
+        (reg:DI 149)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (nil))
+(insn 112 111 113 9 (set (reg/f:DI 151)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 temp+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (nil))
+(insn 113 112 114 9 (parallel [
+            (set (reg/f:DI 100 [ D.2368 ])
+                (plus:DI (reg:DI 99 [ D.2367 ])
+                    (reg/f:DI 151)))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [0 temp+0 S8 A64])
+            (reg:DI 99 [ D.2367 ]))
+        (nil)))
+(insn 114 113 115 9 (set (reg/f:DI 101 [ D.2368 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f56c76dc2f8 books_array>) [0 books_array.array+0 S8 A128])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (nil))
+(insn 115 114 116 9 (set (reg:SI 152)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (nil))
+(insn 116 115 117 9 (set (reg:DI 102 [ D.2367 ])
+        (sign_extend:DI (reg:SI 152))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (nil))
+(insn 117 116 118 9 (set (reg:DI 153)
+        (reg:DI 102 [ D.2367 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (nil))
+(insn 118 117 119 9 (parallel [
+            (set (reg:DI 153)
+                (ashift:DI (reg:DI 153)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (nil))
+(insn 119 118 120 9 (parallel [
+            (set (reg:DI 153)
+                (plus:DI (reg:DI 153)
+                    (reg:DI 102 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 102 [ D.2367 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 120 119 121 9 (parallel [
+            (set (reg:DI 154)
+                (ashift:DI (reg:DI 153)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (nil))
+(insn 121 120 122 9 (set (reg:DI 153)
+        (reg:DI 154)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 102 [ D.2367 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 122 121 123 9 (set (reg:DI 103 [ D.2367 ])
+        (reg:DI 153)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (nil))
+(insn 123 122 124 9 (parallel [
+            (set (reg/f:DI 104 [ D.2368 ])
+                (plus:DI (reg/f:DI 101 [ D.2368 ])
+                    (reg:DI 103 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (nil))
+(insn 124 123 125 9 (set (reg/f:DI 105 [ D.2369 ])
+        (mem/f/j:DI (plus:DI (reg/f:DI 104 [ D.2368 ])
+                (const_int 8 [0x8])) [0 _50->authors+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (nil))
+(insn 125 124 126 9 (set (mem/f/j:DI (plus:DI (reg/f:DI 100 [ D.2368 ])
+                (const_int 8 [0x8])) [0 _46->authors+0 S8 A64])
+        (reg/f:DI 105 [ D.2369 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:78 -1
+     (nil))
+(insn 126 125 127 9 (set (reg:SI 155)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (nil))
+(insn 127 126 128 9 (set (reg:DI 106 [ D.2367 ])
+        (sign_extend:DI (reg:SI 155))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (nil))
+(insn 128 127 129 9 (set (reg:DI 156)
+        (reg:DI 106 [ D.2367 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (nil))
+(insn 129 128 130 9 (parallel [
+            (set (reg:DI 156)
+                (ashift:DI (reg:DI 156)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (nil))
+(insn 130 129 131 9 (parallel [
+            (set (reg:DI 156)
+                (plus:DI (reg:DI 156)
+                    (reg:DI 106 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 106 [ D.2367 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 131 130 132 9 (parallel [
+            (set (reg:DI 157)
+                (ashift:DI (reg:DI 156)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (nil))
+(insn 132 131 133 9 (set (reg:DI 156)
+        (reg:DI 157)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 106 [ D.2367 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 133 132 134 9 (set (reg:DI 107 [ D.2367 ])
+        (reg:DI 156)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (nil))
+(insn 134 133 135 9 (set (reg/f:DI 158)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 temp+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (nil))
+(insn 135 134 136 9 (parallel [
+            (set (reg/f:DI 108 [ D.2368 ])
+                (plus:DI (reg:DI 107 [ D.2367 ])
+                    (reg/f:DI 158)))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [0 temp+0 S8 A64])
+            (reg:DI 107 [ D.2367 ]))
+        (nil)))
+(insn 136 135 137 9 (set (reg/f:DI 109 [ D.2368 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f56c76dc2f8 books_array>) [0 books_array.array+0 S8 A128])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (nil))
+(insn 137 136 138 9 (set (reg:SI 159)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (nil))
+(insn 138 137 139 9 (set (reg:DI 110 [ D.2367 ])
+        (sign_extend:DI (reg:SI 159))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (nil))
+(insn 139 138 140 9 (set (reg:DI 160)
+        (reg:DI 110 [ D.2367 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (nil))
+(insn 140 139 141 9 (parallel [
+            (set (reg:DI 160)
+                (ashift:DI (reg:DI 160)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (nil))
+(insn 141 140 142 9 (parallel [
+            (set (reg:DI 160)
+                (plus:DI (reg:DI 160)
+                    (reg:DI 110 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 110 [ D.2367 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 142 141 143 9 (parallel [
+            (set (reg:DI 161)
+                (ashift:DI (reg:DI 160)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (nil))
+(insn 143 142 144 9 (set (reg:DI 160)
+        (reg:DI 161)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 110 [ D.2367 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 144 143 145 9 (set (reg:DI 111 [ D.2367 ])
+        (reg:DI 160)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (nil))
+(insn 145 144 146 9 (parallel [
+            (set (reg/f:DI 112 [ D.2368 ])
+                (plus:DI (reg/f:DI 109 [ D.2368 ])
+                    (reg:DI 111 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (nil))
+(insn 146 145 147 9 (set (reg:SI 113 [ D.2366 ])
+        (mem/j:SI (plus:DI (reg/f:DI 112 [ D.2368 ])
+                (const_int 16 [0x10])) [0 _58->year+0 S4 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (nil))
+(insn 147 146 148 9 (set (mem/j:SI (plus:DI (reg/f:DI 108 [ D.2368 ])
+                (const_int 16 [0x10])) [0 _54->year+0 S4 A64])
+        (reg:SI 113 [ D.2366 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+     (nil))
+(insn 148 147 149 9 (set (reg:SI 162)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (nil))
+(insn 149 148 150 9 (set (reg:DI 114 [ D.2367 ])
+        (sign_extend:DI (reg:SI 162))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (nil))
+(insn 150 149 151 9 (set (reg:DI 163)
+        (reg:DI 114 [ D.2367 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (nil))
+(insn 151 150 152 9 (parallel [
+            (set (reg:DI 163)
+                (ashift:DI (reg:DI 163)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (nil))
+(insn 152 151 153 9 (parallel [
+            (set (reg:DI 163)
+                (plus:DI (reg:DI 163)
+                    (reg:DI 114 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 114 [ D.2367 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 153 152 154 9 (parallel [
+            (set (reg:DI 164)
+                (ashift:DI (reg:DI 163)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (nil))
+(insn 154 153 155 9 (set (reg:DI 163)
+        (reg:DI 164)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 114 [ D.2367 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 155 154 156 9 (set (reg:DI 115 [ D.2367 ])
+        (reg:DI 163)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (nil))
+(insn 156 155 157 9 (set (reg/f:DI 165)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 temp+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (nil))
+(insn 157 156 158 9 (parallel [
+            (set (reg/f:DI 116 [ D.2368 ])
+                (plus:DI (reg:DI 115 [ D.2367 ])
+                    (reg/f:DI 165)))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [0 temp+0 S8 A64])
+            (reg:DI 115 [ D.2367 ]))
+        (nil)))
+(insn 158 157 159 9 (set (reg/f:DI 117 [ D.2368 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f56c76dc2f8 books_array>) [0 books_array.array+0 S8 A128])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (nil))
+(insn 159 158 160 9 (set (reg:SI 166)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (nil))
+(insn 160 159 161 9 (set (reg:DI 118 [ D.2367 ])
+        (sign_extend:DI (reg:SI 166))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (nil))
+(insn 161 160 162 9 (set (reg:DI 167)
+        (reg:DI 118 [ D.2367 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (nil))
+(insn 162 161 163 9 (parallel [
+            (set (reg:DI 167)
+                (ashift:DI (reg:DI 167)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (nil))
+(insn 163 162 164 9 (parallel [
+            (set (reg:DI 167)
+                (plus:DI (reg:DI 167)
+                    (reg:DI 118 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 118 [ D.2367 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 164 163 165 9 (parallel [
+            (set (reg:DI 168)
+                (ashift:DI (reg:DI 167)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (nil))
+(insn 165 164 166 9 (set (reg:DI 167)
+        (reg:DI 168)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 118 [ D.2367 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 166 165 167 9 (set (reg:DI 119 [ D.2367 ])
+        (reg:DI 167)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (nil))
+(insn 167 166 168 9 (parallel [
+            (set (reg/f:DI 120 [ D.2368 ])
+                (plus:DI (reg/f:DI 117 [ D.2368 ])
+                    (reg:DI 119 [ D.2367 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (nil))
+(insn 168 167 169 9 (set (reg:SI 121 [ D.2366 ])
+        (mem/j:SI (plus:DI (reg/f:DI 120 [ D.2368 ])
+                (const_int 20 [0x14])) [0 _66->copies+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (nil))
+(insn 169 168 170 9 (set (mem/j:SI (plus:DI (reg/f:DI 116 [ D.2368 ])
+                (const_int 20 [0x14])) [0 _62->copies+0 S4 A32])
+        (reg:SI 121 [ D.2366 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+     (nil))
+(insn 170 169 171 9 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:71 -1
+     (nil))
+(code_label 171 170 172 10 10 "" [1 uses])
+(note 172 171 173 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 173 172 174 10 (set (reg:SI 64 [ i.7 ])
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:71 -1
+     (nil))
+(insn 174 173 176 10 (set (reg:SI 65 [ D.2366 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f56c76dc2f8 books_array>)
+                    (const_int 8 [0x8]))) [0 books_array.length+0 S4 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:71 -1
+     (nil))
+(insn 176 174 177 10 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 64 [ i.7 ])
+            (reg:SI 65 [ D.2366 ]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:71 -1
+     (nil))
+(jump_insn 177 176 178 10 (set (pc)
+        (if_then_else (ltu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 175)
+            (pc))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:71 -1
+     (nil)
+ -> 175)
+(note 178 177 179 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 179 178 180 11 (set (reg:SI 169)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:83 -1
+     (nil))
+(insn 180 179 181 11 (set (reg:DI 122 [ D.2370 ])
+        (sign_extend:DI (reg:SI 169))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:83 -1
+     (nil))
+(insn 181 180 182 11 (parallel [
+            (set (reg:DI 123 [ D.2370 ])
+                (plus:DI (reg:DI 122 [ D.2370 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:83 -1
+     (nil))
+(insn 182 181 183 11 (set (reg:DI 170)
+        (reg:DI 123 [ D.2370 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:83 -1
+     (nil))
+(insn 183 182 184 11 (parallel [
+            (set (reg:DI 170)
+                (ashift:DI (reg:DI 170)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:83 -1
+     (nil))
+(insn 184 183 185 11 (parallel [
+            (set (reg:DI 170)
+                (plus:DI (reg:DI 170)
+                    (reg:DI 123 [ D.2370 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:83 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 123 [ D.2370 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 185 184 186 11 (parallel [
+            (set (reg:DI 171)
+                (ashift:DI (reg:DI 170)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:83 -1
+     (nil))
+(insn 186 185 187 11 (set (reg:DI 170)
+        (reg:DI 171)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:83 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 123 [ D.2370 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 187 186 188 11 (set (reg:DI 124 [ D.2370 ])
+        (reg:DI 170)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:83 -1
+     (nil))
+(insn 188 187 189 11 (set (reg/f:DI 172)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 temp+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:83 -1
+     (nil))
+(insn 189 188 190 11 (parallel [
+            (set (reg/f:DI 125 [ D.2368 ])
+                (plus:DI (reg:DI 124 [ D.2370 ])
+                    (reg/f:DI 172)))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:83 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [0 temp+0 S8 A64])
+            (reg:DI 124 [ D.2370 ]))
+        (nil)))
+(insn 190 189 191 11 (set (reg:DI 173)
+        (mem/c:DI (reg/f:DI 53 virtual-incoming-args) [0 book+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:83 -1
+     (nil))
+(insn 191 190 192 11 (set (mem:DI (reg/f:DI 125 [ D.2368 ]) [0 *_72+0 S8 A64])
+        (reg:DI 173)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:83 -1
+     (nil))
+(insn 192 191 193 11 (set (reg:DI 174)
+        (mem/c:DI (plus:DI (reg/f:DI 53 virtual-incoming-args)
+                (const_int 8 [0x8])) [0 book+8 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:83 -1
+     (nil))
+(insn 193 192 194 11 (set (mem:DI (plus:DI (reg/f:DI 125 [ D.2368 ])
+                (const_int 8 [0x8])) [0 *_72+8 S8 A64])
+        (reg:DI 174)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:83 -1
+     (nil))
+(insn 194 193 195 11 (set (reg:DI 175)
+        (mem/c:DI (plus:DI (reg/f:DI 53 virtual-incoming-args)
+                (const_int 16 [0x10])) [0 book+16 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:83 -1
+     (nil))
+(insn 195 194 196 11 (set (mem:DI (plus:DI (reg/f:DI 125 [ D.2368 ])
+                (const_int 16 [0x10])) [0 *_72+16 S8 A64])
+        (reg:DI 175)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:83 -1
+     (nil))
+(insn 196 195 197 11 (set (reg/f:DI 126 [ D.2368 ])
+        (mem/f/j/c:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f56c76dc2f8 books_array>) [0 books_array.array+0 S8 A128])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:84 -1
+     (nil))
+(insn 197 196 198 11 (set (reg:DI 176)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 temp+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:84 -1
+     (nil))
+(insn 198 197 199 11 (set (reg:DI 1 dx)
+        (const_int 8 [0x8])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:84 -1
+     (nil))
+(insn 199 198 200 11 (set (reg:DI 4 si)
+        (reg:DI 176)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:84 -1
+     (nil))
+(insn 200 199 201 11 (set (reg:DI 5 di)
+        (reg/f:DI 126 [ D.2368 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:84 -1
+     (nil))
+(call_insn 201 200 202 11 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x7f56c75b6f00 memcpy>) [0 __builtin_memcpy S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:84 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (set (reg:DI 0 ax)
+            (reg:DI 5 di))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+                (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 1 dx))
+                    (nil))))))
+(insn 202 201 203 11 (set (reg:SI 59 [ D.2365 ])
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:85 -1
+     (nil))
+(code_label 203 202 204 12 12 "" [1 uses])
+(note 204 203 205 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 205 204 209 12 (set (reg:SI 127 [ <retval> ])
+        (reg:SI 59 [ D.2365 ])) -1
+     (nil))
+(insn 209 205 212 12 (set (reg/i:SI 0 ax)
+        (reg:SI 127 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:86 -1
+     (nil))
+(insn 212 209 0 12 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:86 -1
      (nil))
 
 ;; Function remove_book (remove_book, funcdef_no=2, decl_uid=2153, cgraph_uid=2)
@@ -702,16 +1748,16 @@ try_optimize_cfg iteration 2
 (note 1 0 3 NOTE_INSN_DELETED)
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
-(insn 5 2 8 2 (set (reg:SI 59 [ D.2286 ])
-        (const_int -1 [0xffffffffffffffff])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:74 -1
+(insn 5 2 8 2 (set (reg:SI 59 [ D.2371 ])
+        (const_int -1 [0xffffffffffffffff])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:91 -1
      (nil))
 (insn 8 5 12 2 (set (reg:SI 60 [ <retval> ])
-        (reg:SI 59 [ D.2286 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:74 -1
+        (reg:SI 59 [ D.2371 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:91 -1
      (nil))
 (insn 12 8 15 2 (set (reg/i:SI 0 ax)
-        (reg:SI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:75 -1
+        (reg:SI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:92 -1
      (nil))
-(insn 15 12 0 2 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:75 -1
+(insn 15 12 0 2 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:92 -1
      (nil))
 
 ;; Function store_books (store_books, funcdef_no=3, decl_uid=2147, cgraph_uid=3)
@@ -740,7 +1786,7 @@ try_optimize_cfg iteration 1
 Merging block 3 into block 2...
 Merged blocks 2 and 3.
 Merged 2 and 3 without moving.
-Redirecting jump 14 from 9 to 10.
+Redirecting jump 16 from 9 to 10.
 Merging block 9 into block 8...
 Merged blocks 8 and 9.
 Merged 8 and 9 without moving.
@@ -760,211 +1806,242 @@ try_optimize_cfg iteration 2
 (note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -56 [0xffffffffffffffc8])) [0 file+0 S8 A64])
-        (reg:DI 5 di [ file ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:79 -1
+        (reg:DI 5 di [ file ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:96 -1
      (nil))
 (note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
-(insn 6 3 7 2 (set (reg/f:DI 69)
-        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -56 [0xffffffffffffffc8])) [0 file+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
+(insn 6 3 7 2 (set (reg:DI 5 di)
+        (const_int 24 [0x18])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:98 -1
      (nil))
-(insn 7 6 8 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -16 [0xfffffffffffffff0])) [0 store_file+0 S8 A64])
-        (reg/f:DI 69)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:80 -1
-     (nil))
-(insn 8 7 9 2 (set (reg/f:DI 70)
-        (mem/f/j/c:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f868c5612f8 books_array>) [0 books_array.array+0 S8 A128])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:82 -1
-     (nil))
-(insn 9 8 10 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -24 [0xffffffffffffffe8])) [0 array_temp+0 S8 A64])
-        (reg/f:DI 70)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:82 -1
-     (nil))
-(insn 10 9 11 2 (set (reg:CCZ 17 flags)
-        (compare:CCZ (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                    (const_int -16 [0xfffffffffffffff0])) [0 store_file+0 S8 A64])
-            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:84 -1
-     (nil))
-(jump_insn 11 10 12 2 (set (pc)
-        (if_then_else (ne (reg:CCZ 17 flags)
-                (const_int 0 [0]))
-            (label_ref 16)
-            (pc))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:84 -1
-     (nil)
- -> 16)
-(note 12 11 13 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
-(insn 13 12 14 4 (set (reg:SI 59 [ D.2287 ])
-        (const_int -1 [0xffffffffffffffff])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:85 -1
-     (nil))
-(jump_insn 14 13 15 4 (set (pc)
-        (label_ref:DI 61)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:85 650 {jump}
-     (nil)
- -> 61)
-(barrier 15 14 16)
-(code_label 16 15 17 5 14 "" [1 uses])
-(note 17 16 18 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
-(insn 18 17 19 5 (set (reg:SI 60 [ number_books.7 ])
-        (mem/c:SI (symbol_ref:DI ("number_books") [flags 0x2]  <var_decl 0x7f868c561390 number_books>) [0 number_books+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:87 -1
-     (nil))
-(insn 19 18 20 5 (set (reg:DI 61 [ D.2288 ])
-        (sign_extend:DI (reg:SI 60 [ number_books.7 ]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:87 -1
-     (nil))
-(insn 20 19 21 5 (set (reg:DI 4 si)
-        (const_int 24 [0x18])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:87 -1
-     (nil))
-(insn 21 20 22 5 (set (reg:DI 5 di)
-        (reg:DI 61 [ D.2288 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:87 -1
-     (nil))
-(call_insn 22 21 23 5 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x7f868c456d00 calloc>) [0 __builtin_calloc S1 A8])
-            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:87 -1
+(call_insn 7 6 8 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f56c75dcf00 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:98 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
-        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
-            (nil))))
-(insn 23 22 24 5 (set (reg/f:DI 71)
-        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:87 -1
-     (expr_list:REG_NOALIAS (reg/f:DI 71)
         (nil)))
-(insn 24 23 25 5 (set (reg/f:DI 62 [ all_books.8 ])
-        (reg/f:DI 71)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:87 -1
+(insn 8 7 9 2 (set (reg/f:DI 70)
+        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:98 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 70)
+        (nil)))
+(insn 9 8 10 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 array_temp+0 S8 A64])
+        (reg/f:DI 70)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:98 -1
      (nil))
-(insn 25 24 26 5 (set (mem/f/c:DI (symbol_ref:DI ("all_books") [flags 0x2]  <var_decl 0x7f868c561260 all_books>) [0 all_books+0 S8 A64])
-        (reg/f:DI 62 [ all_books.8 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:87 -1
+(insn 10 9 11 2 (set (reg/f:DI 71)
+        (mem/f/c:DI (symbol_ref:DI ("all_books") [flags 0x2]  <var_decl 0x7f56c76dc260 all_books>) [0 all_books+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:99 -1
      (nil))
-(insn 26 25 27 5 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
-        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:89 -1
+(insn 11 10 12 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 array_temp+0 S8 A64])
+        (reg/f:DI 71)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:99 -1
      (nil))
-(jump_insn 27 26 28 5 (set (pc)
-        (label_ref 51)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:89 -1
+(insn 12 11 13 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -56 [0xffffffffffffffc8])) [0 file+0 S8 A64])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:101 -1
+     (nil))
+(jump_insn 13 12 14 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 18)
+            (pc))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:101 -1
      (nil)
- -> 51)
-(barrier 28 27 54)
-(code_label 54 28 29 6 17 "" [1 uses])
-(note 29 54 30 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
-(insn 30 29 31 6 (set (reg/f:DI 72)
+ -> 18)
+(note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 4 (set (reg:SI 59 [ D.2372 ])
+        (const_int -1 [0xffffffffffffffff])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:102 -1
+     (nil))
+(jump_insn 16 15 17 4 (set (pc)
+        (label_ref:DI 65)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:102 650 {jump}
+     (nil)
+ -> 65)
+(barrier 17 16 18)
+(code_label 18 17 19 5 17 "" [1 uses])
+(note 19 18 20 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 5 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:106 -1
+     (nil))
+(jump_insn 21 20 22 5 (set (pc)
+        (label_ref 54)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:106 -1
+     (nil)
+ -> 54)
+(barrier 22 21 58)
+(code_label 58 22 23 6 20 "" [1 uses])
+(note 23 58 24 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 25 6 (set (reg:SI 72)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:107 -1
+     (nil))
+(insn 25 24 26 6 (set (reg:DI 62 [ D.2374 ])
+        (sign_extend:DI (reg:SI 72))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:107 -1
+     (nil))
+(insn 26 25 27 6 (set (reg:DI 73)
+        (reg:DI 62 [ D.2374 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:107 -1
+     (nil))
+(insn 27 26 28 6 (parallel [
+            (set (reg:DI 73)
+                (ashift:DI (reg:DI 73)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:107 -1
+     (nil))
+(insn 28 27 29 6 (parallel [
+            (set (reg:DI 73)
+                (plus:DI (reg:DI 73)
+                    (reg:DI 62 [ D.2374 ])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:107 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 62 [ D.2374 ])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 29 28 30 6 (parallel [
+            (set (reg:DI 74)
+                (ashift:DI (reg:DI 73)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:107 -1
+     (nil))
+(insn 30 29 31 6 (set (reg:DI 73)
+        (reg:DI 74)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:107 -1
+     (expr_list:REG_EQUAL (mult:DI (reg:DI 62 [ D.2374 ])
+            (const_int 24 [0x18]))
+        (nil)))
+(insn 31 30 32 6 (set (reg:DI 63 [ D.2374 ])
+        (reg:DI 73)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:107 -1
+     (nil))
+(insn 32 31 33 6 (set (reg/f:DI 75)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -24 [0xffffffffffffffe8])) [0 array_temp+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
+                (const_int -16 [0xfffffffffffffff0])) [0 array_temp+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:107 -1
      (nil))
-(insn 31 30 32 6 (set (reg:SI 64 [ D.2289 ])
-        (mem/j:SI (plus:DI (reg/f:DI 72)
-                (const_int 20 [0x14])) [0 array_temp_5->copies+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
+(insn 33 32 34 6 (parallel [
+            (set (reg/f:DI 64 [ D.2375 ])
+                (plus:DI (reg:DI 63 [ D.2374 ])
+                    (reg/f:DI 75)))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:107 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [0 array_temp+0 S8 A64])
+            (reg:DI 63 [ D.2374 ]))
+        (nil)))
+(insn 34 33 35 6 (set (reg:DI 76)
+        (mem:DI (reg/f:DI 64 [ D.2375 ]) [0 *_12+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:107 -1
      (nil))
-(insn 32 31 33 6 (set (reg/f:DI 73)
+(insn 35 34 36 6 (set (mem/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -48 [0xffffffffffffffd0])) [0 book_temp+0 S8 A64])
+        (reg:DI 76)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:107 -1
+     (nil))
+(insn 36 35 37 6 (set (reg:DI 77)
+        (mem:DI (plus:DI (reg/f:DI 64 [ D.2375 ])
+                (const_int 8 [0x8])) [0 *_12+8 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:107 -1
+     (nil))
+(insn 37 36 38 6 (set (mem/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [0 book_temp+8 S8 A64])
+        (reg:DI 77)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:107 -1
+     (nil))
+(insn 38 37 39 6 (set (reg:DI 78)
+        (mem:DI (plus:DI (reg/f:DI 64 [ D.2375 ])
+                (const_int 16 [0x10])) [0 *_12+16 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:107 -1
+     (nil))
+(insn 39 38 40 6 (set (mem/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 book_temp+16 S8 A64])
+        (reg:DI 78)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:107 -1
+     (nil))
+(insn 40 39 41 6 (set (reg:SI 65 [ D.2373 ])
+        (mem/j/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [0 book_temp.copies+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:108 -1
+     (nil))
+(insn 41 40 42 6 (set (reg:SI 66 [ D.2373 ])
+        (mem/j/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 book_temp.year+0 S4 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:108 -1
+     (nil))
+(insn 42 41 43 6 (set (reg/f:DI 67 [ D.2376 ])
+        (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [0 book_temp.authors+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:108 -1
+     (nil))
+(insn 43 42 44 6 (set (reg/f:DI 68 [ D.2376 ])
+        (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -48 [0xffffffffffffffd0])) [0 book_temp.title+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:108 -1
+     (nil))
+(insn 44 43 45 6 (set (reg:DI 79)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -24 [0xffffffffffffffe8])) [0 array_temp+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
+                (const_int -56 [0xffffffffffffffc8])) [0 file+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:108 -1
      (nil))
-(insn 33 32 34 6 (set (reg:SI 65 [ D.2289 ])
-        (mem/j:SI (plus:DI (reg/f:DI 73)
-                (const_int 16 [0x10])) [0 array_temp_5->year+0 S4 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
+(insn 45 44 46 6 (set (reg:SI 38 r9)
+        (reg:SI 65 [ D.2373 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:108 -1
      (nil))
-(insn 34 33 35 6 (set (reg/f:DI 74)
-        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -24 [0xffffffffffffffe8])) [0 array_temp+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
+(insn 46 45 47 6 (set (reg:SI 37 r8)
+        (reg:SI 66 [ D.2373 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:108 -1
      (nil))
-(insn 35 34 36 6 (set (reg/f:DI 66 [ D.2290 ])
-        (mem/f/j:DI (plus:DI (reg/f:DI 74)
-                (const_int 8 [0x8])) [0 array_temp_5->authors+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
+(insn 47 46 48 6 (set (reg:DI 2 cx)
+        (reg/f:DI 67 [ D.2376 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:108 -1
      (nil))
-(insn 36 35 37 6 (set (reg/f:DI 75)
-        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -24 [0xffffffffffffffe8])) [0 array_temp+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
+(insn 48 47 49 6 (set (reg:DI 1 dx)
+        (reg/f:DI 68 [ D.2376 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:108 -1
      (nil))
-(insn 37 36 38 6 (set (reg/f:DI 67 [ D.2290 ])
-        (mem/f/j:DI (reg/f:DI 75) [0 array_temp_5->title+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
+(insn 49 48 50 6 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f56c7734000 *.LC1>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:108 -1
      (nil))
-(insn 38 37 39 6 (set (reg:DI 76)
-        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -56 [0xffffffffffffffc8])) [0 file+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
+(insn 50 49 51 6 (set (reg:DI 5 di)
+        (reg:DI 79)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:108 -1
      (nil))
-(insn 39 38 40 6 (set (mem:SI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
-                (const_int 16 [0x10])) [0  S4 A64])
-        (reg:SI 64 [ D.2289 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
+(insn 51 50 52 6 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:108 -1
      (nil))
-(insn 40 39 41 6 (set (mem:SI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
-                (const_int 8 [0x8])) [0  S4 A64])
-        (reg:SI 65 [ D.2289 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
-     (nil))
-(insn 41 40 42 6 (set (mem:DI (reg/f:DI 56 virtual-outgoing-args) [0  S8 A64])
-        (reg/f:DI 66 [ D.2290 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
-     (nil))
-(insn 42 41 43 6 (set (reg:DI 38 r9)
-        (reg/f:DI 67 [ D.2290 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
-     (nil))
-(insn 43 42 44 6 (set (reg:DI 37 r8)
-        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f868c592ab0 *.LC1>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
-     (nil))
-(insn 44 43 45 6 (set (reg:DI 2 cx)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f868c592b48 *.LC2>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
-     (nil))
-(insn 45 44 46 6 (set (reg:DI 1 dx)
-        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f868c592be0 *.LC3>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
-     (nil))
-(insn 46 45 47 6 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f868c592be0 *.LC3>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
-     (nil))
-(insn 47 46 48 6 (set (reg:DI 5 di)
-        (reg:DI 76)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
-     (nil))
-(insn 48 47 49 6 (set (reg:QI 0 ax)
-        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
-     (nil))
-(call_insn 49 48 50 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fprintf") [flags 0x41]  <function_decl 0x7f868c443700 fprintf>) [0 __builtin_fprintf S1 A8])
-            (const_int 24 [0x18]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:90 -1
+(call_insn 52 51 53 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fprintf") [flags 0x41]  <function_decl 0x7f56c75be700 fprintf>) [0 __builtin_fprintf S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:108 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
         (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
             (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
                 (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 1 dx))
                     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 2 cx))
-                        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 37 r8))
-                            (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 38 r9))
-                                (expr_list:REG_FRAME_RELATED_EXPR (use (mem/f:DI (reg/f:DI 56 virtual-outgoing-args) [0  S8 A64]))
-                                    (expr_list:REG_BR_PRED (use (mem:SI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
-                                                    (const_int 8 [0x8])) [0  S4 A64]))
-                                        (expr_list:REG_BR_PRED (use (mem:SI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
-                                                        (const_int 16 [0x10])) [0  S4 A64]))
-                                            (nil))))))))))))
-(insn 50 49 51 6 (parallel [
+                        (expr_list:REG_BR_PRED (use (reg:SI 37 r8))
+                            (expr_list:REG_BR_PRED (use (reg:SI 38 r9))
+                                (nil)))))))))
+(insn 53 52 54 6 (parallel [
             (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                         (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
                 (plus:SI (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                             (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:89 -1
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:106 -1
      (nil))
-(code_label 51 50 52 7 16 "" [1 uses])
-(note 52 51 53 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
-(insn 53 52 55 7 (set (reg:SI 63 [ number_books.9 ])
-        (mem/c:SI (symbol_ref:DI ("number_books") [flags 0x2]  <var_decl 0x7f868c561390 number_books>) [0 number_books+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:89 -1
+(code_label 54 53 55 7 19 "" [1 uses])
+(note 55 54 56 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 56 55 57 7 (set (reg:SI 60 [ i.8 ])
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:106 -1
      (nil))
-(insn 55 53 56 7 (set (reg:CCGC 17 flags)
-        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                    (const_int -4 [0xfffffffffffffffc])) [0 i+0 S4 A32])
-            (reg:SI 63 [ number_books.9 ]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:89 -1
+(insn 57 56 59 7 (set (reg:SI 61 [ D.2373 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("books_array") [flags 0x2]  <var_decl 0x7f56c76dc2f8 books_array>)
+                    (const_int 8 [0x8]))) [0 books_array.length+0 S4 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:106 -1
      (nil))
-(jump_insn 56 55 57 7 (set (pc)
-        (if_then_else (lt (reg:CCGC 17 flags)
+(insn 59 57 60 7 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 60 [ i.8 ])
+            (reg:SI 61 [ D.2373 ]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:106 -1
+     (nil))
+(jump_insn 60 59 61 7 (set (pc)
+        (if_then_else (ltu (reg:CC 17 flags)
                 (const_int 0 [0]))
-            (label_ref 54)
-            (pc))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:89 -1
+            (label_ref 58)
+            (pc))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:106 -1
      (nil)
- -> 54)
-(note 57 56 58 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
-(insn 58 57 61 8 (set (reg:SI 59 [ D.2287 ])
-        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:94 -1
+ -> 58)
+(note 61 60 62 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 62 61 65 8 (set (reg:SI 59 [ D.2372 ])
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:111 -1
      (nil))
-(code_label 61 58 62 10 18 "" [1 uses])
-(note 62 61 63 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
-(insn 63 62 67 10 (set (reg:SI 68 [ <retval> ])
-        (reg:SI 59 [ D.2287 ])) -1
+(code_label 65 62 66 10 21 "" [1 uses])
+(note 66 65 67 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 67 66 71 10 (set (reg:SI 69 [ <retval> ])
+        (reg:SI 59 [ D.2372 ])) -1
      (nil))
-(insn 67 63 70 10 (set (reg/i:SI 0 ax)
-        (reg:SI 68 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:95 -1
+(insn 71 67 74 10 (set (reg/i:SI 0 ax)
+        (reg:SI 69 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:112 -1
      (nil))
-(insn 70 67 0 10 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:95 -1
+(insn 74 71 0 10 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:112 -1
      (nil))
 
 ;; Function find_book_by_title (find_book_by_title, funcdef_no=4, decl_uid=2155, cgraph_uid=4)
@@ -1000,20 +2077,20 @@ try_optimize_cfg iteration 2
 (note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -24 [0xffffffffffffffe8])) [0 title+0 S8 A64])
-        (reg:DI 5 di [ title ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:101 -1
+        (reg:DI 5 di [ title ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:118 -1
      (nil))
 (note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
-(insn 6 3 9 2 (set (reg:TI 59 [ D.2260 ])
+(insn 6 3 9 2 (set (reg:TI 59 [ D.2339 ])
         (mem/c:TI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -16 [0xfffffffffffffff0])) [0 empty+0 S16 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:103 -1
+                (const_int -16 [0xfffffffffffffff0])) [0 empty+0 S16 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:120 -1
      (nil))
 (insn 9 6 13 2 (set (reg:TI 60 [ <retval> ])
-        (reg:TI 59 [ D.2260 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:103 -1
+        (reg:TI 59 [ D.2339 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:120 -1
      (nil))
 (insn 13 9 16 2 (set (reg/i:TI 0 ax)
-        (reg:TI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:104 -1
+        (reg:TI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:121 -1
      (nil))
-(insn 16 13 0 2 (use (reg/i:TI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:104 -1
+(insn 16 13 0 2 (use (reg/i:TI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:121 -1
      (nil))
 
 ;; Function find_book_by_author (find_book_by_author, funcdef_no=5, decl_uid=2157, cgraph_uid=5)
@@ -1049,20 +2126,20 @@ try_optimize_cfg iteration 2
 (note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -24 [0xffffffffffffffe8])) [0 author+0 S8 A64])
-        (reg:DI 5 di [ author ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:110 -1
+        (reg:DI 5 di [ author ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:127 -1
      (nil))
 (note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
-(insn 6 3 9 2 (set (reg:TI 59 [ D.2263 ])
+(insn 6 3 9 2 (set (reg:TI 59 [ D.2342 ])
         (mem/c:TI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -16 [0xfffffffffffffff0])) [0 empty+0 S16 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:112 -1
+                (const_int -16 [0xfffffffffffffff0])) [0 empty+0 S16 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:129 -1
      (nil))
 (insn 9 6 13 2 (set (reg:TI 60 [ <retval> ])
-        (reg:TI 59 [ D.2263 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:112 -1
+        (reg:TI 59 [ D.2342 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:129 -1
      (nil))
 (insn 13 9 16 2 (set (reg/i:TI 0 ax)
-        (reg:TI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:113 -1
+        (reg:TI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:130 -1
      (nil))
-(insn 16 13 0 2 (use (reg/i:TI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:113 -1
+(insn 16 13 0 2 (use (reg/i:TI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:130 -1
      (nil))
 
 ;; Function find_book_by_year (find_book_by_year, funcdef_no=6, decl_uid=2159, cgraph_uid=6)
@@ -1098,23 +2175,23 @@ try_optimize_cfg iteration 2
 (note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (insn 2 4 3 2 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -20 [0xffffffffffffffec])) [0 year+0 S4 A32])
-        (reg:SI 5 di [ year ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:119 -1
+        (reg:SI 5 di [ year ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:136 -1
      (nil))
 (note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
-(insn 6 3 9 2 (set (reg:TI 59 [ D.2266 ])
+(insn 6 3 9 2 (set (reg:TI 59 [ D.2345 ])
         (mem/c:TI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -16 [0xfffffffffffffff0])) [0 empty+0 S16 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:121 -1
+                (const_int -16 [0xfffffffffffffff0])) [0 empty+0 S16 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:138 -1
      (nil))
 (insn 9 6 13 2 (set (reg:TI 60 [ <retval> ])
-        (reg:TI 59 [ D.2266 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:121 -1
+        (reg:TI 59 [ D.2345 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:138 -1
      (nil))
 (insn 13 9 16 2 (set (reg/i:TI 0 ax)
-        (reg:TI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:122 -1
+        (reg:TI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:139 -1
      (nil))
-(insn 16 13 0 2 (use (reg/i:TI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:122 -1
+(insn 16 13 0 2 (use (reg/i:TI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:139 -1
      (nil))
 
-;; Function main (main, funcdef_no=7, decl_uid=2208, cgraph_uid=7)
+;; Function main (main, funcdef_no=7, decl_uid=2210, cgraph_uid=7)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -1147,79 +2224,79 @@ try_optimize_cfg iteration 2
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (insn 5 2 6 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f868c59de40 *.LC4>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:126 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f56c7341260 *.LC2>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:143 -1
      (nil))
 (insn 6 5 7 2 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f868c59ded8 *.LC5>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:126 -1
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f56c73412f8 *.LC3>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:143 -1
      (nil))
 (call_insn 7 6 8 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f868c53a500 fopen>) [0 fopen S1 A8])
-            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:126 -1
+        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f56c76b5500 fopen>) [0 fopen S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:143 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
             (nil))))
 (insn 8 7 9 2 (set (reg:DI 61)
-        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:126 -1
+        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:143 -1
      (nil))
 (insn 9 8 10 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -8 [0xfffffffffffffff8])) [0 file1+0 S8 A64])
-        (reg:DI 61)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:126 -1
+        (reg:DI 61)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:143 -1
      (nil))
 (insn 10 9 11 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f868c5a9000 *.LC6>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:127 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f56c7341390 *.LC4>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:144 -1
      (nil))
 (insn 11 10 12 2 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x7f868c5a9098 *.LC7>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:127 -1
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f56c7341428 *.LC5>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:144 -1
      (nil))
 (call_insn 12 11 13 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f868c53a500 fopen>) [0 fopen S1 A8])
-            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:127 -1
+        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f56c76b5500 fopen>) [0 fopen S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:144 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
             (nil))))
 (insn 13 12 14 2 (set (reg:DI 62)
-        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:127 -1
+        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:144 -1
      (nil))
 (insn 14 13 15 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -16 [0xfffffffffffffff0])) [0 file2+0 S8 A64])
-        (reg:DI 62)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:127 -1
+        (reg:DI 62)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:144 -1
      (nil))
 (insn 15 14 16 2 (set (reg:DI 63)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -8 [0xfffffffffffffff8])) [0 file1+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:129 -1
+                (const_int -8 [0xfffffffffffffff8])) [0 file1+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:146 -1
      (nil))
 (insn 16 15 17 2 (set (reg:DI 5 di)
-        (reg:DI 63)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:129 -1
+        (reg:DI 63)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:146 -1
      (nil))
 (call_insn 17 16 18 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("load_books") [flags 0x3]  <function_decl 0x7f868c565100 load_books>) [0 load_books S1 A8])
-            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:129 -1
+        (call (mem:QI (symbol_ref:DI ("load_books") [flags 0x3]  <function_decl 0x7f56c76e0100 load_books>) [0 load_books S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:146 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (nil)))
 (insn 18 17 19 2 (set (reg:DI 64)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                (const_int -16 [0xfffffffffffffff0])) [0 file2+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:130 -1
+                (const_int -16 [0xfffffffffffffff0])) [0 file2+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:147 -1
      (nil))
 (insn 19 18 20 2 (set (reg:DI 5 di)
-        (reg:DI 64)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:130 -1
+        (reg:DI 64)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:147 -1
      (nil))
 (call_insn 20 19 21 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("store_books") [flags 0x3]  <function_decl 0x7f868c565000 store_books>) [0 store_books S1 A8])
-            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:130 -1
+        (call (mem:QI (symbol_ref:DI ("store_books") [flags 0x3]  <function_decl 0x7f56c76e0000 store_books>) [0 store_books S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:147 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (nil)))
-(insn 21 20 24 2 (set (reg:SI 59 [ D.2294 ])
-        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:132 -1
+(insn 21 20 24 2 (set (reg:SI 59 [ D.2378 ])
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:149 -1
      (nil))
 (insn 24 21 28 2 (set (reg:SI 60 [ <retval> ])
-        (reg:SI 59 [ D.2294 ])) -1
+        (reg:SI 59 [ D.2378 ])) -1
      (nil))
 (insn 28 24 31 2 (set (reg/i:SI 0 ax)
-        (reg:SI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:133 -1
+        (reg:SI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:150 -1
      (nil))
-(insn 31 28 0 2 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:133 -1
+(insn 31 28 0 2 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c:150 -1
      (nil))
