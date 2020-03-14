@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include "unity.h"
 #include "book_management.h"
-
-
+#include "users.h"
+//==============================={START}:book_management tests=========================================
 void test_store_books() {
 	FILE* f= fopen("../test_file.csv","w");
 
@@ -30,6 +30,10 @@ void test_load_books() {
 
 void test_add_book() {
 	struct Book b;
+	b.title = "Test Title";
+	b.authors="Test Author";
+	b.year=2020;
+	b.copies=2;
 
 	int ret_value= add_book(b);
 
@@ -85,8 +89,28 @@ void test_find_book_by_year() {
 	TEST_ASSERT_EQUAL_INT_MESSAGE(ret_value.length,1,"TEST FAILED: find_book_by_title() returned an array with length %i not 1 for 1813.");
 	TEST_ASSERT_EQUAL_INT_MESSAGE(wret_value.length,0, "TEST FAILED: find_book_by_title() returned an array with length %i not 0 for 2021.");
 }
+//==============================={END}:book_management tests=========================================
 
+//------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------
 
+////==============================={START}:users tests===============================================
+
+void test_register_user(){
+	User u;
+	u.id
+
+	int ret_value= register_user(u);
+
+	TEST_ASSERT_EQUAL_INT_MESSAGE(0, ret_value, "TEST FAILED: register_user() did not return 0.");
+}
+
+void test_login(){
+	User u;
+
+	int ret_value= login(u);
+
+	TEST_ASSERT_EQUAL_INT_MESSAGE(0, ret_value, "TEST FAILED: login() did not return 0.");
+}
 void setUp() {
 	 //this function is called before each test, it can be empty
 }
