@@ -65,21 +65,20 @@ int load_books(FILE *file){
 //adds a book to the ones available to the library
 //returns 0 if the book could be added, or an error code otherwise
 int add_book(struct Book book) {
-  struct Book* temp=(struct Book*)malloc((sizeof(struct Book*)*books_array.length)+1); //creates extra space in the array for the new book.
+  struct Book* temp_array=(struct Book*)malloc((sizeof(struct Book*)*books_array.length)+1); //creates extra space in the array for the new book.
 
   int i=0;
   for(;i<books_array.length; i++){
     if(books_array.array[i].title==book.title && books_array.array[i].authors==book.authors && books_array.array[i].year==book.year && books_array.array[i].copies==book.copies){
       return 1;
     }
-
-    else{
-      temp[i].title=books_array.array[i].title;
-      temp[i].authors=books_array.array[i].authors;
-      temp[i].year=books_array.array[i].year;
-      temp[i].copies=books_array.array[i].copies;
-    }
   }
+
+  temp_array[i].title=books_array.array[i].title;
+  temp_array[i].authors=books_array.array[i].authors;
+  temp_array[i].year=books_array.array[i].year;
+  temp_array[i].copies=books_array.array[i].copies;
+
   temp[i+1]=book;
   memcpy(books_array.array,temp,sizeof(temp));
   return 0;
@@ -88,7 +87,31 @@ int add_book(struct Book book) {
 //removes a book from the library
 //returns 0 if the book could be successfully removed, or an error code otherwise.
 int remove_book(struct Book book){
-  return -1;
+/*  int i=0;
+  int x=0,
+
+  for(;x<number_books;x++){
+    if(books_array.array[i])
+  }
+
+  else{
+    for(;i<NumberBookings;i++){
+      if(BookingsTable[i][0]==booking_number){
+          cancelSeatReservation(booking_number);
+          NumberBookings--;
+        }
+
+      else if(BookingsTable[i][0]>=booking_number){
+        for(;i<26;i++){
+            int x=i-1;
+            BookingsTable[x][0]=BookingsTable[i][0];
+            BookingsTable[x][1]=BookingsTable[i][1];
+            BookingsTable[x][2]=BookingsTable[i][2];
+            BookingsTable[x][3]=BookingsTable[i][3];
+          }
+      }
+    }
+  return 1;*/
 }
 
 //saves the database of books in the specified file
@@ -143,7 +166,13 @@ int main(){
   FILE* file1= fopen("../books.csv","r");
   FILE* file2= fopen("../test_file.csv","a");
 
+  struct Book b;
+  b.title = "Bible";
+  b.authors="Jesus Christ";
+  b.year=1234;
+  b.copies=6;
   load_books(file1);
+  add_book(b);
   store_books(file2);
 
   return 0;
