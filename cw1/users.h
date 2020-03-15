@@ -54,7 +54,7 @@ int add_user();
 
 //Checks if the provided user id and password corresponds
 //to an existing user in the user database and returns 0 if correct or 1 otherwise.
-const int login(unsigned int id, char* password);
+const int login(char email[], char password[]);
 
 //Cheks if the provided book has enough copies left in the library's database.
 //Returns 0 if the book is available and 1 otherwise.

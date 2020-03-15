@@ -42,7 +42,16 @@ int register_user(unsigned int uid, char fn[],char ln[], unsigned int ut, char e
 
 //Checks if the provided user id and password corresponds
 //to an existing user in the user database and returns 0 if correct or 1 otherwise.
-const int login(unsigned int id, char* password);
+const int login(char email[], char password[]){
+
+  for(int i=0;i<number_users;i++){
+    if(strcmp(all_users[i]->email,email)==0
+    && strcmp(all_users[i]->password,password)==0){
+      return 0;
+    }
+  }
+  return 1;
+}
 
 //Cheks if the provided book has enough copies left in the library's database.
 //Returns 0 if the book is available and 1 otherwise.
