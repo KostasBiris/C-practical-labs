@@ -38,9 +38,15 @@ typedef struct{
   unsigned int length;
 }User_Array;
 
-//Registers a new user to the library and returns 0 if successful.
-const int register_user(User u);
+// returns a new account id
+// first time returns 1
+// if no more IDs can be generated returns -1
+int newUserId ();
 
+//Registers a new user to the library and returns 0 if successful.
+User* register_user(unsigned int uid, char* fn,char* ln, char* ut, char* e, char* p);
+
+return p;
 //Checks if the provided user id and password corresponds
 //to an existing user in the user database and returns 0 if correct or 1 otherwise.
 const int login(unsigned int id, char* password);

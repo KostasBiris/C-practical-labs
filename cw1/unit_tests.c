@@ -93,7 +93,7 @@ void test_find_book_by_year() {
 
 //------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------
 
-////==============================={START}:users tests===============================================
+//================================={START}:users tests===============================================
 
 void test_register_user(){
 	User u;
@@ -111,6 +111,8 @@ void test_login(){
 
 	TEST_ASSERT_EQUAL_INT_MESSAGE(0, ret_value, "TEST FAILED: login() did not return 0.");
 }
+//==================================={END}:users tests===============================================
+
 void setUp() {
 	 //this function is called before each test, it can be empty
 }

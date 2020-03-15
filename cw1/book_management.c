@@ -65,11 +65,12 @@ int load_books(FILE *file){
 //adds a book to the ones available to the library
 //returns 0 if the book could be added, or an error code otherwise
 int add_book(struct Book book) {
-  struct Book* temp_array=(struct Book*)malloc((sizeof(struct Book*)*books_array.length)+1); //creates extra space in the array for the new book.
+  /*struct Book* temp_array=(struct Book*)malloc((sizeof(struct Book*)*books_array.length)+1); //creates extra space in the array for the new book.
 
-  int i=0;
-  for(;i<books_array.length; i++){
-    if(books_array.array[i].title==book.title && books_array.array[i].authors==book.authors && books_array.array[i].year==book.year && books_array.array[i].copies==book.copies){
+  int i;
+  for(i=0;i<books_array.length; i++){
+    if(books_array.array[i].title!=book.title && books_array.array[i].authors!=book.authors
+      && books_array.array[i].year!=book.year && books_array.array[i].copies!=book.copies){
       return 1;
     }
   }
@@ -79,8 +80,11 @@ int add_book(struct Book book) {
   temp_array[i].year=books_array.array[i].year;
   temp_array[i].copies=books_array.array[i].copies;
 
-  temp[i+1]=book;
-  memcpy(books_array.array,temp,sizeof(temp));
+  book = temp_array[i+1];
+  memcpy(books_array.array,temp_array,sizeof(struct Book));*/
+  books_array.array[books_array.length]= book;
+  books_array.length++;
+  number_books++;
   return 0;
 }
 
@@ -118,8 +122,9 @@ int remove_book(struct Book book){
 //returns 0 if books were stored correctly, or an error code otherwise
 int store_books(FILE *file){
   struct Book book_temp;
-  struct Book *array_temp=(struct Book*)malloc(sizeof(struct Book));
-  array_temp=all_books;
+  struct Book* array_temp= (struct Book*)malloc(sizeof(struct Book*));
+  array_temp=books_array.array;
+  //array_temp=all_books;
 
   if(file==NULL){
     return -1;
@@ -130,7 +135,6 @@ int store_books(FILE *file){
     book_temp= *(array_temp+i);
     fprintf(file, "%s,%s,%d,%d\n", book_temp.title, book_temp.authors, book_temp.year, book_temp.copies);
   }
-
   return 0;
 }
 
