@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/bu
 CMakeFiles/book_management.dir/all:
 	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/depend
 	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles  1 2
 	@echo "Built target book_management"
 .PHONY : CMakeFiles/book_management.dir/all
 
@@ -72,7 +72,7 @@ all: CMakeFiles/book_management.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/book_management.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/book_management.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles 0
 .PHONY : CMakeFiles/book_management.dir/rule

@@ -138,6 +138,30 @@ book_management.c.s:
 	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/book_management.c.s
 .PHONY : book_management.c.s
 
+users.o: users.c.o
+.PHONY : users.o
+
+# target to build an object file
+users.c.o:
+	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/users.c.o
+.PHONY : users.c.o
+
+users.i: users.c.i
+.PHONY : users.i
+
+# target to preprocess a source file
+users.c.i:
+	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/users.c.i
+.PHONY : users.c.i
+
+users.s: users.c.s
+.PHONY : users.s
+
+# target to generate assembly for a file
+users.c.s:
+	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/users.c.s
+.PHONY : users.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -150,6 +174,9 @@ help:
 	@echo "... book_management.o"
 	@echo "... book_management.i"
 	@echo "... book_management.s"
+	@echo "... users.o"
+	@echo "... users.i"
+	@echo "... users.s"
 .PHONY : help
 
 

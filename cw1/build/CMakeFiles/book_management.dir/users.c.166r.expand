@@ -1,0 +1,448 @@
+
+;; Function add_user (add_user, funcdef_no=0, decl_uid=2184, cgraph_uid=0)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+deleting block 7
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 u+0 S8 A64])
+        (reg:DI 5 di [ u ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:16 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:SI 60 [ number_users.0 ])
+        (mem/c:SI (symbol_ref:DI ("number_users") [flags 0x2]  <var_decl 0x7f545a497980 number_users>) [0 number_users+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:17 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 60 [ number_users.0 ])
+            (const_int 3 [0x3]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:17 -1
+     (nil))
+(jump_insn 8 7 9 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 13)
+            (pc))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:17 -1
+     (nil)
+ -> 13)
+(note 9 8 10 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 10 9 11 4 (set (reg:SI 59 [ D.2247 ])
+        (const_int 1 [0x1])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:18 -1
+     (nil))
+(jump_insn 11 10 12 4 (set (pc)
+        (label_ref 26)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:18 -1
+     (nil)
+ -> 26)
+(barrier 12 11 13)
+(code_label 13 12 14 5 2 "" [1 uses])
+(note 14 13 15 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 5 (set (reg:SI 61 [ number_users.1 ])
+        (mem/c:SI (symbol_ref:DI ("number_users") [flags 0x2]  <var_decl 0x7f545a497980 number_users>) [0 number_users+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:20 -1
+     (nil))
+(insn 16 15 17 5 (set (reg:DI 67)
+        (sign_extend:DI (reg:SI 61 [ number_users.1 ]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:20 -1
+     (nil))
+(insn 17 16 18 5 (set (reg/f:DI 68)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 u+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:20 -1
+     (nil))
+(insn 18 17 19 5 (set (mem/f/j:DI (plus:DI (mult:DI (reg:DI 67)
+                    (const_int 8 [0x8]))
+                (symbol_ref:DI ("all_users") [flags 0x2]  <var_decl 0x7f545a497ab0 all_users>)) [0 all_users S8 A64])
+        (reg/f:DI 68)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:20 -1
+     (nil))
+(insn 19 18 20 5 (set (reg:SI 62 [ D.2248 ])
+        (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("users_array") [flags 0x2]  <var_decl 0x7f545a497b48 users_array>)
+                    (const_int 8 [0x8]))) [0 users_array.length+0 S4 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:21 -1
+     (nil))
+(insn 20 19 21 5 (parallel [
+            (set (reg:SI 63 [ D.2248 ])
+                (plus:SI (reg:SI 62 [ D.2248 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:21 -1
+     (nil))
+(insn 21 20 22 5 (set (mem/j/c:SI (const:DI (plus:DI (symbol_ref:DI ("users_array") [flags 0x2]  <var_decl 0x7f545a497b48 users_array>)
+                    (const_int 8 [0x8]))) [0 users_array.length+0 S4 A64])
+        (reg:SI 63 [ D.2248 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:21 -1
+     (nil))
+(insn 22 21 23 5 (set (reg:SI 64 [ number_users.2 ])
+        (mem/c:SI (symbol_ref:DI ("number_users") [flags 0x2]  <var_decl 0x7f545a497980 number_users>) [0 number_users+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:22 -1
+     (nil))
+(insn 23 22 24 5 (parallel [
+            (set (reg:SI 65 [ number_users.3 ])
+                (plus:SI (reg:SI 64 [ number_users.2 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:22 -1
+     (nil))
+(insn 24 23 25 5 (set (mem/c:SI (symbol_ref:DI ("number_users") [flags 0x2]  <var_decl 0x7f545a497980 number_users>) [0 number_users+0 S4 A32])
+        (reg:SI 65 [ number_users.3 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:22 -1
+     (nil))
+(insn 25 24 26 5 (set (reg:SI 59 [ D.2247 ])
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:23 -1
+     (nil))
+(code_label 26 25 27 6 3 "" [1 uses])
+(note 27 26 28 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 28 27 32 6 (set (reg:SI 66 [ <retval> ])
+        (reg:SI 59 [ D.2247 ])) -1
+     (nil))
+(insn 32 28 35 6 (set (reg/i:SI 0 ax)
+        (reg:SI 66 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:24 -1
+     (nil))
+(insn 35 32 0 6 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:24 -1
+     (nil))
+
+;; Function register_user (register_user, funcdef_no=1, decl_uid=2183, cgraph_uid=1)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+deleting block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 14 NOTE_INSN_DELETED)
+(note 14 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 14 3 2 (set (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [0 uid+0 S4 A32])
+        (reg:SI 5 di [ uid ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:27 -1
+     (nil))
+(insn 3 2 5 2 (set (reg:SI 70)
+        (reg:SI 4 si [ fn ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:27 -1
+     (nil))
+(insn 5 3 7 2 (set (reg:SI 71)
+        (reg:SI 1 dx [ ln ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:27 -1
+     (nil))
+(insn 7 5 9 2 (set (reg:SI 72)
+        (reg:SI 2 cx [ ut ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:27 -1
+     (nil))
+(insn 9 7 11 2 (set (reg:SI 73)
+        (reg:SI 37 r8 [ e ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:27 -1
+     (nil))
+(insn 11 9 4 2 (set (reg:SI 74)
+        (reg:SI 38 r9 [ p ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:27 -1
+     (nil))
+(insn 4 11 6 2 (set (mem/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 fn+0 S1 A8])
+        (subreg:QI (reg:SI 70) 0)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:27 -1
+     (nil))
+(insn 6 4 8 2 (set (mem/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [0 ln+0 S1 A8])
+        (subreg:QI (reg:SI 71) 0)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:27 -1
+     (nil))
+(insn 8 6 10 2 (set (mem/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 ut+0 S1 A8])
+        (subreg:QI (reg:SI 72) 0)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:27 -1
+     (nil))
+(insn 10 8 12 2 (set (mem/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -36 [0xffffffffffffffdc])) [0 e+0 S1 A8])
+        (subreg:QI (reg:SI 73) 0)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:27 -1
+     (nil))
+(insn 12 10 13 2 (set (mem/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [0 p+0 S1 A8])
+        (subreg:QI (reg:SI 74) 0)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:27 -1
+     (nil))
+(note 13 12 16 2 NOTE_INSN_FUNCTION_BEG)
+(insn 16 13 17 2 (set (reg:DI 5 di)
+        (const_int 840 [0x348])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:28 -1
+     (nil))
+(call_insn 17 16 18 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f545a397f00 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:28 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 18 17 19 2 (set (reg/f:DI 75)
+        (reg:DI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:28 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 75)
+        (nil)))
+(insn 19 18 20 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 u+0 S8 A64])
+        (reg/f:DI 75)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:28 -1
+     (nil))
+(insn 20 19 21 2 (set (reg/f:DI 76)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 u+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:30 -1
+     (nil))
+(insn 21 20 22 2 (set (reg:SI 77)
+        (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [0 uid+0 S4 A32])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:30 -1
+     (nil))
+(insn 22 21 23 2 (set (mem/j:SI (reg/f:DI 76) [0 u_1->userId+0 S4 A64])
+        (reg:SI 77)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:30 -1
+     (nil))
+(insn 23 22 24 2 (set (reg:SI 59 [ D.2249 ])
+        (sign_extend:SI (mem/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -24 [0xffffffffffffffe8])) [0 fn+0 S1 A8]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:31 -1
+     (nil))
+(insn 24 23 25 2 (set (reg/f:DI 78)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 u+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:31 -1
+     (nil))
+(insn 25 24 26 2 (parallel [
+            (set (reg/f:DI 60 [ D.2250 ])
+                (plus:DI (reg/f:DI 78)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:31 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [0 u+0 S8 A64])
+            (const_int 4 [0x4]))
+        (nil)))
+(insn 26 25 27 2 (set (reg:SI 2 cx)
+        (reg:SI 59 [ D.2249 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:31 -1
+     (nil))
+(insn 27 26 28 2 (set (reg:DI 1 dx)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f545a4b3428 *.LC0>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:31 -1
+     (nil))
+(insn 28 27 29 2 (set (reg:DI 4 si)
+        (const_int 1 [0x1])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:31 -1
+     (nil))
+(insn 29 28 30 2 (set (reg:DI 5 di)
+        (reg/f:DI 60 [ D.2250 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:31 -1
+     (nil))
+(insn 30 29 31 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:31 -1
+     (nil))
+(call_insn 31 30 32 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("snprintf") [flags 0x41]  <function_decl 0x7f545a380300 snprintf>) [0 __builtin_snprintf S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:31 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+                (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 1 dx))
+                    (expr_list:REG_BR_PRED (use (reg:SI 2 cx))
+                        (nil)))))))
+(insn 32 31 33 2 (set (reg:SI 61 [ D.2249 ])
+        (sign_extend:SI (mem/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -28 [0xffffffffffffffe4])) [0 ln+0 S1 A8]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:32 -1
+     (nil))
+(insn 33 32 34 2 (set (reg/f:DI 79)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 u+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:32 -1
+     (nil))
+(insn 34 33 35 2 (parallel [
+            (set (reg/f:DI 62 [ D.2251 ])
+                (plus:DI (reg/f:DI 79)
+                    (const_int 34 [0x22])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:32 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [0 u+0 S8 A64])
+            (const_int 34 [0x22]))
+        (nil)))
+(insn 35 34 36 2 (set (reg:SI 2 cx)
+        (reg:SI 61 [ D.2249 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:32 -1
+     (nil))
+(insn 36 35 37 2 (set (reg:DI 1 dx)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f545a4b3428 *.LC0>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:32 -1
+     (nil))
+(insn 37 36 38 2 (set (reg:DI 4 si)
+        (const_int 1 [0x1])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:32 -1
+     (nil))
+(insn 38 37 39 2 (set (reg:DI 5 di)
+        (reg/f:DI 62 [ D.2251 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:32 -1
+     (nil))
+(insn 39 38 40 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:32 -1
+     (nil))
+(call_insn 40 39 41 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("snprintf") [flags 0x41]  <function_decl 0x7f545a380300 snprintf>) [0 __builtin_snprintf S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:32 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+                (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 1 dx))
+                    (expr_list:REG_BR_PRED (use (reg:SI 2 cx))
+                        (nil)))))))
+(insn 41 40 42 2 (set (reg:SI 63 [ D.2252 ])
+        (sign_extend:SI (mem/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -32 [0xffffffffffffffe0])) [0 ut+0 S1 A8]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:33 -1
+     (nil))
+(insn 42 41 43 2 (set (reg/f:DI 80)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 u+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:33 -1
+     (nil))
+(insn 43 42 44 2 (set (mem/j:SI (plus:DI (reg/f:DI 80)
+                (const_int 76 [0x4c])) [0 u_1->user_type+0 S4 A32])
+        (reg:SI 63 [ D.2252 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:33 -1
+     (nil))
+(insn 44 43 45 2 (set (reg:SI 64 [ D.2249 ])
+        (sign_extend:SI (mem/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -36 [0xffffffffffffffdc])) [0 e+0 S1 A8]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:34 -1
+     (nil))
+(insn 45 44 46 2 (set (reg/f:DI 81)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 u+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:34 -1
+     (nil))
+(insn 46 45 47 2 (parallel [
+            (set (reg/f:DI 65 [ D.2253 ])
+                (plus:DI (reg/f:DI 81)
+                    (const_int 80 [0x50])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:34 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [0 u+0 S8 A64])
+            (const_int 80 [0x50]))
+        (nil)))
+(insn 47 46 48 2 (set (reg:SI 2 cx)
+        (reg:SI 64 [ D.2249 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:34 -1
+     (nil))
+(insn 48 47 49 2 (set (reg:DI 1 dx)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f545a4b3428 *.LC0>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:34 -1
+     (nil))
+(insn 49 48 50 2 (set (reg:DI 4 si)
+        (const_int 1 [0x1])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:34 -1
+     (nil))
+(insn 50 49 51 2 (set (reg:DI 5 di)
+        (reg/f:DI 65 [ D.2253 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:34 -1
+     (nil))
+(insn 51 50 52 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:34 -1
+     (nil))
+(call_insn 52 51 53 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("snprintf") [flags 0x41]  <function_decl 0x7f545a380300 snprintf>) [0 __builtin_snprintf S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:34 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+                (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 1 dx))
+                    (expr_list:REG_BR_PRED (use (reg:SI 2 cx))
+                        (nil)))))))
+(insn 53 52 54 2 (set (reg:SI 66 [ D.2249 ])
+        (sign_extend:SI (mem/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -40 [0xffffffffffffffd8])) [0 p+0 S1 A8]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:35 -1
+     (nil))
+(insn 54 53 55 2 (set (reg/f:DI 82)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 u+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:35 -1
+     (nil))
+(insn 55 54 56 2 (parallel [
+            (set (reg/f:DI 67 [ D.2254 ])
+                (plus:DI (reg/f:DI 82)
+                    (const_int 334 [0x14e])))
+            (clobber (reg:CC 17 flags))
+        ]) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:35 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [0 u+0 S8 A64])
+            (const_int 334 [0x14e]))
+        (nil)))
+(insn 56 55 57 2 (set (reg:SI 2 cx)
+        (reg:SI 66 [ D.2249 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:35 -1
+     (nil))
+(insn 57 56 58 2 (set (reg:DI 1 dx)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f545a4b3428 *.LC0>)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:35 -1
+     (nil))
+(insn 58 57 59 2 (set (reg:DI 4 si)
+        (const_int 1 [0x1])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:35 -1
+     (nil))
+(insn 59 58 60 2 (set (reg:DI 5 di)
+        (reg/f:DI 67 [ D.2254 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:35 -1
+     (nil))
+(insn 60 59 61 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:35 -1
+     (nil))
+(call_insn 61 60 62 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("snprintf") [flags 0x41]  <function_decl 0x7f545a380300 snprintf>) [0 __builtin_snprintf S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:35 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+            (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
+                (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 1 dx))
+                    (expr_list:REG_BR_PRED (use (reg:SI 2 cx))
+                        (nil)))))))
+(insn 62 61 63 2 (set (reg/f:DI 83)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 u+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:36 -1
+     (nil))
+(insn 63 62 64 2 (set (mem/j:SI (plus:DI (reg/f:DI 83)
+                (const_int 352 [0x160])) [0 u_1->numBooksBorrowed+0 S4 A64])
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:36 -1
+     (nil))
+(insn 64 63 65 2 (set (reg/f:DI 84)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 u+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:37 -1
+     (nil))
+(insn 65 64 66 2 (set (mem/j:SI (plus:DI (reg/f:DI 84)
+                (const_int 356 [0x164])) [0 u_1->numBooksReturned+0 S4 A32])
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:37 -1
+     (nil))
+(insn 66 65 67 2 (set (reg:DI 85)
+        (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [0 u+0 S8 A64])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:39 -1
+     (nil))
+(insn 67 66 68 2 (set (reg:DI 5 di)
+        (reg:DI 85)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:39 -1
+     (nil))
+(call_insn 68 67 69 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("add_user") [flags 0x3]  <function_decl 0x7f545a49b900 add_user>) [0 add_user S1 A8])
+            (const_int 0 [0]))) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:39 -1
+     (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
+        (nil)))
+(insn 69 68 72 2 (set (reg:SI 68 [ D.2249 ])
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:40 -1
+     (nil))
+(insn 72 69 76 2 (set (reg:SI 69 [ <retval> ])
+        (reg:SI 68 [ D.2249 ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:40 -1
+     (nil))
+(insn 76 72 79 2 (set (reg/i:SI 0 ax)
+        (reg:SI 69 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:41 -1
+     (nil))
+(insn 79 76 0 2 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c:41 -1
+     (nil))

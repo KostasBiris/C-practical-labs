@@ -11,6 +11,7 @@
 #define MaxFirstNameSize 30
 #define MaxLastNameSize 40
 
+#define MaxNumberUsers 3
 #define MaxNormalUsers 2 //the maximum number of Normal type users.
 #define MaxLibrarianUsers 1 //the maximum number of Librarian type users.
 
@@ -19,12 +20,12 @@
 
 typedef struct {
   unsigned int userId;
-  char* first_name[MaxFirstNameSize];
-  char* last_name[MaxLastNameSize];
-  char* user_type[9]; //"Normal" or "Librarian" (9 is the number of letters in the word Librarian).
+  char first_name[MaxFirstNameSize];
+  char last_name[MaxLastNameSize];
+  unsigned int user_type; //(1)"Normal" or (2)"Librarian" (9 is the number of letters in the word Librarian).
 
-  char* email[254];
-  char* user_password[MaxPasswoedSize];
+  char email[254];
+  char password[MaxPasswoedSize];
 
   unsigned int numBooksBorrowed;
   unsigned int numBooksReturned;
@@ -44,9 +45,13 @@ typedef struct{
 int newUserId ();
 
 //Registers a new user to the library and returns 0 if successful.
-User* register_user(unsigned int uid, char* fn,char* ln, char* ut, char* e, char* p);
+int register_user(unsigned int uid, char fn[],char ln[], unsigned int ut, char e[], char p[]);
 
-return p;
+// adds a user (pointer to the user) to the users_array
+// if the array is full and cannot accept any more accounts the function returns 1
+// otherwise the function returns 0
+int add_user();
+
 //Checks if the provided user id and password corresponds
 //to an existing user in the user database and returns 0 if correct or 1 otherwise.
 const int login(unsigned int id, char* password);

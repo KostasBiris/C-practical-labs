@@ -4,3 +4,7 @@
 CMakeFiles/book_management.dir/book_management.c.o: ../book_management.c
 CMakeFiles/book_management.dir/book_management.c.o: ../book_management.h
 
+CMakeFiles/book_management.dir/users.c.o: ../book_management.h
+CMakeFiles/book_management.dir/users.c.o: ../users.c
+CMakeFiles/book_management.dir/users.c.o: ../users.h
+

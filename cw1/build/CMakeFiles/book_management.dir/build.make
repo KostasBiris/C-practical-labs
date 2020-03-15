@@ -52,9 +52,32 @@ include CMakeFiles/book_management.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/book_management.dir/flags.make
 
+CMakeFiles/book_management.dir/users.c.o: CMakeFiles/book_management.dir/flags.make
+CMakeFiles/book_management.dir/users.c.o: ../users.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/book_management.dir/users.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/book_management.dir/users.c.o   -c /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c
+
+CMakeFiles/book_management.dir/users.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/book_management.dir/users.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c > CMakeFiles/book_management.dir/users.c.i
+
+CMakeFiles/book_management.dir/users.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/book_management.dir/users.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c -o CMakeFiles/book_management.dir/users.c.s
+
+CMakeFiles/book_management.dir/users.c.o.requires:
+.PHONY : CMakeFiles/book_management.dir/users.c.o.requires
+
+CMakeFiles/book_management.dir/users.c.o.provides: CMakeFiles/book_management.dir/users.c.o.requires
+	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/users.c.o.provides.build
+.PHONY : CMakeFiles/book_management.dir/users.c.o.provides
+
+CMakeFiles/book_management.dir/users.c.o.provides.build: CMakeFiles/book_management.dir/users.c.o
+
 CMakeFiles/book_management.dir/book_management.c.o: CMakeFiles/book_management.dir/flags.make
 CMakeFiles/book_management.dir/book_management.c.o: ../book_management.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/book_management.dir/book_management.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/book_management.dir/book_management.c.o   -c /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c
 
@@ -77,11 +100,13 @@ CMakeFiles/book_management.dir/book_management.c.o.provides.build: CMakeFiles/bo
 
 # Object files for target book_management
 book_management_OBJECTS = \
+"CMakeFiles/book_management.dir/users.c.o" \
 "CMakeFiles/book_management.dir/book_management.c.o"
 
 # External object files for target book_management
 book_management_EXTERNAL_OBJECTS =
 
+book_management: CMakeFiles/book_management.dir/users.c.o
 book_management: CMakeFiles/book_management.dir/book_management.c.o
 book_management: CMakeFiles/book_management.dir/build.make
 book_management: CMakeFiles/book_management.dir/link.txt
@@ -92,6 +117,7 @@ book_management: CMakeFiles/book_management.dir/link.txt
 CMakeFiles/book_management.dir/build: book_management
 .PHONY : CMakeFiles/book_management.dir/build
 
+CMakeFiles/book_management.dir/requires: CMakeFiles/book_management.dir/users.c.o.requires
 CMakeFiles/book_management.dir/requires: CMakeFiles/book_management.dir/book_management.c.o.requires
 .PHONY : CMakeFiles/book_management.dir/requires
 

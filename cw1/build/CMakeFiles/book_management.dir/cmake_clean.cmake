@@ -1,4 +1,5 @@
 FILE(REMOVE_RECURSE
+  "CMakeFiles/book_management.dir/users.c.o"
   "CMakeFiles/book_management.dir/book_management.c.o"
   "book_management.pdb"
   "book_management"
