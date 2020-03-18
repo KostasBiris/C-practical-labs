@@ -1,0 +1,1 @@
+/usr/bin/cc  -std=c99 -DNDEBUG -fdump-rtl-expand -g    CMakeFiles/users.dir/book_management.c.o CMakeFiles/users.dir/users.c.o  -o users -rdynamic 

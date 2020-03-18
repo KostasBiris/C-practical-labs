@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "book_management.h"
 #include "users.h"
 
 static int number_users=0;				// the number of users in the library
@@ -9,6 +8,15 @@ int userId_counter;			// a counter for creating unique user IDs
 static User* all_users[MaxNumberUsers];
 static User_Array users_array;
 
+// returns a new user id
+// first time returns 1
+// if no more IDs can be generated returns -1
+int newUserId (){
+  if (userId_counter < MaxUserIDId)  
+    return AccountIdCounter++;
+
+  return -1;
+}
 
 // adds a user (pointer to the user) to the users_array
 // if the array is full and cannot accept any more accounts the function returns 1
@@ -53,18 +61,8 @@ const int login(char email[], char password[]){
   return 1;
 }
 
-//Cheks if the provided book has enough copies left in the library's database.
-//Returns 0 if the book is available and 1 otherwise.
-int is_available(struct Book b);
 
-//Removes the specified book from the library's database while decreasing the number of available copies and
-//adds it to the user's books_borrowed array and returns 0 if successful;
-const int borrow_book(struct Book b, User u);
-
-//Removes the specified book from the user'books_borrowed array and
-//adds it to the library's books database while increasing the number of available copies and returns 0 if successful;
-const int return_book(struct Book b, User u);
-
+/*
 int main(){
   unsigned int iD=1;
   char firstName[MaxFirstNameSize]="Ragnaros";
@@ -76,3 +74,4 @@ int main(){
   register_user(iD,firstName,lastName,type,email,password);
   return 0;
 }
+*/

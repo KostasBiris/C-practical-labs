@@ -56,38 +56,38 @@ CMAKE_SOURCE_DIR = /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1
 CMAKE_BINARY_DIR = /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/book_management.dir
+# Target rules for target CMakeFiles/users.dir
 
 # All Build rule for target.
-CMakeFiles/book_management.dir/all:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/depend
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/build
+CMakeFiles/users.dir/all:
+	$(MAKE) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/depend
+	$(MAKE) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles  1 2
-	@echo "Built target book_management"
-.PHONY : CMakeFiles/book_management.dir/all
+	@echo "Built target users"
+.PHONY : CMakeFiles/users.dir/all
 
 # Include target in all.
-all: CMakeFiles/book_management.dir/all
+all: CMakeFiles/users.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/book_management.dir/rule: cmake_check_build_system
+CMakeFiles/users.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/book_management.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/users.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles 0
-.PHONY : CMakeFiles/book_management.dir/rule
+.PHONY : CMakeFiles/users.dir/rule
 
 # Convenience name for target.
-book_management: CMakeFiles/book_management.dir/rule
-.PHONY : book_management
+users: CMakeFiles/users.dir/rule
+.PHONY : users
 
 # clean rule for target.
-CMakeFiles/book_management.dir/clean:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/clean
-.PHONY : CMakeFiles/book_management.dir/clean
+CMakeFiles/users.dir/clean:
+	$(MAKE) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/clean
+.PHONY : CMakeFiles/users.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/book_management.dir/clean
+clean: CMakeFiles/users.dir/clean
 .PHONY : clean
 
 #=============================================================================

@@ -102,24 +102,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named book_management
+# Target rules for targets named users
 
 # Build rule for target.
-book_management: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 book_management
-.PHONY : book_management
+users: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 users
+.PHONY : users
 
 # fast build rule for target.
-book_management/fast:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/build
-.PHONY : book_management/fast
+users/fast:
+	$(MAKE) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/build
+.PHONY : users/fast
 
 book_management.o: book_management.c.o
 .PHONY : book_management.o
 
 # target to build an object file
 book_management.c.o:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/book_management.c.o
+	$(MAKE) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/book_management.c.o
 .PHONY : book_management.c.o
 
 book_management.i: book_management.c.i
@@ -127,7 +127,7 @@ book_management.i: book_management.c.i
 
 # target to preprocess a source file
 book_management.c.i:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/book_management.c.i
+	$(MAKE) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/book_management.c.i
 .PHONY : book_management.c.i
 
 book_management.s: book_management.c.s
@@ -135,7 +135,7 @@ book_management.s: book_management.c.s
 
 # target to generate assembly for a file
 book_management.c.s:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/book_management.c.s
+	$(MAKE) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/book_management.c.s
 .PHONY : book_management.c.s
 
 users.o: users.c.o
@@ -143,7 +143,7 @@ users.o: users.c.o
 
 # target to build an object file
 users.c.o:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/users.c.o
+	$(MAKE) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/users.c.o
 .PHONY : users.c.o
 
 users.i: users.c.i
@@ -151,7 +151,7 @@ users.i: users.c.i
 
 # target to preprocess a source file
 users.c.i:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/users.c.i
+	$(MAKE) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/users.c.i
 .PHONY : users.c.i
 
 users.s: users.c.s
@@ -159,7 +159,7 @@ users.s: users.c.s
 
 # target to generate assembly for a file
 users.c.s:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/users.c.s
+	$(MAKE) -f CMakeFiles/users.dir/build.make CMakeFiles/users.dir/users.c.s
 .PHONY : users.c.s
 
 # Help Target
@@ -168,9 +168,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... book_management"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... users"
 	@echo "... book_management.o"
 	@echo "... book_management.i"
 	@echo "... book_management.s"

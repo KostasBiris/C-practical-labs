@@ -1,10 +1,11 @@
 
-#ifndef BOOK_MANAGEMENT_GUARD__H 
+#ifndef BOOK_MANAGEMENT_GUARD__H
 #define BOOK_MANAGEMENT_GUARD__H
 
 #include <stdio.h>
 
 struct Book {
+		unsigned int bookId;
 		char *title; //book title
 		char *authors; //comma separated list of authors
 		unsigned int year; // year of publication
@@ -35,19 +36,19 @@ int add_book(struct Book book);
 int remove_book(struct Book book);
 
 //finds books with a given title.
-//returns a BookArray structure, where the field "array" is a newly allocated array of books, or null if no book with the 
+//returns a BookArray structure, where the field "array" is a newly allocated array of books, or null if no book with the
 //provided title can be found. The length of the array is also recorded in the returned structure, with 0 in case
 //array is the null pointer.
 struct BookArray find_book_by_title (const char *title);
 
 //finds books with the given authors.
-//returns a BookArray structure, where the field "array" is a newly allocated array of books, or null if no book with the 
+//returns a BookArray structure, where the field "array" is a newly allocated array of books, or null if no book with the
 //provided title can be found. The length of the array is also recorded in the returned structure, with 0 in case
 //array is the null pointer.
 struct BookArray find_book_by_author (const char *author);
 
 //finds books published in the given year.
-//returns a BookArray structure, where the field "array" is a newly allocated array of books, or null if no book with the 
+//returns a BookArray structure, where the field "array" is a newly allocated array of books, or null if no book with the
 //provided title can be found. The length of the array is also recorded in the returned structure, with 0 in case
 //array is the null pointer.
 struct BookArray find_book_by_year (unsigned int year);
