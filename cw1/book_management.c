@@ -63,7 +63,7 @@ int load_books(FILE *file){
 //adds a book to the ones available to the library
 //returns 0 if the book could be added, or an error code otherwise
 int add_book(struct Book book) {
-
+  
   books_array.array[books_array.length]= book;
   books_array.length++;
   return 0;
@@ -82,14 +82,11 @@ int remove_book(struct Book book){
       break;
      }
   }
-  for(int j= index-1; j< length-1; j++){
-    books_array.array[j].bookId=books_array.array[j+1].bookId;
-    strcpy(books_array.array[j].title,books_array.array[j+1].title);
-    strcpy(books_array.array[j].authors,books_array.array[j+1].authors);
-    books_array.array[j].year=books_array.array[j+1].year;
-    books_array.array[j].copies=books_array.array[j+1].copies;
-  }
+  for(int j= index; j< length-2; j++){
+    books_array.array[j]=books_array.array[j+1];
+
   books_array.length--;
+}
   return 0;
 }
 
@@ -99,12 +96,10 @@ int store_books(FILE *file){
   struct Book book_temp;
   struct Book* array_temp= (struct Book*)malloc(sizeof(struct Book));
   array_temp=books_array.array;
-  //array_temp=books_array.array;
 
   if(file==NULL){
     return -1;
   }
-  //books_array.array= calloc(number_books,sizeof(struct Book));
 
   for(int i=1; i<books_array.length;i++){
     book_temp= *(array_temp+i);
@@ -147,10 +142,10 @@ struct BookArray find_book_by_year (unsigned int year){
   return empty;
 }
 
-
+/*
 int main(){
   FILE* file1= fopen("../books.csv","r");
-  FILE* file2= fopen("../test_file.csv","a+");
+  FILE* file2= fopen("../test_file.csv","w");
 
   struct Book b1;
   b1.title = "BookTitle";
@@ -171,3 +166,4 @@ int main(){
 
   return 0;
 }
+*/
