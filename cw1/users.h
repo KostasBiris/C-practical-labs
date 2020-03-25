@@ -27,10 +27,8 @@ typedef struct {
   char *email;
   char *password;
 
-  unsigned int numBooksBorrowed;
-  unsigned int numBooksReturned;
-  struct Book books_borrowed[MaxBooksBorrowed];
-  struct Book books_returned[MaxBooksReturned];
+  struct BookArray books_borrowed;
+
 
 }User;
 
@@ -49,9 +47,6 @@ int load_users(FILE *file);
 // if no more IDs can be generated returns -1
 int newUserId();
 
-//Registers a new user to the library and returns 0 if successful.
-int register_user(unsigned int uid, char fn[],char ln[], unsigned int ut, char e[], char p[]);
-
 // adds a user to the users_array
 // if the array is full and cannot accept any more accounts the function returns 1
 // otherwise it returns 0.
@@ -61,9 +56,9 @@ int add_user(User u);
 //returns 0 if the user could be successfully removed, or an error code otherwise.
 int remove_user(User u);
 
-//Checks if the provided user id and password corresponds
-//to an existing user in the user database and returns 0 if correct or 1 otherwise.
-const int login(char email[], char p[]);
+//Checks if the provided user email and password corresponds
+//to an existing user in the user database and returns a pointer to a user if correct.
+const User* login(char* e, char* p);
 
 //saves the database of users in the specified file
 //returns 0 if users were stored correctly, or an error code otherwise

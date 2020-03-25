@@ -3,7 +3,11 @@
 
 CMakeFiles/book_management.dir/book_management.c.o: ../book_management.c
 CMakeFiles/book_management.dir/book_management.c.o: ../book_management.h
-CMakeFiles/book_management.dir/book_management.c.o: ../users.h
+
+CMakeFiles/book_management.dir/lib_interface.c.o: ../book_management.h
+CMakeFiles/book_management.dir/lib_interface.c.o: ../lib_interface.c
+CMakeFiles/book_management.dir/lib_interface.c.o: ../lib_interface.h
+CMakeFiles/book_management.dir/lib_interface.c.o: ../users.h
 
 CMakeFiles/book_management.dir/users.c.o: ../book_management.h
 CMakeFiles/book_management.dir/users.c.o: ../users.c

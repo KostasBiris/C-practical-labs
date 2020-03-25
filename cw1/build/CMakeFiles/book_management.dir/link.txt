@@ -1,1 +1,1 @@
-/usr/bin/cc  -std=c99 -DNDEBUG -fdump-rtl-expand -g    CMakeFiles/book_management.dir/users.c.o CMakeFiles/book_management.dir/book_management.c.o  -o book_management -rdynamic 
+/usr/bin/cc  -std=c99 -DNDEBUG -fdump-rtl-expand -g    CMakeFiles/book_management.dir/users.c.o CMakeFiles/book_management.dir/lib_interface.c.o CMakeFiles/book_management.dir/book_management.c.o  -o book_management -rdynamic 

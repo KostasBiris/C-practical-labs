@@ -1,4 +1,4 @@
-User ID,First Name,Last Name,Type,Email,Password,Num Borrowed Books, Num Returned Books
+User ID,First Name,Last Name,Type,Email,Password,Borrowed Books,Num Borrowed Books, Num Returned Books
 0,John,Librarian,2,librarian@library.com,mypassword,0,0
 1,Samantha,James,1,samylove@gletter.com,Jca2qfa13fs,2,3
 2,George,Hamlin,1,geoham52@inlook.com,justpl4int3xt,3,1

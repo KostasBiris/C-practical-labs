@@ -15,28 +15,8 @@ string.h
 -
 book_management.h
 /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.h
-users.h
-/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.h
 
 /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.h
 stdio.h
 -
-users.h
-/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.h
-
-/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c
-stdlib.h
--
-stdio.h
--
-string.h
--
-users.h
-/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.h
-
-/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.h
-string.h
--
-book_management.h
-/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.h
 

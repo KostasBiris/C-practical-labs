@@ -18,8 +18,8 @@ int is_available(struct Book b){
 //adds it to the user's books_borrowed array and returns 0 if successful;
 const int borrow_book(struct Book b, User u){
 
-  u.books_borrowed[u.numBooksBorrowed]= book;
-  u.numBooksBorrowed++;
+  u.books_borrowed.array[books_borrowed.length]= book;
+  u.books_borrowed.length++;
   b.copies--;
   return 0;
 }
@@ -28,23 +28,22 @@ const int borrow_book(struct Book b, User u){
 //Removes the specified book from the user'books_borrowed array and
 //adds it to the library's books database while increasing the number of available copies and returns 0 if successful;
 const int return_book(struct Book b, User u){
-  int length =u.numBooksBorrowed;
+  int length =u.books_borrowed.length;
   int index=0;
 
   add_book(b);
-  u.numBooksReturned++;
-  
+
   for(int i=0;i<length;i++){
-    if((u.books_borrowed[i].bookId== b.bookId)&&(strcmp(u.books_borrowed[i].title,b.title)==0) && (strcmp(u.array[i].authors,b.authors)==0)
-     && (u.books_borrowed[i].year== b.year) && (u.books_borrowed[i].copies==b.copies)){
+    if((u.books_borrowed.array[i].bookId== b.bookId)&&(strcmp(u.books_borrowed.array[i].title,b.title)==0) && (strcmp(u.books_borrowed.array[i].authors,b.authors)==0)
+     && (u.books_borrowed.array[i].year== b.year) && (u.books_borrowed.array[i].copies==b.copies)){
       index=i;
       break;
      }
   }
   for(int j= index; j< length-2; j++){
-    u.books_borrowed[j]=u.books_borrowed[j+1];
+    u.books_borrowed.array[j]=u.books_borrowed.array[j+1];
 
-  u.numBooksBorrowed--;
+  u.books_borrowed.length--;
 }
   return 0;
 }

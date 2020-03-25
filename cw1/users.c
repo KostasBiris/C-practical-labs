@@ -94,34 +94,27 @@ int add_user(User u){
 }
 
 //Registers a new user to the library and returns 0 if successful.
-int register_user(unsigned int uid, char fn[],char ln[], unsigned int t, char e[], char p[]){
+/*int register_user(unsigned int uid, char* fn,char* ln, unsigned int t, char* e, char* p){
   User* u= (User *)malloc(sizeof(User));
+  u->first_name=(char*)malloc(sizeof(u->first_name)*sizeof(char));
+  u->last_name=(char*)malloc(sizeof(u->last_name)*(sizeof(char)));
+  u->email=(char*)malloc(sizeof(u->email)*(sizeof(char)));
+  u->password=(char*)malloc(sizeof(u->password)*(sizeof(char)));
 
-  u->userId= uid;
-  snprintf(u->first_name, sizeof(u->first_name),"%s",fn);
-  snprintf(u->last_name, sizeof(u->last_name),"%s",ln);
+
+  u->userId=uid;
+  strcpy(u->first_name,fn);
+  strcpy(u->last_name,ln);
   u->type=t;
-  snprintf(u->email, sizeof(u->email),"%s",e);
-  snprintf(u->password, sizeof(u->password),"%s",p);
-  u->numBooksBorrowed=0;
+  strcpy(u->email,e);
+  strcpy(u->password,p);
+  u->books_borrowed.length=0;
   u->numBooksReturned=0;
 
-  add_user(*u);
+  //add_user(*u);
   return 0;
-}
+}*/
 
-//Checks if the provided user id and password corresponds
-//to an existing user in the user database and returns 0 if correct or 1 otherwise.
-const int login(char email[], char password[]){
-
-  for(int i=0;i<number_users;i++){
-    if(strcmp(all_users[i]->email,email)==0
-    && strcmp(all_users[i]->password,password)==0){
-      return 0;
-    }
-  }
-  return 1;
-}
 
 //removes a user from the library
 //returns 0 if the user could be successfully removed, or an error code otherwise.
@@ -147,6 +140,19 @@ int remove_user(User u){
   return 0;
 }
 
+//Checks if the provided user email and password corresponds
+//to an existing user in the user database and returns a pointer to a user if correct.
+const User* login(char* e, char* p){
+
+  for(int i=0;i<users_array.length;i++){
+    if(strcmp(users_array.array[i].email,e)==0
+    && strcmp(users_array.array[i].password,p)==0){
+      return &users_array.array[i];
+    }
+  }
+  printf("Invalid Email or Password");;
+}
+
 //saves the database of users in the specified file
 //returns 0 if users were stored correctly, or an error code otherwise
 int store_users(FILE *file){
@@ -160,16 +166,16 @@ int store_users(FILE *file){
 
   for(int i=1; i<users_array.length;i++){
     user_temp= *(array_temp+i);
-    fprintf(file,"%d,%s,%s,%d,%s,%s,%d,%d\n",user_temp.userId, user_temp.first_name, user_temp.last_name, user_temp.type, user_temp.email,
-            user_temp.password,user_temp.numBooksBorrowed,user_temp.numBooksReturned);
+    fprintf(file,"%d,%s,%s,%d,%s,%s,%d\n",user_temp.userId, user_temp.first_name, user_temp.last_name, user_temp.type, user_temp.email,
+            user_temp.password,user_temp.books_borrowed.length);
   }
   return 0;
 }
-
+/*
 int main(){
   FILE* file1= fopen("../users.csv","r");
   FILE* file2= fopen("../test_file.csv","w");
-/*
+
   User user1;
   user1.userId= newUserId();
   user1.first_name = "Jacob";
@@ -177,9 +183,8 @@ int main(){
   user1.type=1;
   user1.email="jacob14frye@mail.com";
   user1.password="wef3524rf";
-  user1.numBooksBorrowed=0;
-  user1.numBooksReturned=0;*/
-  register_user(newUserId(),"Jacob","Frye",1,"jacob14frye@mail.com","wef3524rf");
+  user1.books_borrowed.length=0;
+  user1.numBooksReturned=0;
 
   load_users(file1);
 
@@ -190,8 +195,7 @@ int main(){
   user2.type=1;
   user2.email="geoham@inlook.com";
   user2.password="justpl4int3xt";
-  user2.numBooksBorrowed=3;
-  user2.numBooksReturned=1;
+  user2.books_borrowed.length=3;
 
 //  add_user(user1);
   remove_user(user2);
@@ -199,3 +203,4 @@ int main(){
 
   return 0;
 }
+*/
