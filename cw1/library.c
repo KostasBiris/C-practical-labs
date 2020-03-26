@@ -16,7 +16,7 @@ int is_available(struct Book b){
 }
 //Removes the specified book from the library's database while decreasing the number of available copies and
 //adds it to the user's books_borrowed array and returns 0 if successful;
-const int borrow_book(struct Book b, User u){
+ const int borrow_book(struct Book b, User u){
 
   u.books_borrowed.array[books_borrowed.length]= book;
   u.books_borrowed.length++;

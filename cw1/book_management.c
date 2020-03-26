@@ -146,21 +146,28 @@ struct BookArray find_book_by_title (const char *title){
 //provided title can be found. The length of the array is also recorded in the returned structure, with 0 in case
 //array is the null pointer.
 struct BookArray find_book_by_author (const char *author){
-/*  static struct BookArray author_array= calloc(sizeof(books_array.array),sizeof(struct Book));
-  author_array.array=NULL;
-  author_array.length=0;
   int index=0;
   int i=0;
+  int length=0;
+  struct Book temp_array[index];
+
   while(i<books_array.length){
-    int i=0;
-    if((strcmp(books_array.array[i].author,author)==0){
-      author_array.array[index]=books_array.array[i];
+    if((strcmp(books_array.array[i].authors,author)==0)){
+      temp_array[index]=books_array.array[i];
       index++;
-      author_array.length++;
+      length++;
     }
     i++;
   }
-  return author_array;*/
+  struct BookArray* author_array=(struct BookArray*)calloc(1,sizeof(struct BookArray));
+  author_array->array=NULL;
+  author_array->length=0;
+
+  if(length!=0){
+    author_array->array=temp_array;
+    author_array->length=length;
+  }
+  return *author_array;
 }
 
 //finds books published in the given year.
@@ -168,25 +175,34 @@ struct BookArray find_book_by_author (const char *author){
 //provided title can be found. The length of the array is also recorded in the returned structure, with 0 in case
 //array is the null pointer.
 struct BookArray find_book_by_year (unsigned int year){
-  /*static struct BookArray year_array= calloc(books_array.array,sizeof(struct Book));
-  year_array.array=NULL;
-  year_array.length=0;
   int index=0;
   int i=0;
+  int length=0;
+  struct Book temp_array[index];
+
   while(i<books_array.length){
-    if(books_array.array[i].year=year){
-      year_array.array[index]=books_array.array;
+    if(books_array.array[i].year==year){
+      temp_array[index]=books_array.array[i];
       index++;
-      year_array.length++;
+      length++;
     }
     i++;
   }
-  return year_array;*/
+  struct BookArray* year_array=(struct BookArray*)calloc(1,sizeof(struct BookArray));
+  year_array->array=NULL;
+  year_array->length=0;
+
+  if(length!=0){
+    year_array->array=temp_array;
+    year_array->length=length;
+  }
+  return *year_array;
 }
 
 int main(){
   FILE* file1= fopen("../books.csv","r");
   FILE* file2= fopen("../test_file.csv","w");
+  struct BookArray an_array;
 
   struct Book b1;
   b1.title = "BookTitle";
@@ -204,6 +220,7 @@ int main(){
   //struct BookArray an_array=find_book_by_title("Pride and Prejudice");
   //printf(an_array.array[0].title);
   add_book(b1);
+  an_array=find_book_by_title("Pride and Prejudice");
   remove_book(b2);
   store_books(file2);
 
