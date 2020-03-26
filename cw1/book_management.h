@@ -5,7 +5,6 @@
 #include <stdio.h>
 
 struct Book {
-		unsigned int bookId;
 		char *title; //book title
 		char *authors; //comma separated list of authors
 		unsigned int year; // year of publication
@@ -32,7 +31,7 @@ int load_books(FILE *file);
 int add_book(struct Book book);
 
 //removes a book from the library
-//returns 0 if the book could be successfully removed, or an error code otherwise.
+//returns 0 if the book could be successfully removed, returns 1 if the book isn't in the borrowed books array of the user, or an error code otherwise.
 int remove_book(struct Book book);
 
 //finds books with a given title.

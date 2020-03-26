@@ -150,7 +150,8 @@ const User* login(char* e, char* p){
       return &users_array.array[i];
     }
   }
-  printf("Invalid Email or Password");;
+  printf("Invalid Email or Password");
+  return NULL;
 }
 
 //saves the database of users in the specified file

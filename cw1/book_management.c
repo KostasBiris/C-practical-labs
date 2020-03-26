@@ -70,18 +70,22 @@ int add_book(struct Book book) {
 }
 
 //removes a book from the library
-//returns 0 if the book could be successfully removed, or an error code otherwise.
+//returns 0 if the book could be successfully removed, returns 1 if the book isn't in the borrowed books array of the user, or an error code otherwise.
 int remove_book(struct Book book){
   int length =books_array.length;
-  int index=0;
+  int index=-1;
 
   for(int i=0;i<length;i++){
-    if((books_array.array[i].bookId== book.bookId)&&(strcmp(books_array.array[i].title,book.title)==0) && (strcmp(books_array.array[i].authors,book.authors)==0)
-     && (books_array.array[i].year== book.year) && (books_array.array[i].copies==book.copies)){
+    if((strcmp(books_array.array[i].title,book.title)==0) && (strcmp(books_array.array[i].authors,book.authors)==0)&&(books_array.array[i].year== book.year)){
       index=i;
       break;
      }
   }
+  if(index==-1){
+    printf("Book not found in your Borrowed Books list");
+    return 1;
+  }
+
   for(int j= index; j< length-2; j++){
     books_array.array[j]=books_array.array[j+1];
 
@@ -113,22 +117,28 @@ int store_books(FILE *file){
 //provided title can be found. The length of the array is also recorded in the returned structure, with 0 in case
 //array is the null pointer.
 struct BookArray find_book_by_title (const char *title){
-/*  struct Book book;
-  struct Book title_array= calloc(books_array.length,sizeof(book));
-
-  title_array.array=NULL;
-  title_array.length=0;
   int index=0;
   int i=0;
+  int length=0;
+  struct Book temp_array[index];
+
   while(i<books_array.length){
     if((strcmp(books_array.array[i].title,title)==0)){
-      title_array.array[index]=books_array.array[i];
+      temp_array[index]=books_array.array[i];
       index++;
-      title_array.length++;
+      length++;
     }
     i++;
   }
-  return title_array;*/
+  struct BookArray* title_array=(struct BookArray*)calloc(1,sizeof(struct BookArray));
+  title_array->array=NULL;
+  title_array->length=0;
+
+  if(length!=0){
+    title_array->array=temp_array;
+    title_array->length=length;
+  }
+  return *title_array;
 }
 
 //finds books with the given authors.
