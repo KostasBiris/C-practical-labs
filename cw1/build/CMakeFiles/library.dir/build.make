@@ -75,14 +75,114 @@ CMakeFiles/library.dir/book_management.c.o.provides: CMakeFiles/library.dir/book
 
 CMakeFiles/library.dir/book_management.c.o.provides.build: CMakeFiles/library.dir/book_management.c.o
 
+CMakeFiles/library.dir/users.c.o: CMakeFiles/library.dir/flags.make
+CMakeFiles/library.dir/users.c.o: ../users.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/library.dir/users.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/users.c.o   -c /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c
+
+CMakeFiles/library.dir/users.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/library.dir/users.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c > CMakeFiles/library.dir/users.c.i
+
+CMakeFiles/library.dir/users.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/library.dir/users.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c -o CMakeFiles/library.dir/users.c.s
+
+CMakeFiles/library.dir/users.c.o.requires:
+.PHONY : CMakeFiles/library.dir/users.c.o.requires
+
+CMakeFiles/library.dir/users.c.o.provides: CMakeFiles/library.dir/users.c.o.requires
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/users.c.o.provides.build
+.PHONY : CMakeFiles/library.dir/users.c.o.provides
+
+CMakeFiles/library.dir/users.c.o.provides.build: CMakeFiles/library.dir/users.c.o
+
+CMakeFiles/library.dir/library.c.o: CMakeFiles/library.dir/flags.make
+CMakeFiles/library.dir/library.c.o: ../library.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/library.dir/library.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/library.c.o   -c /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/library.c
+
+CMakeFiles/library.dir/library.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/library.dir/library.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/library.c > CMakeFiles/library.dir/library.c.i
+
+CMakeFiles/library.dir/library.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/library.dir/library.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/library.c -o CMakeFiles/library.dir/library.c.s
+
+CMakeFiles/library.dir/library.c.o.requires:
+.PHONY : CMakeFiles/library.dir/library.c.o.requires
+
+CMakeFiles/library.dir/library.c.o.provides: CMakeFiles/library.dir/library.c.o.requires
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/library.c.o.provides.build
+.PHONY : CMakeFiles/library.dir/library.c.o.provides
+
+CMakeFiles/library.dir/library.c.o.provides.build: CMakeFiles/library.dir/library.c.o
+
+CMakeFiles/library.dir/lib_interface.c.o: CMakeFiles/library.dir/flags.make
+CMakeFiles/library.dir/lib_interface.c.o: ../lib_interface.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/library.dir/lib_interface.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/lib_interface.c.o   -c /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/lib_interface.c
+
+CMakeFiles/library.dir/lib_interface.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/library.dir/lib_interface.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/lib_interface.c > CMakeFiles/library.dir/lib_interface.c.i
+
+CMakeFiles/library.dir/lib_interface.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/library.dir/lib_interface.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/lib_interface.c -o CMakeFiles/library.dir/lib_interface.c.s
+
+CMakeFiles/library.dir/lib_interface.c.o.requires:
+.PHONY : CMakeFiles/library.dir/lib_interface.c.o.requires
+
+CMakeFiles/library.dir/lib_interface.c.o.provides: CMakeFiles/library.dir/lib_interface.c.o.requires
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/lib_interface.c.o.provides.build
+.PHONY : CMakeFiles/library.dir/lib_interface.c.o.provides
+
+CMakeFiles/library.dir/lib_interface.c.o.provides.build: CMakeFiles/library.dir/lib_interface.c.o
+
+CMakeFiles/library.dir/main.c.o: CMakeFiles/library.dir/flags.make
+CMakeFiles/library.dir/main.c.o: ../main.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/library.dir/main.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/main.c.o   -c /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/main.c
+
+CMakeFiles/library.dir/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/library.dir/main.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/main.c > CMakeFiles/library.dir/main.c.i
+
+CMakeFiles/library.dir/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/library.dir/main.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/main.c -o CMakeFiles/library.dir/main.c.s
+
+CMakeFiles/library.dir/main.c.o.requires:
+.PHONY : CMakeFiles/library.dir/main.c.o.requires
+
+CMakeFiles/library.dir/main.c.o.provides: CMakeFiles/library.dir/main.c.o.requires
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/main.c.o.provides.build
+.PHONY : CMakeFiles/library.dir/main.c.o.provides
+
+CMakeFiles/library.dir/main.c.o.provides.build: CMakeFiles/library.dir/main.c.o
+
 # Object files for target library
 library_OBJECTS = \
-"CMakeFiles/library.dir/book_management.c.o"
+"CMakeFiles/library.dir/book_management.c.o" \
+"CMakeFiles/library.dir/users.c.o" \
+"CMakeFiles/library.dir/library.c.o" \
+"CMakeFiles/library.dir/lib_interface.c.o" \
+"CMakeFiles/library.dir/main.c.o"
 
 # External object files for target library
 library_EXTERNAL_OBJECTS =
 
 library: CMakeFiles/library.dir/book_management.c.o
+library: CMakeFiles/library.dir/users.c.o
+library: CMakeFiles/library.dir/library.c.o
+library: CMakeFiles/library.dir/lib_interface.c.o
+library: CMakeFiles/library.dir/main.c.o
 library: CMakeFiles/library.dir/build.make
 library: CMakeFiles/library.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable library"
@@ -93,6 +193,10 @@ CMakeFiles/library.dir/build: library
 .PHONY : CMakeFiles/library.dir/build
 
 CMakeFiles/library.dir/requires: CMakeFiles/library.dir/book_management.c.o.requires
+CMakeFiles/library.dir/requires: CMakeFiles/library.dir/users.c.o.requires
+CMakeFiles/library.dir/requires: CMakeFiles/library.dir/library.c.o.requires
+CMakeFiles/library.dir/requires: CMakeFiles/library.dir/lib_interface.c.o.requires
+CMakeFiles/library.dir/requires: CMakeFiles/library.dir/main.c.o.requires
 .PHONY : CMakeFiles/library.dir/requires
 
 CMakeFiles/library.dir/clean:

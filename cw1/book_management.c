@@ -35,11 +35,11 @@ int load_books(FILE *file){
     }
 
     //Id
-    token= strtok(NULL,",");
+    token= strtok(buff1,",");
     loaded_book->id= atoi(token);
 
     //Title
-    token= strtok(buff1,",");
+    token= strtok(NULL,",");
     loaded_book->title=(char*)malloc(sizeof(char)*strlen(token));
     strcpy(loaded_book->title,token);
 
@@ -203,7 +203,7 @@ struct BookArray find_book_by_year (unsigned int year){
   }
   return *year_array;
 }
-
+/*
 int main(){
   FILE* file1= fopen("../books.csv","r");
   FILE* file2= fopen("../test_file.csv","w");
@@ -231,4 +231,4 @@ int main(){
   store_books(file2);
 
   return 0;
-}
+}*/

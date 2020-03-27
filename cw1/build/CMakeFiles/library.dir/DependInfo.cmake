@@ -5,6 +5,10 @@ SET(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
   "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c" "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles/library.dir/book_management.c.o"
+  "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/lib_interface.c" "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles/library.dir/lib_interface.c.o"
+  "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/library.c" "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles/library.dir/library.c.o"
+  "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/main.c" "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles/library.dir/main.c.o"
+  "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c" "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles/library.dir/users.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 

@@ -102,24 +102,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named book_management
+# Target rules for targets named library
 
 # Build rule for target.
-book_management: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 book_management
-.PHONY : book_management
+library: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 library
+.PHONY : library
 
 # fast build rule for target.
-book_management/fast:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/build
-.PHONY : book_management/fast
+library/fast:
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/build
+.PHONY : library/fast
 
 book_management.o: book_management.c.o
 .PHONY : book_management.o
 
 # target to build an object file
 book_management.c.o:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/book_management.c.o
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/book_management.c.o
 .PHONY : book_management.c.o
 
 book_management.i: book_management.c.i
@@ -127,7 +127,7 @@ book_management.i: book_management.c.i
 
 # target to preprocess a source file
 book_management.c.i:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/book_management.c.i
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/book_management.c.i
 .PHONY : book_management.c.i
 
 book_management.s: book_management.c.s
@@ -135,7 +135,7 @@ book_management.s: book_management.c.s
 
 # target to generate assembly for a file
 book_management.c.s:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/book_management.c.s
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/book_management.c.s
 .PHONY : book_management.c.s
 
 lib_interface.o: lib_interface.c.o
@@ -143,7 +143,7 @@ lib_interface.o: lib_interface.c.o
 
 # target to build an object file
 lib_interface.c.o:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/lib_interface.c.o
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/lib_interface.c.o
 .PHONY : lib_interface.c.o
 
 lib_interface.i: lib_interface.c.i
@@ -151,7 +151,7 @@ lib_interface.i: lib_interface.c.i
 
 # target to preprocess a source file
 lib_interface.c.i:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/lib_interface.c.i
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/lib_interface.c.i
 .PHONY : lib_interface.c.i
 
 lib_interface.s: lib_interface.c.s
@@ -159,7 +159,7 @@ lib_interface.s: lib_interface.c.s
 
 # target to generate assembly for a file
 lib_interface.c.s:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/lib_interface.c.s
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/lib_interface.c.s
 .PHONY : lib_interface.c.s
 
 library.o: library.c.o
@@ -167,7 +167,7 @@ library.o: library.c.o
 
 # target to build an object file
 library.c.o:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/library.c.o
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/library.c.o
 .PHONY : library.c.o
 
 library.i: library.c.i
@@ -175,7 +175,7 @@ library.i: library.c.i
 
 # target to preprocess a source file
 library.c.i:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/library.c.i
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/library.c.i
 .PHONY : library.c.i
 
 library.s: library.c.s
@@ -183,15 +183,39 @@ library.s: library.c.s
 
 # target to generate assembly for a file
 library.c.s:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/library.c.s
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/library.c.s
 .PHONY : library.c.s
+
+main.o: main.c.o
+.PHONY : main.o
+
+# target to build an object file
+main.c.o:
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/main.c.o
+.PHONY : main.c.o
+
+main.i: main.c.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.c.i:
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/main.c.i
+.PHONY : main.c.i
+
+main.s: main.c.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.c.s:
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/main.c.s
+.PHONY : main.c.s
 
 users.o: users.c.o
 .PHONY : users.o
 
 # target to build an object file
 users.c.o:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/users.c.o
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/users.c.o
 .PHONY : users.c.o
 
 users.i: users.c.i
@@ -199,7 +223,7 @@ users.i: users.c.i
 
 # target to preprocess a source file
 users.c.i:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/users.c.i
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/users.c.i
 .PHONY : users.c.i
 
 users.s: users.c.s
@@ -207,7 +231,7 @@ users.s: users.c.s
 
 # target to generate assembly for a file
 users.c.s:
-	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/users.c.s
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/users.c.s
 .PHONY : users.c.s
 
 # Help Target
@@ -216,8 +240,8 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... book_management"
 	@echo "... edit_cache"
+	@echo "... library"
 	@echo "... rebuild_cache"
 	@echo "... book_management.o"
 	@echo "... book_management.i"
@@ -228,6 +252,9 @@ help:
 	@echo "... library.o"
 	@echo "... library.i"
 	@echo "... library.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... users.o"
 	@echo "... users.i"
 	@echo "... users.s"

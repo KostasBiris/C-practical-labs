@@ -34,7 +34,7 @@ int load_loans(FILE *file){
       continue;
     }
     //Loan ID
-    token= strtok(NULL,",");
+    token= strtok(buff1,",");
     loaded_loan->loan_id= atoi(token);
 
     //User ID

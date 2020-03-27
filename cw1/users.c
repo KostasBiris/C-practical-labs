@@ -38,12 +38,12 @@ int load_users(FILE *file){
     }
 
     //User Id
-    token= strtok(NULL,",");
+    token= strtok(buff1,",");
     loaded_user->userId= atoi(token);
 
     //First Name
-    token= strtok(buff1,",");
-    loaded_user->first_name=(char*){malloc(sizeof(char)*strlen(token))};
+    token= strtok(NULL,",");
+    loaded_user->first_name=(char*)malloc(sizeof(char)*strlen(token));
     strcpy(loaded_user->first_name,token);
 
     //Last Name
@@ -65,6 +65,9 @@ int load_users(FILE *file){
     loaded_user->password=(char*)malloc(sizeof(char)*strlen(token));
     strcpy(loaded_user->password,token);
 
+    //User Type
+    token= strtok(NULL,",");
+    loaded_user->books_borrowed.length= atoi(token);
 
     users_array.array[users_array.length]= *loaded_user;
     users_array.length++;
@@ -98,28 +101,6 @@ int add_user(User u){
     return 0;
 }
 
-//Registers a new user to the library and returns 0 if successful.
-/*int register_user(unsigned int uid, char* fn,char* ln, unsigned int t, char* e, char* p){
-  User* u= (User *)malloc(sizeof(User));
-  u->first_name=(char*)malloc(sizeof(u->first_name)*sizeof(char));
-  u->last_name=(char*)malloc(sizeof(u->last_name)*(sizeof(char)));
-  u->email=(char*)malloc(sizeof(u->email)*(sizeof(char)));
-  u->password=(char*)malloc(sizeof(u->password)*(sizeof(char)));
-
-
-  u->userId=uid;
-  strcpy(u->first_name,fn);
-  strcpy(u->last_name,ln);
-  u->type=t;
-  strcpy(u->email,e);
-  strcpy(u->password,p);
-  u->books_borrowed.length=0;
-  u->numBooksReturned=0;
-
-  //add_user(*u);
-  return 0;
-}*/
-
 
 //removes a user from the library
 //returns 0 if the user could be successfully removed, or an error code otherwise.
@@ -150,8 +131,7 @@ int remove_user(User u){
 const User* login(char* e, char* p){
 
   for(int i=0;i<users_array.length;i++){
-    if(strcmp(users_array.array[i].email,e)==0
-    && strcmp(users_array.array[i].password,p)==0){
+    if(strcmp(users_array.array[i].email,e)==0 && strcmp(users_array.array[i].password,p)==0){
       return &users_array.array[i];
     }
   }

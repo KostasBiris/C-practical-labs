@@ -1,0 +1,52 @@
+
+;; Function main (main, funcdef_no=0, decl_uid=2212, cgraph_uid=0)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+deleting block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/main.c:4 -1
+     (nil))
+(call_insn 6 5 7 2 (call (mem:QI (symbol_ref:DI ("run_lib_interface") [flags 0x41]  <function_decl 0x7fd77f8e2200 run_lib_interface>) [0 run_lib_interface S1 A8])
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/main.c:4 -1
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
+        (nil)))
+(insn 7 6 10 2 (set (reg:SI 59 [ D.2218 ])
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/main.c:5 -1
+     (nil))
+(insn 10 7 14 2 (set (reg:SI 60 [ <retval> ])
+        (reg:SI 59 [ D.2218 ])) -1
+     (nil))
+(insn 14 10 17 2 (set (reg/i:SI 0 ax)
+        (reg:SI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/main.c:6 -1
+     (nil))
+(insn 17 14 0 2 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/main.c:6 -1
+     (nil))

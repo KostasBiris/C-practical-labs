@@ -1,1 +1,1 @@
-/usr/bin/cc  -fdump-rtl-expand -g    CMakeFiles/library.dir/book_management.c.o  -o library -rdynamic 
+/usr/bin/cc  -std=c99 -g -DNDEBUG -fdump-rtl-expand -g    CMakeFiles/library.dir/book_management.c.o CMakeFiles/library.dir/users.c.o CMakeFiles/library.dir/library.c.o CMakeFiles/library.dir/lib_interface.c.o CMakeFiles/library.dir/main.c.o  -o library -rdynamic 
