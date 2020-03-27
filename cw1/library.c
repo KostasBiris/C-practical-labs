@@ -5,16 +5,16 @@
 #include "users.h"
 #include "library.h"
 
-struct BookArray loans_array={0};
+LoanArray loans_array={0};
 int number_loans=0;
 
-/*int load_loans(FILE *file){
+int load_loans(FILE *file){
   loans_array.length=0;
   int buff=0;
   char b;
   char buff1[512];
-  struct Loan* loaded_loan;
-  loaded_loan= (struct Loan*)malloc(sizeof(struct Loan));
+  Loan* loaded_loan;
+  loaded_loan= (Loan*)malloc(sizeof(Loan));
   char *token;
   int i=0;
 
@@ -26,7 +26,7 @@ int number_loans=0;
   rewind(file);
 
   number_loans=i-1;
-  loans_array.array= calloc(number_loans,sizeof(struct Loan));
+  loans_array.array= calloc(number_loans,sizeof(Loan));
   while (fgets(buff1, 512, file)) {
 
     if(buff==0){
@@ -39,17 +39,17 @@ int number_loans=0;
 
     //User ID
     token= strtok(NULL,",");
-    loaded_loa->user_id= atoi(token);
+    loaded_loan->user_id= atoi(token);
 
     //Book ID
     token= strtok(NULL,",");
     loaded_loan->book_id= atoi(token);
     }
 
-  loans_array.array= (struct Loan*) loans_array.array;
+  loans_array.array= (Loan*) loans_array.array;
 
   return 0;
-}*/
+}
 
 
 //Cheks if the provided book has enough copies left in the library's database.
@@ -104,18 +104,18 @@ const int return_book(struct Book b, User u){
 
 //saves the database of loans in the specified file
 //returns 0 if loans were stored correctly, or an error code otherwise
-/*int store_loans(FILE *file){
-  struct Loan loan_temp;
-  User* array_temp= (Loan*)malloc(sizeof(Loan));
+int store_loans(FILE *file){
+  Loan loan_temp;
+  Loan* array_temp= (Loan*)malloc(sizeof(Loan));
   array_temp=loans_array.array;
 
   if(file==NULL){
     return -1;
   }
 
-  for(int i=1; i<users_array.length;i++){
-    user_temp= *(array_temp+i);
+  for(int i=1; i<loans_array.length;i++){
+    loan_temp= *(array_temp+i);
     fprintf(file,"%d,%d,%d\n", loan_temp.loan_id, loan_temp.user_id, loan_temp.book_id);
   }
   return 0;
-}*/
+}

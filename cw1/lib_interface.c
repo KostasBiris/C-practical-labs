@@ -109,17 +109,15 @@ static void main_menu() {
 	} while (choice!=3);
 
 //load user's Borrowed books
-	/*current_user->books_borrowed.array=NULL;
-	current_user->books_borrowed.length=0;
 	for(int i=0;i<loans_array.length;i++){
 		for(int j=0;j<books_array.length;j++){
 			if(current_user->userId==loans_array.array[i].user_id){
-				if(loans_array.array[i]==books_array.array[j]){
+				if(loans_array.array[i].book_id==books_array.array[j].id){
 					borrow_book(books_array.array[i],*current_user);
 				}
 			}
 		}
-	}*/
+	}
 //========================================={Start: Normal User}==================================================
 	if(current_user->type==1){
 

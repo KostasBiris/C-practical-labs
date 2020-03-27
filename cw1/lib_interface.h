@@ -1,5 +1,5 @@
-#ifndef LIB_INTERFACE GUARD
-#define LIB_INTERFACE GUARD
+#ifndef LIB_INTERFACE_GUARD_H
+#define LIB_INTERFACE_GUARD_H
 
 #include "book_management.h"
 #include "users.h"
