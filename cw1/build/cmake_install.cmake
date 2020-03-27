@@ -1,4 +1,4 @@
-# Install script for directory: /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1
+# Install script for directory: /home/csunix/sc19kb/Desktop/PP_cw1_Repository/sc19kb/cw1
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/csunix/sc19kb/Desktop/PP_cw1_Repository/sc19kb/cw1/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/csunix/sc19kb/Desktop/PP_cw1_Repository/sc19kb/cw1/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

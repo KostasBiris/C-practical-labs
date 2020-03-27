@@ -50,10 +50,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1
+CMAKE_SOURCE_DIR = /home/csunix/sc19kb/Desktop/PP_cw1_Repository/sc19kb/cw1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build
+CMAKE_BINARY_DIR = /home/csunix/sc19kb/Desktop/PP_cw1_Repository/sc19kb/cw1/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/library.dir
@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/bu
 CMakeFiles/library.dir/all:
 	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/depend
 	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles  1 2 3 4 5
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/PP_cw1_Repository/sc19kb/cw1/build/CMakeFiles  1 2 3 4 5
 	@echo "Built target library"
 .PHONY : CMakeFiles/library.dir/all
 
@@ -72,9 +72,9 @@ all: CMakeFiles/library.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/library.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csunix/sc19kb/Desktop/PP_cw1_Repository/sc19kb/cw1/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/library.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csunix/sc19kb/Desktop/PP_cw1_Repository/sc19kb/cw1/build/CMakeFiles 0
 .PHONY : CMakeFiles/library.dir/rule
 
 # Convenience name for target.

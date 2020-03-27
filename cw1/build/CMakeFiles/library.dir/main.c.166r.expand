@@ -32,21 +32,21 @@ try_optimize_cfg iteration 2
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (insn 5 2 6 2 (set (reg:QI 0 ax)
-        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/main.c:4 -1
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/PP_cw1_Repository/sc19kb/cw1/main.c:4 -1
      (nil))
-(call_insn 6 5 7 2 (call (mem:QI (symbol_ref:DI ("run_lib_interface") [flags 0x41]  <function_decl 0x7fd77f8e2200 run_lib_interface>) [0 run_lib_interface S1 A8])
-        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/main.c:4 -1
+(call_insn 6 5 7 2 (call (mem:QI (symbol_ref:DI ("run_lib_interface") [flags 0x41]  <function_decl 0x7f1fd15cf200 run_lib_interface>) [0 run_lib_interface S1 A8])
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/PP_cw1_Repository/sc19kb/cw1/main.c:4 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
         (nil)))
 (insn 7 6 10 2 (set (reg:SI 59 [ D.2218 ])
-        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/main.c:5 -1
+        (const_int 0 [0])) /home/csunix/sc19kb/Desktop/PP_cw1_Repository/sc19kb/cw1/main.c:5 -1
      (nil))
 (insn 10 7 14 2 (set (reg:SI 60 [ <retval> ])
         (reg:SI 59 [ D.2218 ])) -1
      (nil))
 (insn 14 10 17 2 (set (reg/i:SI 0 ax)
-        (reg:SI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/main.c:6 -1
+        (reg:SI 60 [ <retval> ])) /home/csunix/sc19kb/Desktop/PP_cw1_Repository/sc19kb/cw1/main.c:6 -1
      (nil))
-(insn 17 14 0 2 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/main.c:6 -1
+(insn 17 14 0 2 (use (reg/i:SI 0 ax)) /home/csunix/sc19kb/Desktop/PP_cw1_Repository/sc19kb/cw1/main.c:6 -1
      (nil))
