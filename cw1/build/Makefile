@@ -162,6 +162,30 @@ lib_interface.c.s:
 	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/lib_interface.c.s
 .PHONY : lib_interface.c.s
 
+library.o: library.c.o
+.PHONY : library.o
+
+# target to build an object file
+library.c.o:
+	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/library.c.o
+.PHONY : library.c.o
+
+library.i: library.c.i
+.PHONY : library.i
+
+# target to preprocess a source file
+library.c.i:
+	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/library.c.i
+.PHONY : library.c.i
+
+library.s: library.c.s
+.PHONY : library.s
+
+# target to generate assembly for a file
+library.c.s:
+	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/library.c.s
+.PHONY : library.c.s
+
 users.o: users.c.o
 .PHONY : users.o
 
@@ -201,6 +225,9 @@ help:
 	@echo "... lib_interface.o"
 	@echo "... lib_interface.i"
 	@echo "... lib_interface.s"
+	@echo "... library.o"
+	@echo "... library.i"
+	@echo "... library.s"
 	@echo "... users.o"
 	@echo "... users.i"
 	@echo "... users.s"

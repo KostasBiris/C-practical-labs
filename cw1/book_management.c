@@ -33,6 +33,11 @@ int load_books(FILE *file){
       buff++;
       continue;
     }
+
+    //Id
+    token= strtok(NULL,",");
+    loaded_book->id= atoi(token);
+
     //Title
     token= strtok(buff1,",");
     loaded_book->title=(char*)malloc(sizeof(char)*strlen(token));
@@ -107,7 +112,7 @@ int store_books(FILE *file){
 
   for(int i=1; i<books_array.length;i++){
     book_temp= *(array_temp+i);
-    fprintf(file,"%s,%s,%d,%d\n", book_temp.title, book_temp.authors, book_temp.year, book_temp.copies);
+    fprintf(file,"%d,%s,%s,%d,%d\n",book_temp.id, book_temp.title, book_temp.authors, book_temp.year, book_temp.copies);
   }
   return 0;
 }
@@ -205,6 +210,7 @@ int main(){
   struct BookArray an_array;
 
   struct Book b1;
+  b1.id=5;
   b1.title = "BookTitle";
   b1.authors="BookAuthor";
   b1.year=2020;

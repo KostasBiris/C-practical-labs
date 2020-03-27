@@ -36,6 +36,11 @@ int load_users(FILE *file){
       buff++;
       continue;
     }
+
+    //User Id
+    token= strtok(NULL,",");
+    loaded_user->userId= atoi(token);
+
     //First Name
     token= strtok(buff1,",");
     loaded_user->first_name=(char*){malloc(sizeof(char)*strlen(token))};

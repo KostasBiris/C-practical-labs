@@ -20,6 +20,9 @@ int book_was_borrowed;
 int book_was_returned; //equals 0 if the book was returned, 1 if the book doesn't exist in the user's books_borrowed array
 struct Book temp_book;
 int book_was_returned;
+
+struct Book book_added;
+int book_was_removed;
 //return a newly allocated data string
 static char *command(const char *c) {
 
@@ -105,6 +108,18 @@ static void main_menu() {
 
 	} while (choice!=3);
 
+//load user's Borrowed books
+	/*current_user->books_borrowed.array=NULL;
+	current_user->books_borrowed.length=0;
+	for(int i=0;i<loans_array.length;i++){
+		for(int j=0;j<books_array.length;j++){
+			if(current_user->userId==loans_array.array[i].user_id){
+				if(loans_array.array[i]==books_array.array[j]){
+					borrow_book(books_array.array[i],*current_user);
+				}
+			}
+		}
+	}*/
 //========================================={Start: Normal User}==================================================
 	if(current_user->type==1){
 
@@ -207,6 +222,7 @@ static void main_menu() {
 					}
 
 				}while (choice!=4);
+				break;
 //----------------------------------------------------{End:Borrow Book}----------------------------------------------------------
 
 //--------------------------------------------------{Start:Return Book}----------------------------------------------------------
@@ -215,7 +231,7 @@ static void main_menu() {
 					do{
 						char * users_choice2 = command("\n1) Enter Book details\n2) Go Back\n\nChoice: \n\n\n");
 						printf("\n\t\t\t----------------------------------------------------------------------------");
-						int choice2 = atoi(users_choice2);
+						choice2 = atoi(users_choice2);
 						free(users_choice2);
 
 
@@ -243,14 +259,16 @@ static void main_menu() {
 									printf("Something Unexpected Happened.");
 									break;
 								}
+								break;
+
 							case 2:
 								break;
 
 							default:
 								printf("Sorry,that doesn't seem to be an option.");
-
+						}
 					}while(choice2!=2);
-
+					break;
 //---------------------------------------------------{End:Return Book}------------------------------------------------------------
 
 //--------------------------------------------------{Start: Logout}---------------------------------------------------------------
@@ -261,176 +279,280 @@ static void main_menu() {
 				default:
 					printf("Sorry, that doesn't seem to be an option\n");
 
-			}while(choice2!=2);
-
+				}
+		}while(choice!=3);
+	}
 //===================================={End: Normal User}===============================================================
 
 //===================================={Start: Librarian}================================================================
-if(current_user->type==2){
+	if(current_user->type==2){
 
-	do {
-		printf("\n\t\t\t---------------------------------------------------------------------------\n");
-		char * users_choice = command("\nWhat would you like to do now?:\n1) Borrow Book\n2) Return Book\n3)Add Book\n4)Remove Book\n5) Logout\n\nChoice: \n\n\n");
-		printf("\n\t\t\t----------------------------------------------------------------------------");
-		choice = atoi(users_choice);
-		free(users_choice);
+		do {
+			printf("\n\t\t\t---------------------------------------------------------------------------\n");
+			char * users_choice = command("\nWhat would you like to do now?:\n1) Borrow Book\n2) Return Book\n3)Add Book\n4)Remove Book\n5) Logout\n\nChoice: \n\n\n");
+			printf("\n\t\t\t----------------------------------------------------------------------------");
+			choice = atoi(users_choice);
+			free(users_choice);
 
-		switch (choice) {
+			switch (choice) {
 //----------------------------------------------------{Start:Borrow Book}----------------------------------------------------------
-			case 1:
-			do {
-				printf("\n\t\t\t---------------------------------------------------------------------------\n");
-				char * users_choice = command("\n1) Find Book by Title\n2) Find Book by Author\n3) Find Book by Year\n4)Go Back\n\nChoice: \n\n\n");
-				printf("\n\t\t\t----------------------------------------------------------------------------");
-				choice = atoi(users_choice);
-				free(users_choice);
+				case 1:
+				do {
+					printf("\n\t\t\t---------------------------------------------------------------------------\n");
+					char * users_choice = command("\n1) Find Book by Title\n2) Find Book by Author\n3) Find Book by Year\n4)Go Back\n\nChoice: \n\n\n");
+					printf("\n\t\t\t----------------------------------------------------------------------------");
+					choice = atoi(users_choice);
+					free(users_choice);
 
-				switch (choice) {
-			//1) Find Book by Title
-					case 1:
-						printf("Book's Title: ");
-						scanf("%s\n", title);
+					switch (choice) {
+				//1) Find Book by Title
+						case 1:
+							printf("Book's Title: ");
+							scanf("%s\n", title);
 
-						temp_array=find_book_by_title(title);
+							temp_array=find_book_by_title(title);
+
+							if(temp_array.length==0){
+								printf("Book with title <<%s>> was Not found",title);
+							}
+
+							else{
+								printf("Book with title <<%s>> was found\nDo you want to borrow it?",title);
+								users_choice2= command("\n1) Yes\n2) No\n\nChoice: \n\n\n");
+								choice = atoi(users_choice);
+								free(users_choice2);
+
+								if(choice==1){
+									printf("Book was returned successfully.");
+									book_was_borrowed=borrow_book(temp_array.array[0],*current_user);
+									break;
+								}
+							}
+
+				//2) Find Book by Author
+						case 2:
+						printf("Book's Author: ");
+						scanf("%s\n", author);
+
+						temp_array=find_book_by_author(author);
 
 						if(temp_array.length==0){
-							printf("Book with title <<%s>> was Not found",title);
+							printf("Book with author <<%s>> was Not found",author);
 						}
 
 						else{
 							printf("Book with title <<%s>> was found\nDo you want to borrow it?",title);
 							users_choice2= command("\n1) Yes\n2) No\n\nChoice: \n\n\n");
-							choice = atoi(users_choice);
+							choice = atoi(users_choice2);
 							free(users_choice2);
 
 							if(choice==1){
-								printf("Book was returned successfully.");
-								book_was_borrowed=borrow_book(temp_array.array[0],current_user);
+								borrow_book(temp_array.array[0],*current_user);
 								break;
 							}
 						}
-
-			//2) Find Book by Author
-					case 2:
-					printf("Book's Author: ");
-					scanf("%s\n", author);
-
-					temp_array=find_book_by_author(author);
-
-					if(temp_array.length==0){
-						printf("Book with author <<%s>> was Not found",author);
-					}
-
-					else{
-						printf("Book with title <<%s>> was found\nDo you want to borrow it?",title);
-						users_choice2= command("\n1) Yes\n2) No\n\nChoice: \n\n\n");
-						choice = atoi(users_choice2);
-						free(users_choice2);
-
-						if(choice==1){
-							borrow_book(temp_array.array[0],*current_user);
-							break;
-						}
-					}
-					break;
-
-			//3) Find Book by Year
-					case 3:
-					printf("Book's Year: ");
-					scanf("%d\n", year);
-
-					temp_array=find_book_by_year(year);
-
-					if(temp_array.length==0){
-						printf("Book from <<%d>> was Not found",year);
-					}
-
-					else{
-						printf("Book from <<%d>> was found\nDo you want to borrow it?",year);
-						users_choice2 = command("\n1) Yes\n2) No\n\nChoice: \n\n\n");
-						choice = atoi(users_choice2);
-						free(users_choice2);
-
-						if(choice==1){
-							borrow_book(temp_array.array[0],*current_user);
-							break;
-						}
-					}
-					break;
-
-			//4)Go Back
-					case 4:
 						break;
 
-					default:
-						printf("Sorry, that doesn't seem to be an option\n");
-				}
-			} while (choice!=4);
+				//3) Find Book by Year
+						case 3:
+						printf("Book's Year: ");
+						scanf("%d\n", year);
+
+						temp_array=find_book_by_year(year);
+
+						if(temp_array.length==0){
+							printf("Book from <<%d>> was Not found",year);
+						}
+
+						else{
+							printf("Book from <<%d>> was found\nDo you want to borrow it?",year);
+							users_choice2 = command("\n1) Yes\n2) No\n\nChoice: \n\n\n");
+							choice = atoi(users_choice2);
+							free(users_choice2);
+
+							if(choice==1){
+								borrow_book(temp_array.array[0],*current_user);
+								break;
+							}
+						}
+						break;
+
+				//4)Go Back
+						case 4:
+							break;
+
+						default:
+							printf("Sorry, that doesn't seem to be an option\n");
+					}
+
+				}while (choice!=4);
+				break;
 //----------------------------------------------------{End:Borrow Book}----------------------------------------------------------
 
 //--------------------------------------------------{Start:Return Book}----------------------------------------------------------
-			case 2:
+				case 2:
 
-				do{
-					char * users_choice2 = command("\n1) Enter Book details\n2) Go Back\n\nChoice: \n\n\n");
-					printf("\n\t\t\t----------------------------------------------------------------------------");
-					choice2 = atoi(users_choice2);
-					free(users_choice2);
+					do{
+						char * users_choice2 = command("\n1) Enter Book details\n2) Go Back\n\nChoice: \n\n\n");
+						printf("\n\t\t\t----------------------------------------------------------------------------");
+						choice2 = atoi(users_choice2);
+						free(users_choice2);
 
 
-					switch (choice2){
-						case 1:
-							printf("Please Enter the details of the Book you want to return.");
-							temp_book.title=command("Book's Title: ");
-							temp_book.authors=command("Book's Author: ");
-							temp_book.year=atoi(command("Book's Year: "));
-							temp_book.copies=1;
+						switch (choice2){
+							case 1:
+								printf("Please Enter the details of the Book you want to return.");
+								temp_book.title=command("Book's Title: ");
+								temp_book.authors=command("Book's Author: ");
+								temp_book.year=atoi(command("Book's Year: "));
+								temp_book.copies=1;
 
-							book_was_returned=return_book(temp_book);
+								book_was_returned=return_book(temp_book,*current_user);
 
-							if(book_was_returned==0){
-								printf("Book was returned successfully.");
+								if(book_was_returned==0){
+									printf("Book was returned successfully.");
+									break;
+								}
+
+								else if(book_was_returned==1){
+									printf("There is no such Book in your Borrowed Books list.");
+									break;
+								}
+
+								else{
+									printf("Something Unexpected Happened.");
+									break;
+								}
 								break;
-							}
 
-							else if(book_was_returned==1){
-								printf("There is no such Book in your Borrowed Books list.");
+							case 2:
 								break;
-							}
 
-							else{
-								printf("Something Unexpected Happened.");
-								break;
-							}
-						case 2:
-							break;
-
-				}while(choice2!=2);
-
-				if(return_book(temp_book,current_user)==0)
+							default:
+								printf("Sorry,that doesn't seem to be an option.");
+						}
+					}while(choice2!=2);
 					break;
 //---------------------------------------------------{End:Return Book}------------------------------------------------------------
 
+//--------------------------------------------------{Start: Add Book}---------------------------------------------------------------
+				case 3:
+					printf("Please Enter the Book's details.");
+
+					book_added.title= command("Enter the Book's Title: ");
+					book_added.authors= command("Enter the Book's Authors: ");
+					book_added.year= atoi(command("Enter the Book's Year: "));
+					book_added.copies= atoi(command("Enter the Book's number of copies: "));
+
+					add_book(book_added);
+					break;
+//--------------------------------------------------{End: Add Book}-----------------------------------------------------------------
+
+//--------------------------------------------------{Start: Remove Book}-----------------------------------------------------------
+				case 4:
+					do {
+						printf("\n\t\t\t---------------------------------------------------------------------------\n");
+						char * users_choice = command("\n1) Find Book by Title\n2) Find Book by Author\n3) Find Book by Year\n4)Go Back\n\nChoice: \n\n\n");
+						printf("\n\t\t\t----------------------------------------------------------------------------");
+						choice = atoi(users_choice);
+						free(users_choice);
+
+						switch (choice) {
+					//1) Find Book by Title
+							case 1:
+								printf("Book's Title: ");
+								scanf("%s\n", title);
+
+								temp_array=find_book_by_title(title);
+
+								if(temp_array.length==0){
+									printf("Book with title <<%s>> was Not found",title);
+								}
+
+								else{
+									printf("Book with title <<%s>> was found\nDo you want to remove it?",title);
+									users_choice2= command("\n1) Yes\n2) No\n\nChoice: \n\n\n");
+									choice = atoi(users_choice);
+									free(users_choice2);
+
+									if(choice==1){
+										printf("Book was returned successfully.");
+										book_was_removed=remove_book(temp_array.array[0]);
+										break;
+									}
+								}
+
+					//2) Find Book by Author
+							case 2:
+							printf("Book's Author: ");
+							scanf("%s\n", author);
+
+							temp_array=find_book_by_author(author);
+
+							if(temp_array.length==0){
+								printf("Book with author <<%s>> was Not found",author);
+							}
+
+							else{
+								printf("Book with title <<%s>> was found\nDo you want to remove it?",title);
+								users_choice2= command("\n1) Yes\n2) No\n\nChoice: \n\n\n");
+								choice = atoi(users_choice2);
+								free(users_choice2);
+
+								if(choice==1){
+									book_was_removed=remove_book(temp_array.array[0]);
+									break;
+								}
+							}
+							break;
+
+					//3) Find Book by Year
+							case 3:
+								printf("Book's Year: ");
+								scanf("%d\n", year);
+
+								temp_array=find_book_by_year(year);
+
+								if(temp_array.length==0){
+									printf("Book from <<%d>> was Not found",year);
+								}
+
+								else{
+									printf("Book from <<%d>> was found\nDo you want to remove it?",year);
+									users_choice2 = command("\n1) Yes\n2) No\n\nChoice: \n\n\n");
+									choice = atoi(users_choice2);
+									free(users_choice2);
+
+									if(choice==1){
+										book_was_removed=remove_book(temp_array.array[0]);
+										break;
+									}
+								}
+								break;
+
+					//4)Go Back
+							case 4:
+								break;
+
+							default:
+								printf("Sorry, that doesn't seem to be an option\n");
+						}
+
+					}while (choice!=4);
+					break;
+//--------------------------------------------------{End: Remove Book}--------------------------------------------------------------
+
 //--------------------------------------------------{Start: Logout}---------------------------------------------------------------
-			case 3:
-				printf("Have a nice Day!");
-				break;
+				case 5:
+					printf("Have a nice Day!");
+					break;
 //--------------------------------------------------{End: Logout}---------------------------------------------------------------
-			default:
-				printf("Sorry, that doesn't seem to be an option\n");
-		}
+				default:
+					printf("Sorry, that doesn't seem to be an option\n");
 
-
-
-
-
-
-
-
-
-
-		}while (choice!=3);
-		}
+				}
+		}while(choice!=5);
+	}
 
 	return;
 }

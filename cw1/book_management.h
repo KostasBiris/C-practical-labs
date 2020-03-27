@@ -4,7 +4,11 @@
 
 #include <stdio.h>
 
+struct BookArray books_array;
+int number_books;
+
 struct Book {
+		unsigned int id;
 		char *title; //book title
 		char *authors; //comma separated list of authors
 		unsigned int year; // year of publication

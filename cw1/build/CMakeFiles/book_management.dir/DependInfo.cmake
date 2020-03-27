@@ -6,6 +6,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
 SET(CMAKE_DEPENDS_CHECK_C
   "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c" "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles/book_management.dir/book_management.c.o"
   "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/lib_interface.c" "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles/book_management.dir/lib_interface.c.o"
+  "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/library.c" "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles/book_management.dir/library.c.o"
   "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/users.c" "/home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles/book_management.dir/users.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")

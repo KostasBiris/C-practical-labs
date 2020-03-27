@@ -75,9 +75,32 @@ CMakeFiles/book_management.dir/users.c.o.provides: CMakeFiles/book_management.di
 
 CMakeFiles/book_management.dir/users.c.o.provides.build: CMakeFiles/book_management.dir/users.c.o
 
+CMakeFiles/book_management.dir/library.c.o: CMakeFiles/book_management.dir/flags.make
+CMakeFiles/book_management.dir/library.c.o: ../library.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/book_management.dir/library.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/book_management.dir/library.c.o   -c /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/library.c
+
+CMakeFiles/book_management.dir/library.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/book_management.dir/library.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/library.c > CMakeFiles/book_management.dir/library.c.i
+
+CMakeFiles/book_management.dir/library.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/book_management.dir/library.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/library.c -o CMakeFiles/book_management.dir/library.c.s
+
+CMakeFiles/book_management.dir/library.c.o.requires:
+.PHONY : CMakeFiles/book_management.dir/library.c.o.requires
+
+CMakeFiles/book_management.dir/library.c.o.provides: CMakeFiles/book_management.dir/library.c.o.requires
+	$(MAKE) -f CMakeFiles/book_management.dir/build.make CMakeFiles/book_management.dir/library.c.o.provides.build
+.PHONY : CMakeFiles/book_management.dir/library.c.o.provides
+
+CMakeFiles/book_management.dir/library.c.o.provides.build: CMakeFiles/book_management.dir/library.c.o
+
 CMakeFiles/book_management.dir/lib_interface.c.o: CMakeFiles/book_management.dir/flags.make
 CMakeFiles/book_management.dir/lib_interface.c.o: ../lib_interface.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/book_management.dir/lib_interface.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/book_management.dir/lib_interface.c.o   -c /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/lib_interface.c
 
@@ -100,7 +123,7 @@ CMakeFiles/book_management.dir/lib_interface.c.o.provides.build: CMakeFiles/book
 
 CMakeFiles/book_management.dir/book_management.c.o: CMakeFiles/book_management.dir/flags.make
 CMakeFiles/book_management.dir/book_management.c.o: ../book_management.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/book_management.dir/book_management.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/book_management.dir/book_management.c.o   -c /home/csunix/sc19kb/Desktop/Programming_Project/sc19kb/cw1/book_management.c
 
@@ -124,6 +147,7 @@ CMakeFiles/book_management.dir/book_management.c.o.provides.build: CMakeFiles/bo
 # Object files for target book_management
 book_management_OBJECTS = \
 "CMakeFiles/book_management.dir/users.c.o" \
+"CMakeFiles/book_management.dir/library.c.o" \
 "CMakeFiles/book_management.dir/lib_interface.c.o" \
 "CMakeFiles/book_management.dir/book_management.c.o"
 
@@ -131,6 +155,7 @@ book_management_OBJECTS = \
 book_management_EXTERNAL_OBJECTS =
 
 book_management: CMakeFiles/book_management.dir/users.c.o
+book_management: CMakeFiles/book_management.dir/library.c.o
 book_management: CMakeFiles/book_management.dir/lib_interface.c.o
 book_management: CMakeFiles/book_management.dir/book_management.c.o
 book_management: CMakeFiles/book_management.dir/build.make
@@ -143,6 +168,7 @@ CMakeFiles/book_management.dir/build: book_management
 .PHONY : CMakeFiles/book_management.dir/build
 
 CMakeFiles/book_management.dir/requires: CMakeFiles/book_management.dir/users.c.o.requires
+CMakeFiles/book_management.dir/requires: CMakeFiles/book_management.dir/library.c.o.requires
 CMakeFiles/book_management.dir/requires: CMakeFiles/book_management.dir/lib_interface.c.o.requires
 CMakeFiles/book_management.dir/requires: CMakeFiles/book_management.dir/book_management.c.o.requires
 .PHONY : CMakeFiles/book_management.dir/requires
